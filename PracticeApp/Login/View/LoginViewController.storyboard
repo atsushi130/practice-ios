@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FwU-Ok-4G9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="bh9-PR-zXm">
+            <objects>
+                <viewController id="FwU-Ok-4G9" customClass="LoginViewController" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bZt-1d-gBI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9c-5U-G3h" customClass="LoginView" customModule="PracticeApp" customModuleProvider="target">
+                                <rect key="frame" x="15" y="246" width="345" height="175"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RbM-tl-iDp">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="175"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njB-cD-5Lq" customClass="LoginField" customModule="PracticeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="55"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="アカウント" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8In-GY-0ef">
+                                                        <rect key="frame" x="5" y="2" width="335" height="50"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="J8A-uI-Dgp"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="2Hg-Y4-VHx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8In-GY-0ef" secondAttribute="trailing" constant="5" id="aAa-jt-mqo"/>
+                                                    <constraint firstItem="8In-GY-0ef" firstAttribute="centerY" secondItem="njB-cD-5Lq" secondAttribute="centerY" id="hdv-0w-ztl"/>
+                                                    <constraint firstItem="8In-GY-0ef" firstAttribute="leading" secondItem="njB-cD-5Lq" secondAttribute="leading" constant="5" id="sKZ-IN-HG5"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="field" destination="8In-GY-0ef" id="uW9-PD-ksk"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7l-hz-JgZ" customClass="LoginField" customModule="PracticeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="65" width="345" height="55"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VU9-z2-RgK">
+                                                        <rect key="frame" x="5" y="2.5" width="335" height="50"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Kn2-0c-o3L"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="0lY-dv-lKP"/>
+                                                    <constraint firstItem="VU9-z2-RgK" firstAttribute="leading" secondItem="A7l-hz-JgZ" secondAttribute="leading" constant="5" id="rBg-qg-r29"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VU9-z2-RgK" secondAttribute="trailing" constant="5" id="sSn-S8-o4M"/>
+                                                    <constraint firstItem="VU9-z2-RgK" firstAttribute="centerY" secondItem="A7l-hz-JgZ" secondAttribute="centerY" id="z5P-4p-5dC"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="field" destination="VU9-z2-RgK" id="p9Z-9h-Mea"/>
+                                                </connections>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dla-OR-wfo" customClass="LoginButton" customModule="PracticeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="130" width="345" height="45"/>
+                                                <color key="backgroundColor" red="0.97254901960784312" green="0.64313725490196072" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="NeW-BU-jQM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="ログイン"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="login" destination="Y9c-5U-G3h" eventType="touchUpInside" id="k7P-DY-S2Q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RbM-tl-iDp" firstAttribute="top" secondItem="Y9c-5U-G3h" secondAttribute="top" id="7kg-gc-KbR"/>
+                                    <constraint firstItem="RbM-tl-iDp" firstAttribute="leading" secondItem="Y9c-5U-G3h" secondAttribute="leading" id="GHE-Ae-8Nc"/>
+                                    <constraint firstAttribute="trailing" secondItem="RbM-tl-iDp" secondAttribute="trailing" id="HhM-ei-xyy"/>
+                                    <constraint firstAttribute="height" constant="175" id="npa-P9-fvb"/>
+                                    <constraint firstAttribute="bottom" secondItem="RbM-tl-iDp" secondAttribute="bottom" id="ptX-9w-gsb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="accountField" destination="njB-cD-5Lq" id="hYB-pf-CQM"/>
+                                    <outlet property="loginButton" destination="dla-OR-wfo" id="8DV-Pz-1fS"/>
+                                    <outlet property="passwordField" destination="A7l-hz-JgZ" id="w7E-9y-KPM"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y9c-5U-G3h" firstAttribute="leading" secondItem="bYC-Wi-vg9" secondAttribute="leading" constant="15" id="8BN-vF-Qsv"/>
+                            <constraint firstItem="Y9c-5U-G3h" firstAttribute="centerX" secondItem="bZt-1d-gBI" secondAttribute="centerX" id="Ppa-ti-adi"/>
+                            <constraint firstItem="Y9c-5U-G3h" firstAttribute="centerY" secondItem="bZt-1d-gBI" secondAttribute="centerY" id="ZON-zS-Ln9"/>
+                            <constraint firstItem="bYC-Wi-vg9" firstAttribute="trailing" secondItem="Y9c-5U-G3h" secondAttribute="trailing" constant="15" id="hpH-zD-sGK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bYC-Wi-vg9"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginView" destination="Y9c-5U-G3h" id="ja4-gI-BHB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XoZ-ai-ZHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170.40000000000001" y="145.27736131934034"/>
+        </scene>
+    </scenes>
+</document>
