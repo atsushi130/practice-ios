@@ -19,7 +19,7 @@
 - APIKit
 - Quick
 - Nimble
-- SwiftExtensions
+- [SwiftExtensions](https://github.com/atsushi130/SwiftExtensions)
 
 ## Architecture
 - MVVM
