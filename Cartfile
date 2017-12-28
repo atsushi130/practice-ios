@@ -1,0 +1,5 @@
+github "ishkawa/APIKit"
+github "ReactiveX/RxSwift"
+github "realm/realm-cocoa"
+github "SnapKit/SnapKit"
+github "atsushi130/SwiftExtensions"
