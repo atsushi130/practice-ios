@@ -7,10 +7,71 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class ItemViewContrller: UIViewController {
     
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            self.layout = UICollectionViewFlowLayout()
+            self.collectionView.collectionViewLayout = self.layout
+            self.collectionView.ex.register(cellType: ItemCell.self)
+            self.collectionView.dataSource = self
+            self.collectionView.delegate   = self
+        }
+    }
+    
+    private var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() {
+        didSet {
+            // self sizing by autolayout
+            self.layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+            self.layout.sectionInset      = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+            self.layout.minimumLineSpacing      = 10
+            self.layout.minimumInteritemSpacing = 10
+        }
+    }
+    
+    private let disposeBag    = DisposeBag()
+    private var itemViewModel = ItemViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.itemViewModel.rx.didChange.drive(onNext: { [weak self] _ in
+            self?.collectionView.reloadData()
+        }).disposed(by: self.disposeBag)
+        
+        self.itemViewModel.fetch()
     }
 }
+
+// MARK: - UICollectionViewDelegate
+extension ItemViewContrller: UICollectionViewDelegate {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension ItemViewContrller: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30//self.itemViewModel.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
+        
+        cell.bind(item: self.itemViewModel[indexPath.row])
+        cell.tapped = { isOn in self.itemViewModel[indexPath.row].isOn = isOn }
+        
+        let inset  = self.layout.sectionInset
+        let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
+        cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
+
+        return cell
+    }
+}
+
