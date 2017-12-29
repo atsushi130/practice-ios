@@ -7,5 +7,7 @@
 //
 
 struct Item {
-    let name: String
+    let name:    String
+    let subName: String
+    var isOn: (wants: Bool, haves: Bool)
 }
