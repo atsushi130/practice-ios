@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class ItemButton: UIView {
     
+    @IBOutlet fileprivate weak var button: UIButton!
     @IBOutlet private weak var imageView:  UIImageView!
     @IBOutlet private weak var countLabel: UILabel!
     @IBOutlet private weak var typeLabel:  UILabel!
@@ -26,12 +29,16 @@ final class ItemButton: UIView {
         }
     }
     
-    private var isOn = false {
+    var isOn = false {
         didSet { self.changeImage() }
     }
     
     private var suffix: String {
         get { return self.isOn ? "_on" : "_off" }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
     private func changeImage() {
@@ -41,8 +48,15 @@ final class ItemButton: UIView {
     private func changeTypeLabel() {
         self.typeLabel.text = self.buttonType.rawValue
     }
+}
+
+extension Reactive where Base: ItemButton {
     
-    @IBAction func tap() {
-        self.isOn = !self.isOn
+    var tap: ControlEvent<Void> {
+        return self.base.button.rx.tap
+    }
+    
+    func controlEvent(_ controlEvent: UIControlEvents) -> Driver<Void> {
+        return self.base.button.rx.controlEvent(controlEvent).asDriver()
     }
 }
