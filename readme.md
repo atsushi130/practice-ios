@@ -5,6 +5,8 @@
 ![swift](https://img.shields.io/badge/Swift-4-ffac45.svg)
 
 
+PracticeApp implements a part of the [Sumally](https://sumally.com)'s design'.
+
 ## Bootstrap
 ```
 ❯ git clone https://github.com/atsushi130/PracticeApp
