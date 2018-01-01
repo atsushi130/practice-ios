@@ -6,5 +6,10 @@
 //  Copyright © 2017年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
+extension UIColor {
+    static var theme: UIColor {
+        return UIColor.ex.hex(string: "#F8A41A")
+    }
+}
