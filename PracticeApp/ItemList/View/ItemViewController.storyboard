@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item View Contrller-->
+        <!--ホーム-->
         <scene sceneID="9ff-eA-yWe">
             <objects>
                 <viewController id="OXS-cK-E2e" customClass="ItemViewContrller" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,6 +29,10 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-qj-x7e">
+                                <rect key="frame" x="175" y="626" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -39,6 +43,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tdd-5H-cTb"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="home_off" selectedImage="home_on" id="Tbo-jJ-oEi">
+                        <color key="badgeColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="a66-Ou-sJr" id="3OH-yi-UJO"/>
                     </connections>
@@ -48,4 +56,8 @@
             <point key="canvasLocation" x="-122.40000000000001" y="154.27286356821591"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home_off" width="18" height="25"/>
+        <image name="home_on" width="18" height="25"/>
+    </resources>
 </document>

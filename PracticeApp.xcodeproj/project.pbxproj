@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D00B1C11FFA4D2B00DFCCE0 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D00B1C01FFA4D2B00DFCCE0 /* MainTabController.swift */; };
+		0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D00B1C31FFA51D200DFCCE0 /* MainTabController.storyboard */; };
+		0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; };
+		0DA0882C1FFA8BBA00EE18CF /* UIFontComplete.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		759441931FF52E62001E4FD1 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759441921FF52E62001E4FD1 /* ItemViewModel.swift */; };
 		7594419C1FF6ABD0001E4FD1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */; };
 		75E596311FF272BD00784269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596301FF272BD00784269 /* AppDelegate.swift */; };
@@ -86,6 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0DA0882C1FFA8BBA00EE18CF /* UIFontComplete.framework in CopyFiles */,
 				75E596791FF378FB00784269 /* APIKit.framework in CopyFiles */,
 				75E5967A1FF378FB00784269 /* Realm.framework in CopyFiles */,
 				75E5967B1FF378FB00784269 /* RealmSwift.framework in CopyFiles */,
@@ -113,6 +118,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D00B1C01FFA4D2B00DFCCE0 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		0D00B1C31FFA51D200DFCCE0 /* MainTabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabController.storyboard; sourceTree = "<group>"; };
+		0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIFontComplete.framework; path = Carthage/Build/iOS/UIFontComplete.framework; sourceTree = SOURCE_ROOT; };
 		759441921FF52E62001E4FD1 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		75E5962D1FF272BD00784269 /* PracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +183,7 @@
 				75E596731FF378C600784269 /* RxSwift.framework in Frameworks */,
 				75E5966F1FF378C600784269 /* RealmSwift.framework in Frameworks */,
 				75E596751FF378C600784269 /* APIKit.framework in Frameworks */,
+				0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */,
 				75E596711FF378C600784269 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +208,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D00B1BF1FFA4C4900DFCCE0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0D00B1C21FFA512000DFCCE0 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0D00B1C21FFA512000DFCCE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D00B1C01FFA4D2B00DFCCE0 /* MainTabController.swift */,
+				0D00B1C31FFA51D200DFCCE0 /* MainTabController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		759441911FF52E4F001E4FD1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +266,7 @@
 		75E5962F1FF272BD00784269 /* PracticeApp */ = {
 			isa = PBXGroup;
 			children = (
+				0D00B1BF1FFA4C4900DFCCE0 /* Main */,
 				7594419A1FF6ABBA001E4FD1 /* Extension */,
 				75E596B51FF4CD0E00784269 /* ItemList */,
 				75E596B01FF3F16100784269 /* Api */,
@@ -275,6 +302,7 @@
 		75E5965F1FF3788800784269 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */,
 				75E596691FF378C500784269 /* APIKit.framework */,
 				75E5966B1FF378C500784269 /* Nimble.framework */,
 				75E596611FF378C500784269 /* Quick.framework */,
@@ -506,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E5963B1FF272BD00784269 /* LaunchScreen.storyboard in Resources */,
+				0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */,
 				75E5968D1FF37E2700784269 /* LoginViewController.storyboard in Resources */,
 				75E596C81FF4E2F300784269 /* ItemCell.xib in Resources */,
 				75E596C61FF4E2B200784269 /* ItemViewController.storyboard in Resources */,
@@ -536,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E596A21FF39EBD00784269 /* LoginFieldValidateViewModelable.swift in Sources */,
+				0D00B1C11FFA4D2B00DFCCE0 /* MainTabController.swift in Sources */,
 				75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */,
 				75E596C21FF4E25D00784269 /* Item.swift in Sources */,
 				75E5968F1FF37E3500784269 /* LoginViewController.swift in Sources */,
