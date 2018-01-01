@@ -12,10 +12,14 @@ import RxCocoa
 
 final class ItemButton: UIView {
     
-    @IBOutlet fileprivate weak var button: UIButton!
-    @IBOutlet private weak var imageView:  UIImageView!
-    @IBOutlet private weak var countLabel: UILabel!
-    @IBOutlet private weak var typeLabel:  UILabel!
+    @IBOutlet fileprivate weak var button:    UIButton!
+    @IBOutlet private weak var imageView:     UIImageView!
+    @IBOutlet weak var animationView:         UIView!
+    @IBOutlet private weak var countLabel:    UILabel!
+    @IBOutlet private weak var typeLabel:     UILabel!
+    
+    private let disposeBag = DisposeBag()
+    fileprivate let animationDuration = 0.5
     
     enum ButtonType: String {
         case wants = "wants"
@@ -30,19 +34,34 @@ final class ItemButton: UIView {
     }
     
     var isOn = false {
-        didSet { self.changeImage() }
-    }
-    
-    private var suffix: String {
-        get { return self.isOn ? "_on" : "_off" }
+        didSet {
+            self.changeAnimation()
+        }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.animationView.backgroundColor    = UIColor.theme
+        self.animationView.layer.cornerRadius = self.animationView.frame.size.width.ex.half
     }
     
     private func changeImage() {
-        self.imageView.image = UIImage(named: self.buttonType.rawValue + self.suffix)
+        self.imageView.image = UIImage(named: self.buttonType.rawValue + "_mark")
+    }
+    
+    private func changeAnimation() {
+
+        switch self.isOn {
+        case true:
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.animationView.transform = CGAffineTransform.identity
+            }) { _ in }
+            
+        case false:
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+                self.animationView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+            }) { _ in }
+        }
     }
     
     private func changeTypeLabel() {
@@ -52,11 +71,7 @@ final class ItemButton: UIView {
 
 extension Reactive where Base: ItemButton {
     
-    var tap: ControlEvent<Void> {
-        return self.base.button.rx.tap
-    }
-    
     func controlEvent(_ controlEvent: UIControlEvents) -> Driver<Void> {
-        return self.base.button.rx.controlEvent(controlEvent).asDriver()
+        return self.base.button.rx.controlEvent(controlEvent).asDriver().throttle(self.base.animationDuration)
     }
 }
