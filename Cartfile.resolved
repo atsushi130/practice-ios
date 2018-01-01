@@ -1,6 +1,7 @@
+github "Nirma/UIFontComplete" "2.0.1"
 github "Quick/Nimble" "v7.0.3"
 github "Quick/Quick" "v1.2.0"
-github "ReactiveX/RxSwift" "4.0.0"
+github "ReactiveX/RxSwift" "4.1.0"
 github "SnapKit/SnapKit" "4.0.0"
 github "antitypical/Result" "3.2.4"
 github "atsushi130/SwiftExtensions" "1.0.2"
