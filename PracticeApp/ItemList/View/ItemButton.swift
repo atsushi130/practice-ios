@@ -19,7 +19,14 @@ final class ItemButton: UIView {
     @IBOutlet private weak var typeLabel:     UILabel!
     
     private let disposeBag = DisposeBag()
-    fileprivate let animationDuration = 0.5
+    
+    fileprivate struct Const {
+        typealias OnOff = (on: CGFloat, off: CGFloat)
+        static let animationDuration     = 0.45
+        static let springDamping: OnOff  = (on: 0.4, off: 1.0)
+        static let springVelocity: OnOff = (on: 0.0, off: 1.0)
+        static let options: UIViewAnimationOptions = .curveEaseIn
+    }
     
     enum ButtonType: String {
         case wants = "wants"
@@ -53,12 +60,22 @@ final class ItemButton: UIView {
 
         switch self.isOn {
         case true:
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: Const.animationDuration,
+                           delay: 0,
+                           usingSpringWithDamping: Const.springDamping.on,
+                           initialSpringVelocity:  Const.springVelocity.on,
+                           options: Const.options,
+                           animations: {
                 self.animationView.transform = CGAffineTransform.identity
             }) { _ in }
             
         case false:
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: Const.animationDuration,
+                           delay: 0,
+                           usingSpringWithDamping: Const.springDamping.off,
+                           initialSpringVelocity:  Const.springVelocity.off,
+                           options: Const.options,
+                           animations: {
                 self.animationView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
             }) { _ in }
         }
@@ -72,6 +89,6 @@ final class ItemButton: UIView {
 extension Reactive where Base: ItemButton {
     
     func controlEvent(_ controlEvent: UIControlEvents) -> Driver<Void> {
-        return self.base.button.rx.controlEvent(controlEvent).asDriver().throttle(self.base.animationDuration)
+        return self.base.button.rx.controlEvent(controlEvent).asDriver().throttle(ItemButton.Const.animationDuration)
     }
 }
