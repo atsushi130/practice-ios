@@ -6,4 +6,9 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+protocol Itemable {
+    var name: String { get }
+    var subName: String { get }
+    var isOn: (wants: Bool, haves: Bool) { get }
+    var count: (wants: Int, haves: Int) { get }
+}

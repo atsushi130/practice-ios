@@ -6,8 +6,9 @@
 //  Copyright © 2017年 Atsushi Miyake. All rights reserved.
 //
 
-struct Item {
+struct Item: Itemable {
     let name:    String
     let subName: String
     var isOn: (wants: Bool, haves: Bool)
+    var count: (wants: Int, haves: Int)
 }
