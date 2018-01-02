@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+struct ItemDetail: Itemable {
+    let name: String
+    let subName: String
+    var isOn: (wants: Bool, haves: Bool)
+    var count: (wants: Int, haves: Int)
+    let users: (wants: [User], haves: [User])
+    let brand: Brand?
+    let categories: [Category]
+    let registrant: User
+    let createAt: Date
+    let associateItems: [Item]
+}
