@@ -6,4 +6,9 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class ReactionBarView: UIView {
+    
+    private var count: Int = 0
+}

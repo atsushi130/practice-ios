@@ -6,4 +6,13 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+@IBDesignable final class ReactionView: UIView {
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get { return self.layer.cornerRadius }
+        set { self.layer.cornerRadius = newValue }
+    }
+}

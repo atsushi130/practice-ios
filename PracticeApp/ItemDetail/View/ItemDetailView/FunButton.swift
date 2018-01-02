@@ -6,4 +6,25 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+@IBDesignable final class FunButton: UIButton {
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get { return self.layer.cornerRadius }
+        set { self.layer.cornerRadius = newValue }
+    }
+    
+    @IBInspectable
+    var borderColor: UIColor {
+        get { return self.layer.borderColor!.ex.uiColor }
+        set { self.layer.borderColor = newValue.cgColor }
+    }
+    
+    @IBInspectable
+    var borderWidth: CGFloat {
+        get { return self.layer.borderWidth }
+        set { self.layer.borderWidth = newValue }
+    }
+}
