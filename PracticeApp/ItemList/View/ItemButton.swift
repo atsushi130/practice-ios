@@ -12,11 +12,11 @@ import RxCocoa
 
 final class ItemButton: UIView {
     
-    @IBOutlet fileprivate weak var button:    UIButton!
-    @IBOutlet private weak var imageView:     UIImageView!
-    @IBOutlet weak var animationView:         UIView!
-    @IBOutlet private weak var countLabel:    UILabel!
-    @IBOutlet private weak var typeLabel:     UILabel!
+    @IBOutlet fileprivate weak var button: UIButton!
+    @IBOutlet private weak var imageView:  UIImageView!
+    @IBOutlet weak var animationView:      UIView!
+    @IBOutlet private weak var countLabel: UILabel!
+    @IBOutlet private weak var typeLabel:  UILabel!
     
     private let disposeBag = DisposeBag()
     
