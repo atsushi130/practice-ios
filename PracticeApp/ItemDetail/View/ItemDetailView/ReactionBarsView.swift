@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable final class ReactionView: UIView {
+@IBDesignable final class ReactionBarsView: UIView {
     
     @IBInspectable
     var cornerRadius: CGFloat {
