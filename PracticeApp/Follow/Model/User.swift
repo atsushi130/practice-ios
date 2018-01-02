@@ -6,4 +6,9 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+struct User {
+    let name: String
+    let profile: String
+    let follow: Int
+    let follower: Int
+}

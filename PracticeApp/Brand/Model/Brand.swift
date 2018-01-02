@@ -6,4 +6,7 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+struct Brand {
+    let name: String
+    let isFun: Bool
+}
