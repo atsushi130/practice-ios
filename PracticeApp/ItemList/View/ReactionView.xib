@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReactionView" customModule="PracticeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="BRl-MH-9PJ" id="287-5h-cMM"/>
+                <outlet property="markView" destination="NqR-9g-yg4" id="XWH-Xs-MR7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zfl-xR-mRv">
+            <rect key="frame" x="0.0" y="0.0" width="25.5" height="25.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base" translatesAutoresizingMaskIntoConstraints="NO" id="KJF-mk-OP3">
+                    <rect key="frame" x="0.0" y="0.0" width="25.5" height="25.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="KJF-mk-OP3" secondAttribute="height" multiplier="1:1" id="pGf-xR-PSB"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRl-MH-9PJ">
+                    <rect key="frame" x="0.0" y="0.0" width="25.5" height="25.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BRl-MH-9PJ" secondAttribute="height" multiplier="1:1" id="KqH-O6-gFn"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wants_mark" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-9g-yg4">
+                    <rect key="frame" x="0.0" y="0.0" width="25.5" height="25.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="NqR-9g-yg4" secondAttribute="height" multiplier="1:1" id="WmW-9w-yZr"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KJF-mk-OP3" firstAttribute="centerY" secondItem="zfl-xR-mRv" secondAttribute="centerY" id="9Ng-HS-j4b"/>
+                <constraint firstItem="KJF-mk-OP3" firstAttribute="top" secondItem="lG7-UF-JQg" secondAttribute="top" id="9iv-oe-jex"/>
+                <constraint firstItem="NqR-9g-yg4" firstAttribute="width" secondItem="KJF-mk-OP3" secondAttribute="width" id="G9G-0j-H3o"/>
+                <constraint firstItem="KJF-mk-OP3" firstAttribute="bottom" secondItem="lG7-UF-JQg" secondAttribute="bottom" id="Qii-Kv-mFj"/>
+                <constraint firstItem="KJF-mk-OP3" firstAttribute="leading" secondItem="lG7-UF-JQg" secondAttribute="leading" id="SlM-BD-Vzs"/>
+                <constraint firstItem="NqR-9g-yg4" firstAttribute="centerY" secondItem="zfl-xR-mRv" secondAttribute="centerY" id="VZm-Rj-sRg"/>
+                <constraint firstItem="NqR-9g-yg4" firstAttribute="centerX" secondItem="zfl-xR-mRv" secondAttribute="centerX" id="Wrp-N8-jWa"/>
+                <constraint firstItem="BRl-MH-9PJ" firstAttribute="width" secondItem="KJF-mk-OP3" secondAttribute="width" id="X2x-Si-EvS"/>
+                <constraint firstItem="KJF-mk-OP3" firstAttribute="centerX" secondItem="zfl-xR-mRv" secondAttribute="centerX" id="dqY-pT-bYb"/>
+                <constraint firstItem="BRl-MH-9PJ" firstAttribute="centerX" secondItem="zfl-xR-mRv" secondAttribute="centerX" id="g5J-Ho-MBg"/>
+                <constraint firstItem="BRl-MH-9PJ" firstAttribute="centerY" secondItem="zfl-xR-mRv" secondAttribute="centerY" id="rrc-Bh-hNa"/>
+                <constraint firstItem="KJF-mk-OP3" firstAttribute="trailing" secondItem="lG7-UF-JQg" secondAttribute="trailing" id="uTm-HI-hOo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="lG7-UF-JQg"/>
+            <point key="canvasLocation" x="43" y="143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="base" width="200" height="200"/>
+        <image name="wants_mark" width="200" height="200"/>
+    </resources>
+</document>

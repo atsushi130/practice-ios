@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D00B1C11FFA4D2B00DFCCE0 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D00B1C01FFA4D2B00DFCCE0 /* MainTabController.swift */; };
 		0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D00B1C31FFA51D200DFCCE0 /* MainTabController.storyboard */; };
+		0D6899481FFBBED6004640CE /* ReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6899471FFBBED5004640CE /* ReactionView.swift */; };
+		0D68994A1FFBC028004640CE /* ReactionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6899491FFBC028004640CE /* ReactionView.xib */; };
 		0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; };
 		0DA0882C1FFA8BBA00EE18CF /* UIFontComplete.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DA088301FFAB01000EE18CF /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */; };
@@ -133,6 +135,8 @@
 /* Begin PBXFileReference section */
 		0D00B1C01FFA4D2B00DFCCE0 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		0D00B1C31FFA51D200DFCCE0 /* MainTabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabController.storyboard; sourceTree = "<group>"; };
+		0D6899471FFBBED5004640CE /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
+		0D6899491FFBC028004640CE /* ReactionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionView.xib; sourceTree = "<group>"; };
 		0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIFontComplete.framework; path = Carthage/Build/iOS/UIFontComplete.framework; sourceTree = SOURCE_ROOT; };
 		0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		0DA088311FFAB03A00EE18CF /* Itemable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itemable.swift; sourceTree = "<group>"; };
@@ -504,6 +508,8 @@
 				75E596C51FF4E2B200784269 /* ItemViewController.storyboard */,
 				75E596C71FF4E2F300784269 /* ItemCell.xib */,
 				75E596C91FF4E82700784269 /* ItemButton.swift */,
+				0D6899471FFBBED5004640CE /* ReactionView.swift */,
+				0D6899491FFBC028004640CE /* ReactionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -641,6 +647,7 @@
 				0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */,
 				75E5968D1FF37E2700784269 /* LoginViewController.storyboard in Resources */,
 				75E596C81FF4E2F300784269 /* ItemCell.xib in Resources */,
+				0D68994A1FFBC028004640CE /* ReactionView.xib in Resources */,
 				75E596C61FF4E2B200784269 /* ItemViewController.storyboard in Resources */,
 				75E596381FF272BD00784269 /* Assets.xcassets in Resources */,
 				75E596361FF272BD00784269 /* Main.storyboard in Resources */,
@@ -672,6 +679,7 @@
 				0D00B1C11FFA4D2B00DFCCE0 /* MainTabController.swift in Sources */,
 				75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */,
 				0DA088381FFAB1B800EE18CF /* User.swift in Sources */,
+				0D6899481FFBBED6004640CE /* ReactionView.swift in Sources */,
 				0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */,
 				0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */,
 				0DA0883A1FFAB1BF00EE18CF /* Userable.swift in Sources */,
