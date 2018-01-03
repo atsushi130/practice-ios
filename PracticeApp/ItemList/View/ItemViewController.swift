@@ -63,7 +63,7 @@ extension ItemViewController: UICollectionViewDataSource {
         let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
         
         cell.bind(item: self.itemViewModel[indexPath.row])
-        cell.tapped = { isOn in self.itemViewModel[indexPath.row].isOn = isOn }
+        cell.tapped = { [weak self] isOn in self?.itemViewModel[indexPath.row].isOn = isOn }
         
         let inset  = self.layout.sectionInset
         let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
