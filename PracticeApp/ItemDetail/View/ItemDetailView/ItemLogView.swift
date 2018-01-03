@@ -6,4 +6,9 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class ItemLogView: UIView {
+    @IBOutlet private weak var userIconView: UserIconView!
+    @IBOutlet private weak var logLabel: UILabel!
+}
