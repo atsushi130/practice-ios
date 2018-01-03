@@ -23,6 +23,14 @@ final class ReactionView: UIView, NibDesignable {
         static let options: UIViewAnimationOptions = .curveEaseIn
     }
     
+    var animationDuration: Double { return Const.animationDuration }
+    
+    @IBInspectable
+    var markImage: UIImage? {
+        get { return self.markView.image }
+        set { self.markView.image = newValue }
+    }
+    
     enum ButtonType: String {
         case wants = "wants"
         case haves = "haves"
