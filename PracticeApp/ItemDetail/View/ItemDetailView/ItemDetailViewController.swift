@@ -1,16 +1,16 @@
 //
-//  ItemViewController.swift
+//  ItemDetailViewController.swift
 //  PracticeApp
 //
-//  Created by Atsushi Miyake on 2017/12/28.
-//  Copyright © 2017年 Atsushi Miyake. All rights reserved.
+//  Created by Atsushi Miyake on 2018/01/04.
+//  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 import RxCocoa
 
-final class ItemViewContrller: UIViewController {
+final class ItemDetailViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
@@ -20,7 +20,7 @@ final class ItemViewContrller: UIViewController {
         }
     }
     
-    private var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() {
+    private var layout: UICollectionViewFlowLayout! = UICollectionViewFlowLayout() {
         didSet {
             // self sizing by autolayout
             self.layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
@@ -30,7 +30,8 @@ final class ItemViewContrller: UIViewController {
         }
     }
     
-    private let disposeBag    = DisposeBag()
+    private let disposeBag = DisposeBag()
+    
     private var itemViewModel = ItemViewModel()
     
     override func viewDidLoad() {
@@ -45,14 +46,14 @@ final class ItemViewContrller: UIViewController {
 }
 
 // MARK: - UICollectionViewDelegate
-extension ItemViewContrller: UICollectionViewDelegate {
+extension ItemDetailViewController: UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 }
 
 // MARK: - UICollectionViewDataSource
-extension ItemViewContrller: UICollectionViewDataSource {
+extension ItemDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.itemViewModel.count
@@ -68,14 +69,7 @@ extension ItemViewContrller: UICollectionViewDataSource {
         let inset  = self.layout.sectionInset
         let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
         cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
-
+        
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: ItemDetailViewController.ex.className, bundle: nil)
-        let itemDetailViewController = storyboard.instantiateInitialViewController() as! ItemDetailViewController
-        self.navigationController?.pushViewController(itemDetailViewController, animated: true)
-    }
 }
-

@@ -28,6 +28,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OXS-cK-E2e" id="fRu-rz-Qy4"/>
+                                    <outlet property="delegate" destination="OXS-cK-E2e" id="Gca-BF-peg"/>
+                                </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-qj-x7e">
                                 <rect key="frame" x="175" y="626" width="25" height="25"/>
