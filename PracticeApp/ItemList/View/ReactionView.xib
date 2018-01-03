@@ -41,7 +41,6 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="KJF-mk-OP3" firstAttribute="centerY" secondItem="zfl-xR-mRv" secondAttribute="centerY" id="9Ng-HS-j4b"/>
                 <constraint firstItem="KJF-mk-OP3" firstAttribute="top" secondItem="lG7-UF-JQg" secondAttribute="top" id="9iv-oe-jex"/>
