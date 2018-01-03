@@ -16,7 +16,6 @@ final class ItemCell: UICollectionViewCell {
     @IBOutlet private weak var imageView:     UIImageView!
     @IBOutlet private weak var mainNameLabel: UILabel!
     @IBOutlet private weak var subNameLabel:  UILabel!
-    
     @IBOutlet fileprivate weak var wants: ItemButton!
     @IBOutlet fileprivate weak var haves: ItemButton!
     @IBOutlet private weak var imageConstraintsWidth:  NSLayoutConstraint!
@@ -79,5 +78,9 @@ final class ItemCell: UICollectionViewCell {
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         // able to refarence attributes of cell has sized by auto layout.
         return super.preferredLayoutAttributesFitting(layoutAttributes)
+    }
+    
+    deinit {
+        print("deinit item cell")
     }
 }
