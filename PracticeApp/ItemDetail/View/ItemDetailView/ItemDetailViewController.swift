@@ -72,7 +72,9 @@ extension ItemDetailViewController: UICollectionViewDataSource {
         let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
         
         cell.bind(item: self.itemViewModel[indexPath.row])
-        cell.tapped = { [weak self] isOn in self?.itemViewModel[indexPath.row].isOn = isOn }
+        cell.rx.didReactionUpdate.subscribe(onNext: { [weak self] item in
+            self?.itemViewModel[indexPath.row] = item
+        }).disposed(by: cell.disposeBag)
         
         let inset  = self.layout.sectionInset
         let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
@@ -82,12 +84,14 @@ extension ItemDetailViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         let header = collectionView.ex.dequeueReusableView(with: ItemDetailReusableView.self, for: indexPath)
         
         let updateConstraints = { [weak self] in
             guard let `self` = self else { return }
+            let offsetY   = self.collectionView.contentOffset.y
             let threshold = header.frame.size.height - self.view.frame.size.height
-            let offset = self.collectionView.contentOffset.y <= threshold ? threshold - self.collectionView.contentOffset.y : 0.0
+            let offset    = offsetY <= threshold ? threshold - offsetY : 0.0
             header.reactionFooterView.snp.updateConstraints { make in
                 make.bottom.equalTo(header.snp.bottom).offset(-offset)
             }
