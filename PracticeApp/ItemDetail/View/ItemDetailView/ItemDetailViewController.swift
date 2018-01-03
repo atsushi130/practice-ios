@@ -17,6 +17,7 @@ final class ItemDetailViewController: UIViewController {
             self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.ex.register(cellType: ItemCell.self)
+            self.collectionView.ex.register(reusableViewType: ItemDetailReusableView.self)
         }
     }
     
@@ -24,6 +25,7 @@ final class ItemDetailViewController: UIViewController {
         didSet {
             // self sizing by autolayout
             self.layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+            self.layout.headerReferenceSize = CGSize(width: self.collectionView.frame.size.width, height: 946)
             self.layout.sectionInset      = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
             self.layout.minimumLineSpacing      = 10
             self.layout.minimumInteritemSpacing = 10
@@ -71,5 +73,9 @@ extension ItemDetailViewController: UICollectionViewDataSource {
         cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        return collectionView.ex.dequeueReusableView(with: ItemDetailReusableView.self, for: indexPath)
     }
 }
