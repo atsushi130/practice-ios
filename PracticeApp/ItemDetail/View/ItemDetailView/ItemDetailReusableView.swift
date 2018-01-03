@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 final class ItemDetailReusableView: UICollectionReusableView {
     
@@ -16,7 +17,9 @@ final class ItemDetailReusableView: UICollectionReusableView {
     @IBOutlet private weak var itemInformationView: ItemInformationView!
     @IBOutlet private weak var itemLogView: ItemLogView!
     @IBOutlet private weak var itemActionView: ItemActionView!
-    @IBOutlet private weak var reactionFooterView: ReactionFooterView!
+    @IBOutlet weak var reactionFooterView: ReactionFooterView!
+    
+    let disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +27,9 @@ final class ItemDetailReusableView: UICollectionReusableView {
     
     func bind(itemDetail: ItemDetail) {
         self.itemNameView.bind(name: (main: itemDetail.name, sub: itemDetail.subName))
+    }
+    
+    deinit {
+        print("deinit item detail reusable view")
     }
 }
