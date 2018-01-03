@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class ItemViewContrller: UIViewController {
+final class ItemViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
@@ -45,14 +45,14 @@ final class ItemViewContrller: UIViewController {
 }
 
 // MARK: - UICollectionViewDelegate
-extension ItemViewContrller: UICollectionViewDelegate {
+extension ItemViewController: UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 }
 
 // MARK: - UICollectionViewDataSource
-extension ItemViewContrller: UICollectionViewDataSource {
+extension ItemViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.itemViewModel.count
