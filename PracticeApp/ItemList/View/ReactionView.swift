@@ -61,7 +61,11 @@ final class ReactionView: UIView, NibDesignable {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.animationView.backgroundColor    = UIColor.theme
-        self.animationView.layer.cornerRadius = self.animationView.frame.size.width.ex.half
+        self.animationView.layer.cornerRadius = self.frame.size.width.ex.half
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 
     private func changeMark() {
