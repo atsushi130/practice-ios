@@ -21,9 +21,10 @@ final class ItemCell: UICollectionViewCell {
     @IBOutlet private weak var imageConstraintsWidth:  NSLayoutConstraint!
     @IBOutlet private weak var imageConstraintsHeight: NSLayoutConstraint!
     
-    private let disposeBag = DisposeBag()
-    
+    private var item: Item? = nil
+    let disposeBag = DisposeBag()
     private typealias IsOn = (wants: Bool, haves: Bool)
+    fileprivate let itemUpdateEvent = PublishSubject<Item>()
     
     var cellWidth: CGFloat = 0.0 {
         didSet { self.imageConstraintsWidth.constant = self.cellWidth }
@@ -57,17 +58,19 @@ final class ItemCell: UICollectionViewCell {
     }
     
     func bind(item: Item) {
+        self.item = item
         self.mainNameLabel.text = item.name
         self.subNameLabel.text  = item.subName
         self.wants.isOn = item.isOn.wants
         self.haves.isOn = item.isOn.haves
     }
     
-    var tapped: ((wants: Bool, haves: Bool)) -> Void = { isOn in }
     private func bindState(isOn: IsOn) {
+        self.item?.isOn = isOn
         self.wants.isOn = isOn.wants
         self.haves.isOn = isOn.haves
-        self.tapped((wants: self.wants.isOn, haves: self.haves.isOn))
+        guard let item = self.item else { return }
+        self.itemUpdateEvent.onNext(item)
     }
     
     private func imageSizeFit(imageSize: CGSize) {
@@ -82,5 +85,11 @@ final class ItemCell: UICollectionViewCell {
     
     deinit {
         print("deinit item cell")
+    }
+}
+
+extension Reactive where Base: ItemCell {
+    var didReactionUpdate: Observable<Item> {
+        return self.base.itemUpdateEvent
     }
 }
