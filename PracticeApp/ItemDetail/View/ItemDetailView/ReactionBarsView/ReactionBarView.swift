@@ -7,8 +7,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class ReactionBarView: UIView {
+
+    @IBOutlet fileprivate weak var button:       UIButton!
+    @IBOutlet fileprivate weak var reactionView: ReactionView!
+    @IBOutlet private weak var countLabel:       UILabel!
     
-    private var count: Int = 0
+    var isOn: Bool = false {
+        didSet { self.reactionView.isOn = self.isOn }
+    }
+    
+    var buttonType: ReactionView.ButtonType = ReactionView.ButtonType.wants {
+        didSet { self.reactionView.buttonType = self.buttonType }
+    }
+}
+
+extension Reactive where Base: ReactionBarView {
+    func controlEvent(_ controlEvent: UIControlEvents) -> Driver<Void> {
+        return self.base.button.rx.controlEvent(controlEvent).asDriver().throttle(self.base.reactionView.animationDuration)
+    }
 }
