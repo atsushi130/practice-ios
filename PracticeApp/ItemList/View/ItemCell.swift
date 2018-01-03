@@ -16,12 +16,15 @@ final class ItemCell: UICollectionViewCell {
     @IBOutlet private weak var imageView:     UIImageView!
     @IBOutlet private weak var mainNameLabel: UILabel!
     @IBOutlet private weak var subNameLabel:  UILabel!
-    @IBOutlet fileprivate weak var wants:     ItemButton!
-    @IBOutlet fileprivate weak var haves:     ItemButton!
+    
+    @IBOutlet fileprivate weak var wants: ItemButton!
+    @IBOutlet fileprivate weak var haves: ItemButton!
     @IBOutlet private weak var imageConstraintsWidth:  NSLayoutConstraint!
     @IBOutlet private weak var imageConstraintsHeight: NSLayoutConstraint!
     
     private let disposeBag = DisposeBag()
+    
+    private typealias IsOn = (wants: Bool, haves: Bool)
     
     var cellWidth: CGFloat = 0.0 {
         didSet { self.imageConstraintsWidth.constant = self.cellWidth }
@@ -33,36 +36,24 @@ final class ItemCell: UICollectionViewCell {
     }
     
     private func setup() {
-        
         self.wants.buttonType = .wants
         self.haves.buttonType = .haves
         self.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-        
         self.observe()
     }
     
     private func observe() {
         
-        self.wants.rx.controlEvent(.touchUpInside).drive(onNext: { [unowned self] _ in
-            switch self.haves.isOn {
-            case true:
-                self.haves.isOn = false
-                self.wants.isOn = true
-            case false:
-                self.wants.isOn = !self.wants.isOn
-            }
-            self.tap()
+        self.wants.rx.controlEvent(.touchUpInside).drive(onNext: { [weak self] in
+            guard let `self` = self else { return }
+            let isOn = ReactionViewModel.wants.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
+            self.bindState(isOn: isOn)
         }).disposed(by: self.disposeBag)
         
-        self.haves.rx.controlEvent(.touchUpInside).drive(onNext: { [unowned self] _ in
-            switch self.wants.isOn {
-            case true:
-                self.wants.isOn = false
-                self.haves.isOn = true
-            case false:
-                self.haves.isOn = !self.haves.isOn
-            }
-            self.tap()
+        self.haves.rx.controlEvent(.touchUpInside).drive(onNext: { [weak self] in
+            guard let `self` = self else { return }
+            let isOn = ReactionViewModel.haves.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
+            self.bindState(isOn: isOn)
         }).disposed(by: self.disposeBag)
     }
     
@@ -74,7 +65,9 @@ final class ItemCell: UICollectionViewCell {
     }
     
     var tapped: ((wants: Bool, haves: Bool)) -> Void = { isOn in }
-    private func tap() {
+    private func bindState(isOn: IsOn) {
+        self.wants.isOn = isOn.wants
+        self.haves.isOn = isOn.haves
         self.tapped((wants: self.wants.isOn, haves: self.haves.isOn))
     }
     

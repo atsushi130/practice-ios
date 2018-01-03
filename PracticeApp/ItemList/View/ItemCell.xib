@@ -85,50 +85,17 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi6-HK-Zxh">
                                                         <rect key="frame" x="0.0" y="0.0" width="38.5" height="46"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base" translatesAutoresizingMaskIntoConstraints="NO" id="4Oi-3I-Z34">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-Qy-FBC" customClass="ReactionView" customModule="PracticeApp" customModuleProvider="target">
                                                                 <rect key="frame" x="9" y="10" width="25.5" height="25.5"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="4Oi-3I-Z34" secondAttribute="height" multiplier="1:1" id="WNI-1B-0Wg"/>
-                                                                    <constraint firstAttribute="width" secondItem="4Oi-3I-Z34" secondAttribute="height" multiplier="1:1" id="nMO-w2-fUY"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yta-rz-2Hv">
-                                                                <rect key="frame" x="9" y="10" width="25.5" height="25.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="yta-rz-2Hv" secondAttribute="height" multiplier="1:1" id="Lbl-UQ-91T"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VLy-XK-Hhy">
-                                                                <rect key="frame" x="9" y="10" width="25.5" height="25.5"/>
-                                                                <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wants_mark" translatesAutoresizingMaskIntoConstraints="NO" id="RNa-kE-CyX">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="25.5" height="25.5"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="RNa-kE-CyX" secondAttribute="height" multiplier="1:1" id="0wY-U1-IUI"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                </subviews>
-                                                                <constraints>
-                                                                    <constraint firstItem="RNa-kE-CyX" firstAttribute="width" secondItem="VLy-XK-Hhy" secondAttribute="width" multiplier="1:1" id="0NV-Ld-kyn"/>
-                                                                    <constraint firstItem="RNa-kE-CyX" firstAttribute="centerX" secondItem="VLy-XK-Hhy" secondAttribute="centerX" id="4lQ-hv-5Ow"/>
-                                                                    <constraint firstItem="RNa-kE-CyX" firstAttribute="centerY" secondItem="VLy-XK-Hhy" secondAttribute="centerY" id="Gf3-yJ-uiq"/>
-                                                                    <constraint firstAttribute="width" secondItem="VLy-XK-Hhy" secondAttribute="height" multiplier="1:1" id="lH0-K1-Axb"/>
+                                                                    <constraint firstAttribute="width" secondItem="cD0-Qy-FBC" secondAttribute="height" multiplier="1:1" id="UVh-hp-P8h"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="VLy-XK-Hhy" firstAttribute="centerX" secondItem="zi6-HK-Zxh" secondAttribute="centerX" constant="3" id="6n6-P0-b8k"/>
-                                                            <constraint firstItem="4Oi-3I-Z34" firstAttribute="width" secondItem="yta-rz-2Hv" secondAttribute="width" id="IQG-b2-4tp"/>
-                                                            <constraint firstItem="4Oi-3I-Z34" firstAttribute="centerY" secondItem="zi6-HK-Zxh" secondAttribute="centerY" id="O4f-2W-N7b"/>
-                                                            <constraint firstItem="VLy-XK-Hhy" firstAttribute="centerY" secondItem="zi6-HK-Zxh" secondAttribute="centerY" id="b6H-We-Y0E"/>
-                                                            <constraint firstItem="4Oi-3I-Z34" firstAttribute="width" secondItem="zi6-HK-Zxh" secondAttribute="width" multiplier="1.3:2" id="cYT-Zc-yWK"/>
-                                                            <constraint firstItem="yta-rz-2Hv" firstAttribute="centerX" secondItem="zi6-HK-Zxh" secondAttribute="centerX" constant="3" id="jQq-hx-rHq"/>
-                                                            <constraint firstItem="VLy-XK-Hhy" firstAttribute="width" secondItem="4Oi-3I-Z34" secondAttribute="width" id="kp9-zi-E2Z"/>
-                                                            <constraint firstItem="yta-rz-2Hv" firstAttribute="centerY" secondItem="zi6-HK-Zxh" secondAttribute="centerY" id="ngd-wS-mM8"/>
-                                                            <constraint firstItem="4Oi-3I-Z34" firstAttribute="centerX" secondItem="zi6-HK-Zxh" secondAttribute="centerX" constant="3" id="w5K-gF-gON"/>
+                                                            <constraint firstItem="cD0-Qy-FBC" firstAttribute="centerX" secondItem="zi6-HK-Zxh" secondAttribute="centerX" constant="3" id="UYo-PI-Wgu"/>
+                                                            <constraint firstItem="cD0-Qy-FBC" firstAttribute="width" secondItem="zi6-HK-Zxh" secondAttribute="width" multiplier="1.3:2" id="w3Q-Js-Sj2"/>
+                                                            <constraint firstItem="cD0-Qy-FBC" firstAttribute="centerY" secondItem="zi6-HK-Zxh" secondAttribute="centerY" id="wuG-YC-mqn"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2L-ae-WgX">
@@ -187,10 +154,9 @@
                                             <constraint firstItem="ZV9-Bg-1CO" firstAttribute="leading" secondItem="QrM-Zr-nCS" secondAttribute="leading" id="u7I-df-jFF"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="animationView" destination="yta-rz-2Hv" id="xqw-RW-sdP"/>
                                             <outlet property="button" destination="ZV9-Bg-1CO" id="zVN-Bc-f1h"/>
                                             <outlet property="countLabel" destination="M1u-zY-Voe" id="7jM-Mc-e5g"/>
-                                            <outlet property="imageView" destination="RNa-kE-CyX" id="eR4-cj-1eG"/>
+                                            <outlet property="reactionView" destination="cD0-Qy-FBC" id="uGX-HM-1TC"/>
                                             <outlet property="typeLabel" destination="ohc-iW-MIq" id="Mue-RQ-kV5"/>
                                         </connections>
                                     </view>
@@ -203,49 +169,20 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7M2-13-A2I">
                                                         <rect key="frame" x="0.0" y="0.0" width="38.5" height="46"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base" translatesAutoresizingMaskIntoConstraints="NO" id="jZ5-jc-Shf">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIV-qQ-vMu" customClass="ReactionView" customModule="PracticeApp" customModuleProvider="target">
                                                                 <rect key="frame" x="9" y="10" width="25.5" height="25.5"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="jZ5-jc-Shf" secondAttribute="height" multiplier="1:1" id="VCf-uD-3c9"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W2-lh-NqV">
-                                                                <rect key="frame" x="9" y="10" width="25.5" height="25.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="1W2-lh-NqV" secondAttribute="height" multiplier="1:1" id="48N-bO-LPj"/>
+                                                                    <constraint firstAttribute="width" secondItem="QIV-qQ-vMu" secondAttribute="height" multiplier="1:1" id="RZr-AO-29H"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="markImage" value="haves_mark"/>
                                                                 </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gh-5V-cL9">
-                                                                <rect key="frame" x="9" y="10" width="25.5" height="25.5"/>
-                                                                <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haves_mark" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-aL-eI8">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="25.5" height="25.5"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="fm6-aL-eI8" secondAttribute="height" multiplier="1:1" id="x7D-Wy-bT6"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                </subviews>
-                                                                <constraints>
-                                                                    <constraint firstItem="fm6-aL-eI8" firstAttribute="width" secondItem="8gh-5V-cL9" secondAttribute="width" multiplier="1:1" id="RmQ-K1-crF"/>
-                                                                    <constraint firstItem="fm6-aL-eI8" firstAttribute="centerY" secondItem="8gh-5V-cL9" secondAttribute="centerY" id="UNT-a3-L1k"/>
-                                                                    <constraint firstAttribute="width" secondItem="8gh-5V-cL9" secondAttribute="height" multiplier="1:1" id="l8O-7k-MFV"/>
-                                                                    <constraint firstItem="fm6-aL-eI8" firstAttribute="centerX" secondItem="8gh-5V-cL9" secondAttribute="centerX" id="mII-fD-7ao"/>
-                                                                </constraints>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="8gh-5V-cL9" firstAttribute="centerX" secondItem="7M2-13-A2I" secondAttribute="centerX" constant="3" id="8Go-SO-kbI"/>
-                                                            <constraint firstItem="jZ5-jc-Shf" firstAttribute="width" secondItem="7M2-13-A2I" secondAttribute="width" multiplier="1.3:2" id="GoY-8D-IXQ"/>
-                                                            <constraint firstItem="jZ5-jc-Shf" firstAttribute="centerY" secondItem="7M2-13-A2I" secondAttribute="centerY" id="HdS-9h-gKQ"/>
-                                                            <constraint firstItem="1W2-lh-NqV" firstAttribute="centerX" secondItem="7M2-13-A2I" secondAttribute="centerX" constant="3" id="YtE-Zf-l8J"/>
-                                                            <constraint firstItem="jZ5-jc-Shf" firstAttribute="width" secondItem="1W2-lh-NqV" secondAttribute="width" id="fwR-x6-mYZ"/>
-                                                            <constraint firstItem="jZ5-jc-Shf" firstAttribute="width" secondItem="8gh-5V-cL9" secondAttribute="width" id="kL7-SH-gRo"/>
-                                                            <constraint firstItem="jZ5-jc-Shf" firstAttribute="centerX" secondItem="7M2-13-A2I" secondAttribute="centerX" constant="3" id="kk1-x0-4id"/>
-                                                            <constraint firstItem="1W2-lh-NqV" firstAttribute="centerY" secondItem="7M2-13-A2I" secondAttribute="centerY" id="sqg-oO-r5v"/>
-                                                            <constraint firstItem="8gh-5V-cL9" firstAttribute="centerY" secondItem="7M2-13-A2I" secondAttribute="centerY" id="uTn-1m-cS1"/>
+                                                            <constraint firstItem="QIV-qQ-vMu" firstAttribute="width" secondItem="7M2-13-A2I" secondAttribute="width" multiplier="1.3:2" id="gwj-n8-qax"/>
+                                                            <constraint firstItem="QIV-qQ-vMu" firstAttribute="centerY" secondItem="7M2-13-A2I" secondAttribute="centerY" id="jKT-4e-GDT"/>
+                                                            <constraint firstItem="QIV-qQ-vMu" firstAttribute="centerX" secondItem="7M2-13-A2I" secondAttribute="centerX" constant="3" id="k6Y-Ct-nL6"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6h-0X-HW5">
@@ -304,10 +241,9 @@
                                             <constraint firstItem="6ch-Qn-C3G" firstAttribute="leading" secondItem="3jG-EX-dew" secondAttribute="leading" id="t15-As-4Fi"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="animationView" destination="1W2-lh-NqV" id="HMV-LW-hul"/>
                                             <outlet property="button" destination="6ch-Qn-C3G" id="Q6y-uv-dj4"/>
                                             <outlet property="countLabel" destination="VgL-Xi-rah" id="oGl-uf-DcR"/>
-                                            <outlet property="imageView" destination="fm6-aL-eI8" id="sub-94-fi2"/>
+                                            <outlet property="reactionView" destination="QIV-qQ-vMu" id="ScM-B4-UNx"/>
                                             <outlet property="typeLabel" destination="MH1-cO-zXc" id="kHG-uC-bFE"/>
                                         </connections>
                                     </view>
@@ -342,9 +278,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="base" width="200" height="200"/>
         <image name="haves_mark" width="200" height="200"/>
         <image name="sample" width="1000" height="1000"/>
-        <image name="wants_mark" width="200" height="200"/>
     </resources>
 </document>
