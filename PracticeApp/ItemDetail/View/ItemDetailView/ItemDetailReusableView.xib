@@ -26,7 +26,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NdV-E6-Lft">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NdV-E6-Lft" customClass="ItemDetailReusableView" customModule="PracticeApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="946"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -1216,6 +1216,15 @@
                 <constraint firstItem="6Iv-gB-nbf" firstAttribute="bottom" secondItem="h2Z-9M-BGJ" secondAttribute="bottom" id="v4r-X0-sao"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="h2Z-9M-BGJ"/>
+            <connections>
+                <outlet property="imageView" destination="ULe-bY-66h" id="637-d6-X1d"/>
+                <outlet property="itemActionView" destination="cVt-sf-IeZ" id="Pe8-JI-9gE"/>
+                <outlet property="itemInformationView" destination="7Hw-jY-ioC" id="ZUX-oE-fQQ"/>
+                <outlet property="itemLogView" destination="tiP-cM-y38" id="XS2-wW-AGb"/>
+                <outlet property="itemNameView" destination="48w-N5-EXB" id="aSC-23-YBC"/>
+                <outlet property="reactionBarsView" destination="oGt-FS-MCI" id="UkQ-cq-tdn"/>
+                <outlet property="reactionFooterView" destination="6Iv-gB-nbf" id="je4-DG-OWe"/>
+            </connections>
             <point key="canvasLocation" x="-73.5" y="165"/>
         </collectionReusableView>
     </objects>
