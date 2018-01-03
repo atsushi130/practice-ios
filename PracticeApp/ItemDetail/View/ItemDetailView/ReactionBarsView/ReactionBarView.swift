@@ -23,6 +23,11 @@ final class ReactionBarView: UIView {
     var buttonType: ReactionView.ButtonType = ReactionView.ButtonType.wants {
         didSet { self.reactionView.buttonType = self.buttonType }
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.isOn = self.reactionView.isOn
+    }
 }
 
 extension Reactive where Base: ReactionBarView {
