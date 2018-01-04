@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwiftExtensions
 
-@IBDesignable final class UserIconView: UIView {
+@IBDesignable final class UserIconView: UIView, NibDesignable {
     
     @IBOutlet private weak var imageView: UIImageView!
     
@@ -22,5 +23,15 @@ import UIKit
     var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set { self.layer.cornerRadius = newValue }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.configureNib()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.configureNib()
     }
 }
