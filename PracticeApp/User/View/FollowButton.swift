@@ -8,7 +8,13 @@
 
 import UIKit
 
-@IBDesignable final class FunButton: UIButton {
+@IBDesignable final class FollowButton: UIButton {
+    
+    @IBInspectable
+    var title: String {
+        get { return self.title }
+        set { self.title = newValue }
+    }
     
     @IBInspectable
     var cornerRadius: CGFloat {
