@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,16 +27,32 @@
                     <color key="value" red="0.97254901959999995" green="0.64313725489999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="button" destination="dYy-48-iZM" id="Zou-x7-Pv5"/>
+            </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q4H-Y8-SiC">
+        <view contentMode="scaleToFill" id="hbk-yR-8SD">
             <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="8"/>
-            <state key="normal" title="フォローする">
-                <color key="titleColor" red="0.97254901960784312" green="0.64313725490196072" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-            </state>
-            <point key="canvasLocation" x="64" y="32"/>
-        </button>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYy-48-iZM">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="8"/>
+                    <state key="normal" title="フォローする">
+                        <color key="titleColor" red="0.97254901959999995" green="0.64313725489999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="dYy-48-iZM" firstAttribute="leading" secondItem="BCl-6A-rzx" secondAttribute="leading" id="81L-SD-HbE"/>
+                <constraint firstItem="dYy-48-iZM" firstAttribute="top" secondItem="BCl-6A-rzx" secondAttribute="top" id="eDe-Fq-ruS"/>
+                <constraint firstItem="dYy-48-iZM" firstAttribute="trailing" secondItem="BCl-6A-rzx" secondAttribute="trailing" id="gjQ-pE-cbW"/>
+                <constraint firstItem="dYy-48-iZM" firstAttribute="bottom" secondItem="BCl-6A-rzx" secondAttribute="bottom" id="kjQ-j1-ykV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="BCl-6A-rzx"/>
+            <point key="canvasLocation" x="39" y="44"/>
+        </view>
     </objects>
 </document>

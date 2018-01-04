@@ -8,11 +8,12 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class ItemDetailReusableView: UICollectionReusableView {
     
     @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet private weak var reactionBarsView: ReactionBarsView!
+    @IBOutlet fileprivate weak var reactionBarsView: ReactionBarsView!
     @IBOutlet private weak var itemNameView: ItemNameView!
     @IBOutlet private weak var itemInformationView: ItemInformationView!
     @IBOutlet private weak var itemLogView: ItemLogView!
@@ -37,5 +38,11 @@ final class ItemDetailReusableView: UICollectionReusableView {
     
     deinit {
         print("deinit item detail reusable view")
+    }
+}
+
+extension Reactive where Base: ItemDetailReusableView {
+    var willSegueToUserList: Driver<ReactionView.ButtonType> {
+        return self.base.reactionBarsView.rx.willSegueToUserList
     }
 }

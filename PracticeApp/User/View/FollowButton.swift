@@ -11,12 +11,15 @@ import RxSwift
 import RxCocoa
 import SwiftExtensions
 
-@IBDesignable final class FollowButton: UIButton, NibDesignable {
+@IBDesignable
+final class FollowButton: UIView, NibDesignable {
+    
+    @IBOutlet private weak var button: UIButton!
     
     @IBInspectable
     var buttonTitle: String? {
-        get { return self.titleLabel?.text }
-        set { self.titleLabel?.text = newValue }
+        get { return self.button.currentTitle }
+        set { self.button.setTitle(newValue, for: .normal) }
     }
     
     private(set) var isFollowed: Bool = false {
@@ -61,7 +64,7 @@ import SwiftExtensions
     }
     
     private func observe() {
-        self.rx.controlEvent(.touchUpInside).asDriver().drive(onNext: { [weak self] in
+        self.button.rx.controlEvent(.touchUpInside).asDriver().drive(onNext: { [weak self] in
             guard let `self` = self else { return }
             self.isFollowed = !self.isFollowed
         }).disposed(by: self.disposeBag)
@@ -70,13 +73,13 @@ import SwiftExtensions
     private func changeView() {
         switch self.isFollowed {
         case true:
-            self.buttonTitle     = self.title.followed
             self.backgroundColor = UIColor.theme
-            self.setTitleColor(UIColor.white, for: .normal)
+            self.buttonTitle = self.title.followed
+            self.button.setTitleColor(UIColor.white, for: .normal)
         case false:
-            self.buttonTitle     = self.title.notFollowing
             self.backgroundColor = UIColor.clear
-            self.setTitleColor(UIColor.theme, for: .normal)
+            self.buttonTitle = self.title.notFollowing
+            self.button.setTitleColor(UIColor.theme, for: .normal)
         }
     }
 }
