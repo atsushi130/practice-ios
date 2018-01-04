@@ -93,15 +93,17 @@ extension ItemDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
+        print(self.view.ex.safeAreaInsets.bottom)
         switch indexPath.section {
         case 0:
             let header = collectionView.ex.dequeueReusableView(with: ItemDetailReusableView.self, for: indexPath)
             
             let updateConstraints = { [weak self] in
                 guard let `self` = self else { return }
-                let offsetY   = self.collectionView.contentOffset.y
-                let threshold = header.frame.size.height - self.view.frame.size.height
-                let offset    = offsetY <= threshold ? threshold - offsetY : 0.0
+                let offsetY    = self.collectionView.contentOffset.y
+                let hideHeight = 34.0 as CGFloat
+                let threshold  = header.frame.size.height - self.view.frame.size.height + self.view.ex.safeAreaInsets.bottom
+                let offset     = offsetY <= threshold ? threshold - offsetY - hideHeight : -hideHeight
                 header.reactionFooterView.snp.updateConstraints { make in
                     make.bottom.equalTo(header.snp.bottom).offset(-offset)
                 }
@@ -132,3 +134,4 @@ extension ItemDetailViewController: UICollectionViewDelegateFlowLayout {
         }
     }
 }
+
