@@ -18,15 +18,16 @@ final class ItemDetailViewController: UIViewController {
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.ex.register(cellType: ItemCell.self)
             self.collectionView.ex.register(reusableViewType: ItemDetailReusableView.self)
+            self.collectionView.ex.register(reusableViewType: LabelReusableView.self)
         }
     }
     
     private var layout: UICollectionViewFlowLayout! = UICollectionViewFlowLayout() {
         didSet {
             // self sizing by autolayout
-            self.layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
-            self.layout.headerReferenceSize = CGSize(width: self.collectionView.frame.size.width, height: 946)
-            self.layout.sectionInset      = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+            self.layout.estimatedItemSize   = CGSize(width: 1.0, height: 1.0)
+            self.layout.headerReferenceSize = CGSize(width: 1.0, height: 1.0)
+            self.layout.sectionInset        = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
             self.layout.minimumLineSpacing      = 10
             self.layout.minimumInteritemSpacing = 10
         }
@@ -56,7 +57,7 @@ final class ItemDetailViewController: UIViewController {
 // MARK: - UICollectionViewDelegate
 extension ItemDetailViewController: UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
 }
 
@@ -64,10 +65,17 @@ extension ItemDetailViewController: UICollectionViewDelegate {
 extension ItemDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.itemViewModel.count
+        switch section {
+        case 0: return 0
+        case 1: return self.itemViewModel.count
+        default: return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // このアイテムが含まれるフォルダ
+        // 関連アイテム
         
         let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
         
@@ -84,26 +92,43 @@ extension ItemDetailViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        let header = collectionView.ex.dequeueReusableView(with: ItemDetailReusableView.self, for: indexPath)
-        
-        let updateConstraints = { [weak self] in
-            guard let `self` = self else { return }
-            let offsetY   = self.collectionView.contentOffset.y
-            let threshold = header.frame.size.height - self.view.frame.size.height
-            let offset    = offsetY <= threshold ? threshold - offsetY : 0.0
-            header.reactionFooterView.snp.updateConstraints { make in
-                make.bottom.equalTo(header.snp.bottom).offset(-offset)
+
+        switch indexPath.section {
+        case 0:
+            let header = collectionView.ex.dequeueReusableView(with: ItemDetailReusableView.self, for: indexPath)
+            
+            let updateConstraints = { [weak self] in
+                guard let `self` = self else { return }
+                let offsetY   = self.collectionView.contentOffset.y
+                let threshold = header.frame.size.height - self.view.frame.size.height
+                let offset    = offsetY <= threshold ? threshold - offsetY : 0.0
+                header.reactionFooterView.snp.updateConstraints { make in
+                    make.bottom.equalTo(header.snp.bottom).offset(-offset)
+                }
             }
-        }
-
-        // initial
-        updateConstraints()
-        
-        self.collectionView.rx.didScroll.asDriver().drive(onNext: {
+            
+            // initial
             updateConstraints()
-        }).disposed(by: header.disposeBag)
+            
+            self.collectionView.rx.didScroll.asDriver().drive(onNext: {
+                updateConstraints()
+            }).disposed(by: header.disposeBag)
+            
+            return header
+            
+        default:
+            let header = collectionView.ex.dequeueReusableView(with: LabelReusableView.self, for: indexPath)
+            header.text = "関連アイテム"
+            return header
+        }
+    }
+}
 
-        return header
+extension ItemDetailViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        switch section {
+        case 0:  return CGSize(width: collectionView.frame.size.width, height: 946)
+        default: return CGSize(width: collectionView.frame.size.width, height: 30)
+        }
     }
 }
