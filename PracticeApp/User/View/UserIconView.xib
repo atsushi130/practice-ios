@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserIconView" customModule="PracticeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="sgv-LG-qO6" id="fq5-3p-9sM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Hfz-ns-ACa">
+            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sgv-LG-qO6">
+                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sgv-LG-qO6" secondAttribute="trailing" id="1i7-Dw-tXX"/>
+                <constraint firstAttribute="bottom" secondItem="sgv-LG-qO6" secondAttribute="bottom" id="5Zq-Lc-5Qx"/>
+                <constraint firstItem="sgv-LG-qO6" firstAttribute="leading" secondItem="Hfz-ns-ACa" secondAttribute="leading" id="d8q-K8-yVH"/>
+                <constraint firstItem="sgv-LG-qO6" firstAttribute="top" secondItem="Hfz-ns-ACa" secondAttribute="top" id="gQW-c2-NVl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Ur8-L6-V91"/>
+            <point key="canvasLocation" x="-132" y="222.5"/>
+        </view>
+    </objects>
+</document>
