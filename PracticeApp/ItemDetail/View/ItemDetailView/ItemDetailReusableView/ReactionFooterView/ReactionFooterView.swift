@@ -16,8 +16,15 @@ final class ReactionFooterView: UIView {
     @IBOutlet private weak var haves: ReactionFooterButtonView!
 
     private let disposeBag = DisposeBag()
-
-    private typealias IsOn = (wants: Bool, haves: Bool)
+    typealias IsOn = (wants: Bool, haves: Bool)
+    fileprivate let updateStateEvent = PublishSubject<IsOn>()
+    
+    fileprivate var isOn: IsOn = IsOn(wants: false, haves: false) {
+        didSet {
+            self.wants.isOn = isOn.wants
+            self.haves.isOn = isOn.haves
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,7 +55,19 @@ final class ReactionFooterView: UIView {
     private func bindState(isOn: IsOn) {
         self.wants.isOn = isOn.wants
         self.haves.isOn = isOn.haves
+        self.updateStateEvent.onNext(isOn)
     }
 }
 
-
+extension Reactive where Base: ReactionFooterView {
+    
+    var isOn: Binder<ReactionFooterView.IsOn> {
+        return Binder(self.base) { element, value in
+            element.isOn = value
+        }
+    }
+    
+    var didStateUpdate: Driver<ReactionFooterView.IsOn> {
+        return self.base.updateStateEvent.asDriver(onErrorDriveWith: Driver.empty())
+    }
+}

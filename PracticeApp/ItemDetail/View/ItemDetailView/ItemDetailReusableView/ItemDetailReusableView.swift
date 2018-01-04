@@ -23,6 +23,12 @@ final class ItemDetailReusableView: UICollectionReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.observe()
+    }
+    
+    private func observe() {
+        self.reactionBarsView.rx.didStateUpdate.drive(self.reactionFooterView.rx.isOn).disposed(by: self.disposeBag)
+        self.reactionFooterView.rx.didStateUpdate.drive(self.reactionBarsView.rx.isOn).disposed(by: self.disposeBag)
     }
     
     func bind(itemDetail: ItemDetail) {

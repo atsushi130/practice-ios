@@ -22,9 +22,16 @@ import RxCocoa
     }
     
     private let disposeBag = DisposeBag()
+    typealias IsOn = (wants: Bool, haves: Bool)
+    fileprivate let updateStateEvent = PublishSubject<IsOn>()
     
-    private typealias IsOn = (wants: Bool, haves: Bool)
-    
+    fileprivate var isOn: IsOn = IsOn(wants: false, haves: false) {
+        didSet {
+            self.wants.isOn = isOn.wants
+            self.haves.isOn = isOn.haves
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setup()
@@ -54,5 +61,19 @@ import RxCocoa
     private func bindState(isOn: IsOn) {
         self.wants.isOn = isOn.wants
         self.haves.isOn = isOn.haves
+        self.updateStateEvent.onNext(isOn)
+    }
+}
+
+extension Reactive where Base: ReactionBarsView {
+    
+    var isOn: Binder<ReactionFooterView.IsOn> {
+        return Binder(self.base) { element, value in
+            element.isOn = value
+        }
+    }
+    
+    var didStateUpdate: Driver<ReactionBarsView.IsOn> {
+        return self.base.updateStateEvent.asDriver(onErrorDriveWith: Driver.empty())
     }
 }
