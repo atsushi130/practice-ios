@@ -13,6 +13,8 @@
 		0D2C19131FFD4AB50083466A /* ItemDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19121FFD4AB50083466A /* ItemDetailViewController.storyboard */; };
 		0D2C19181FFE1FAB0083466A /* LabelReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19171FFE1FAB0083466A /* LabelReusableView.xib */; };
 		0D2C191A1FFE207E0083466A /* LabelResusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C19191FFE207E0083466A /* LabelResusableView.swift */; };
+		0D2C19211FFE65EE0083466A /* UserIconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19201FFE65EE0083466A /* UserIconView.xib */; };
+		0D2C19231FFE67590083466A /* FollowButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19221FFE67590083466A /* FollowButton.xib */; };
 		0D485DB21FFD21F4004116AB /* ItemNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB11FFD21F4004116AB /* ItemNameView.swift */; };
 		0D485DB51FFD2289004116AB /* ItemLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB41FFD2289004116AB /* ItemLogView.swift */; };
 		0D485DB71FFD2309004116AB /* ItemActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB61FFD2309004116AB /* ItemActionView.swift */; };
@@ -34,7 +36,7 @@
 		0DA088481FFABC8C00EE18CF /* ReactionBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088471FFABC8C00EE18CF /* ReactionBarsView.swift */; };
 		0DA0884A1FFABD1200EE18CF /* ReactionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088491FFABD1200EE18CF /* ReactionBarView.swift */; };
 		0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */; };
-		0DA0884E1FFAC7D100EE18CF /* FunButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884D1FFAC7D100EE18CF /* FunButton.swift */; };
+		0DA0884E1FFAC7D100EE18CF /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */; };
 		0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */; };
 		759441931FF52E62001E4FD1 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759441921FF52E62001E4FD1 /* ItemViewModel.swift */; };
 		7594419C1FF6ABD0001E4FD1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */; };
@@ -149,6 +151,8 @@
 		0D2C19121FFD4AB50083466A /* ItemDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetailViewController.storyboard; sourceTree = "<group>"; };
 		0D2C19171FFE1FAB0083466A /* LabelReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelReusableView.xib; sourceTree = "<group>"; };
 		0D2C19191FFE207E0083466A /* LabelResusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelResusableView.swift; sourceTree = "<group>"; };
+		0D2C19201FFE65EE0083466A /* UserIconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserIconView.xib; sourceTree = "<group>"; };
+		0D2C19221FFE67590083466A /* FollowButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowButton.xib; sourceTree = "<group>"; };
 		0D485DB11FFD21F4004116AB /* ItemNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNameView.swift; sourceTree = "<group>"; };
 		0D485DB41FFD2289004116AB /* ItemLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLogView.swift; sourceTree = "<group>"; };
 		0D485DB61FFD2309004116AB /* ItemActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionView.swift; sourceTree = "<group>"; };
@@ -169,7 +173,7 @@
 		0DA088471FFABC8C00EE18CF /* ReactionBarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionBarsView.swift; sourceTree = "<group>"; };
 		0DA088491FFABD1200EE18CF /* ReactionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionBarView.swift; sourceTree = "<group>"; };
 		0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInformationView.swift; sourceTree = "<group>"; };
-		0DA0884D1FFAC7D100EE18CF /* FunButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunButton.swift; sourceTree = "<group>"; };
+		0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconView.swift; sourceTree = "<group>"; };
 		759441921FF52E62001E4FD1 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
@@ -299,6 +303,33 @@
 			path = LabelReusableView;
 			sourceTree = "<group>";
 		};
+		0D2C191B1FFE659D0083466A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0D2C191D1FFE65D80083466A /* View */,
+				0DA088361FFAB1AA00EE18CF /* Model */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		0D2C191C1FFE65AB0083466A /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		0D2C191D1FFE65D80083466A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */,
+				0D2C19221FFE67590083466A /* FollowButton.xib */,
+				0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */,
+				0D2C19201FFE65EE0083466A /* UserIconView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0D85A86E1FFCDCCD00A9C364 /* ReactionFooterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,7 +352,6 @@
 			isa = PBXGroup;
 			children = (
 				0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */,
-				0DA0884D1FFAC7D100EE18CF /* FunButton.swift */,
 			);
 			path = ItemInformationView;
 			sourceTree = "<group>";
@@ -342,14 +372,6 @@
 				0DA0883B1FFAB2F200EE18CF /* Category.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		0DA088331FFAB16400EE18CF /* Follow */ = {
-			isa = PBXGroup;
-			children = (
-				0DA088361FFAB1AA00EE18CF /* Model */,
-			);
-			path = Follow;
 			sourceTree = "<group>";
 		};
 		0DA088361FFAB1AA00EE18CF /* Model */ = {
@@ -390,7 +412,6 @@
 			children = (
 				0D2C19161FFE1ED30083466A /* LabelReusableView */,
 				0D2C19141FFE1ADF0083466A /* ItemDetailReusableView */,
-				0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */,
 				0D2C19101FFD4A9B0083466A /* ItemDetailViewController.swift */,
 				0D2C19121FFD4AB50083466A /* ItemDetailViewController.storyboard */,
 			);
@@ -439,8 +460,9 @@
 		75E5962F1FF272BD00784269 /* PracticeApp */ = {
 			isa = PBXGroup;
 			children = (
+				0D2C191C1FFE65AB0083466A /* UserList */,
+				0D2C191B1FFE659D0083466A /* User */,
 				0DA0883D1FFAB33500EE18CF /* Brand */,
-				0DA088331FFAB16400EE18CF /* Follow */,
 				0DA0882D1FFAAFF900EE18CF /* ItemDetail */,
 				0D00B1BF1FFA4C4900DFCCE0 /* Main */,
 				7594419A1FF6ABBA001E4FD1 /* Extension */,
@@ -712,6 +734,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2C19211FFE65EE0083466A /* UserIconView.xib in Resources */,
 				0DA088451FFABB7D00EE18CF /* ItemDetailReusableView.xib in Resources */,
 				75E5963B1FF272BD00784269 /* LaunchScreen.storyboard in Resources */,
 				0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */,
@@ -719,6 +742,7 @@
 				75E596C81FF4E2F300784269 /* ItemCell.xib in Resources */,
 				0D2C19131FFD4AB50083466A /* ItemDetailViewController.storyboard in Resources */,
 				0D2C19181FFE1FAB0083466A /* LabelReusableView.xib in Resources */,
+				0D2C19231FFE67590083466A /* FollowButton.xib in Resources */,
 				0D68994A1FFBC028004640CE /* ReactionView.xib in Resources */,
 				75E596C61FF4E2B200784269 /* ItemViewController.storyboard in Resources */,
 				75E596381FF272BD00784269 /* Assets.xcassets in Resources */,
@@ -783,7 +807,7 @@
 				75E596BB1FF4D62A00784269 /* Const.swift in Sources */,
 				75E596AF1FF3DA2700784269 /* Account.swift in Sources */,
 				0D485DB51FFD2289004116AB /* ItemLogView.swift in Sources */,
-				0DA0884E1FFAC7D100EE18CF /* FunButton.swift in Sources */,
+				0DA0884E1FFAC7D100EE18CF /* FollowButton.swift in Sources */,
 				0DA0883C1FFAB2F200EE18CF /* Category.swift in Sources */,
 				75E596AC1FF3DA1100784269 /* LoginViewModel.swift in Sources */,
 				0DA088401FFAB34100EE18CF /* Brand.swift in Sources */,

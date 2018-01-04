@@ -570,7 +570,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="WwU-rI-IVI" secondAttribute="trailing" constant="8" id="fnJ-Z9-ztc"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYl-vc-SM9" customClass="FunButton" customModule="PracticeApp" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYl-vc-SM9" customClass="FollowButton" customModule="PracticeApp" customModuleProvider="target">
                                                     <rect key="frame" x="257" y="12" width="80" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="P79-IK-5zF"/>
@@ -585,7 +585,7 @@
                                                             <real key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" red="0.97254901960784312" green="0.64313725490196072" blue="0.10196078431372549" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="value" red="0.97254901960784312" green="0.64313725490196072" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                             <real key="value" value="1"/>
