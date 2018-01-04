@@ -16,7 +16,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="Hfz-ns-ACa">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="Hfz-ns-ACa">
             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -33,7 +33,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Ur8-L6-V91"/>
-            <point key="canvasLocation" x="-132" y="222.5"/>
+            <point key="canvasLocation" x="-132" y="222"/>
         </view>
     </objects>
 </document>
