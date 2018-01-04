@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 final class UserCell: UICollectionViewCell {
     
@@ -17,5 +18,6 @@ final class UserCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.followButton.title = (followed: "フォロー中", notFollowing: "フォローする")
     }
 }
