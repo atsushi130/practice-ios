@@ -124,6 +124,12 @@ extension ItemDetailViewController: UICollectionViewDataSource {
             return header
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: ItemDetailViewController.ex.className, bundle: nil)
+        let itemDetailViewController = storyboard.instantiateInitialViewController() as! ItemDetailViewController
+        self.navigationController?.pushViewController(itemDetailViewController, animated: true)
+    }
 }
 
 extension ItemDetailViewController: UICollectionViewDelegateFlowLayout {
