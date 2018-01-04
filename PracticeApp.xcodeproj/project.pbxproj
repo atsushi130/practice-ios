@@ -17,6 +17,9 @@
 		0D2C19231FFE67590083466A /* FollowButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19221FFE67590083466A /* FollowButton.xib */; };
 		0D2C19261FFE6A6C0083466A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C19251FFE6A6C0083466A /* UserCell.swift */; };
 		0D2C19281FFE70990083466A /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19271FFE70990083466A /* UserCell.xib */; };
+		0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C19291FFE80DC0083466A /* UserListViewController.swift */; };
+		0D2C192D1FFE82030083466A /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C192C1FFE82030083466A /* UserListViewModel.swift */; };
+		0D2C192F1FFE825A0083466A /* UserListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C192E1FFE825A0083466A /* UserListViewController.storyboard */; };
 		0D485DB21FFD21F4004116AB /* ItemNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB11FFD21F4004116AB /* ItemNameView.swift */; };
 		0D485DB51FFD2289004116AB /* ItemLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB41FFD2289004116AB /* ItemLogView.swift */; };
 		0D485DB71FFD2309004116AB /* ItemActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB61FFD2309004116AB /* ItemActionView.swift */; };
@@ -157,6 +160,9 @@
 		0D2C19221FFE67590083466A /* FollowButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowButton.xib; sourceTree = "<group>"; };
 		0D2C19251FFE6A6C0083466A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0D2C19271FFE70990083466A /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		0D2C19291FFE80DC0083466A /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		0D2C192C1FFE82030083466A /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		0D2C192E1FFE825A0083466A /* UserListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserListViewController.storyboard; sourceTree = "<group>"; };
 		0D485DB11FFD21F4004116AB /* ItemNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNameView.swift; sourceTree = "<group>"; };
 		0D485DB41FFD2289004116AB /* ItemLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLogView.swift; sourceTree = "<group>"; };
 		0D485DB61FFD2309004116AB /* ItemActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionView.swift; sourceTree = "<group>"; };
@@ -319,6 +325,7 @@
 		0D2C191C1FFE65AB0083466A /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				0D2C192B1FFE81F60083466A /* ViewModel */,
 				0D2C19241FFE6A530083466A /* View */,
 			);
 			path = UserList;
@@ -340,8 +347,18 @@
 			children = (
 				0D2C19251FFE6A6C0083466A /* UserCell.swift */,
 				0D2C19271FFE70990083466A /* UserCell.xib */,
+				0D2C19291FFE80DC0083466A /* UserListViewController.swift */,
+				0D2C192E1FFE825A0083466A /* UserListViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0D2C192B1FFE81F60083466A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0D2C192C1FFE82030083466A /* UserListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0D85A86E1FFCDCCD00A9C364 /* ReactionFooterView */ = {
@@ -756,6 +773,7 @@
 				75E596C81FF4E2F300784269 /* ItemCell.xib in Resources */,
 				0D2C19281FFE70990083466A /* UserCell.xib in Resources */,
 				0D2C19131FFD4AB50083466A /* ItemDetailViewController.storyboard in Resources */,
+				0D2C192F1FFE825A0083466A /* UserListViewController.storyboard in Resources */,
 				0D2C19181FFE1FAB0083466A /* LabelReusableView.xib in Resources */,
 				0D2C19231FFE67590083466A /* FollowButton.xib in Resources */,
 				0D68994A1FFBC028004640CE /* ReactionView.xib in Resources */,
@@ -791,6 +809,7 @@
 				75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */,
 				0DA088381FFAB1B800EE18CF /* User.swift in Sources */,
 				0D6899481FFBBED6004640CE /* ReactionView.swift in Sources */,
+				0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */,
 				0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */,
 				0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */,
 				0DA0883A1FFAB1BF00EE18CF /* Userable.swift in Sources */,
@@ -806,6 +825,7 @@
 				0DA088431FFABB5400EE18CF /* ItemDetailReusableView.swift in Sources */,
 				75E596331FF272BD00784269 /* ViewController.swift in Sources */,
 				0D485DB21FFD21F4004116AB /* ItemNameView.swift in Sources */,
+				0D2C192D1FFE82030083466A /* UserListViewModel.swift in Sources */,
 				0D2C19261FFE6A6C0083466A /* UserCell.swift in Sources */,
 				75E596911FF37E6100784269 /* LoginView.swift in Sources */,
 				75E596A41FF39F5500784269 /* AccountValidateViewModel.swift in Sources */,
