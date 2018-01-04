@@ -6,4 +6,13 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class LabelReusableView: UICollectionReusableView {
+    
+    @IBOutlet private weak var label: UILabel!
+    
+    var text: String = "" {
+        didSet { self.label.text = self.text }
+    }
+}
