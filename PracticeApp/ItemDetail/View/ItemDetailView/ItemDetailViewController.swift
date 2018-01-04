@@ -116,6 +116,13 @@ extension ItemDetailViewController: UICollectionViewDataSource {
                 updateConstraints()
             }).disposed(by: header.disposeBag)
             
+            header.rx.willSegueToUserList.asDriver().drive(onNext: { [weak self] buttonType in
+                let storyboard = UIStoryboard(name: UserListViewController.ex.className, bundle: nil)
+                let itemDetailViewController = storyboard.instantiateInitialViewController() as! UserListViewController
+                itemDetailViewController.navigationItem.title = buttonType == .wants ? "wantしている人" : "haveしている人"
+                self?.navigationController?.pushViewController(itemDetailViewController, animated: true)
+            }).disposed(by: header.disposeBag)
+            
             return header
             
         default:
