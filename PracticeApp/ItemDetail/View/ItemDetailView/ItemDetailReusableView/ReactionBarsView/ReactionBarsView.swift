@@ -24,6 +24,7 @@ import RxCocoa
     private let disposeBag = DisposeBag()
     typealias IsOn = (wants: Bool, haves: Bool)
     fileprivate let updateStateEvent = PublishSubject<IsOn>()
+    fileprivate let segueEvent       = PublishSubject<ReactionView.ButtonType>()
     
     fileprivate var isOn: IsOn = IsOn(wants: false, haves: false) {
         didSet {
@@ -56,6 +57,16 @@ import RxCocoa
             let isOn = ReactionViewModel.haves.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
             self.bindState(isOn: isOn)
         }).disposed(by: self.disposeBag)
+        
+        self.wants.rx.willSegueToUserList.drive(onNext: { [weak self] in
+            guard let `self` = self else { return }
+            self.segueEvent.onNext(.wants)
+        }).disposed(by: self.disposeBag)
+        
+        self.haves.rx.willSegueToUserList.drive(onNext: { [weak self] in
+            guard let `self` = self else { return }
+            self.segueEvent.onNext(.haves)
+        }).disposed(by: self.disposeBag)
     }
     
     private func bindState(isOn: IsOn) {
@@ -75,5 +86,9 @@ extension Reactive where Base: ReactionBarsView {
     
     var didStateUpdate: Driver<ReactionBarsView.IsOn> {
         return self.base.updateStateEvent.asDriver(onErrorDriveWith: Driver.empty())
+    }
+    
+    var willSegueToUserList: Driver<ReactionView.ButtonType> {
+        return self.base.segueEvent.asDriver(onErrorDriveWith: Driver.empty())
     }
 }

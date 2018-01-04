@@ -12,9 +12,10 @@ import RxCocoa
 
 final class ReactionBarView: UIView {
 
-    @IBOutlet fileprivate weak var button:       UIButton!
-    @IBOutlet fileprivate weak var reactionView: ReactionView!
-    @IBOutlet private weak var countLabel:       UILabel!
+    @IBOutlet fileprivate weak var button:         UIButton!
+    @IBOutlet fileprivate weak var reactionView:   ReactionView!
+    @IBOutlet private weak var countLabel:         UILabel!
+    @IBOutlet fileprivate weak var userListButton: UIButton!
     
     var isOn: Bool = false {
         didSet { self.reactionView.isOn = self.isOn }
@@ -31,7 +32,12 @@ final class ReactionBarView: UIView {
 }
 
 extension Reactive where Base: ReactionBarView {
+    
     func controlEvent(_ controlEvent: UIControlEvents) -> Driver<Void> {
         return self.base.button.rx.controlEvent(controlEvent).asDriver().throttle(self.base.reactionView.animationDuration)
+    }
+    
+    var willSegueToUserList: Driver<Void> {
+        return self.base.userListButton.rx.controlEvent(.touchUpInside).asDriver()
     }
 }
