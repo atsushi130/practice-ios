@@ -16,6 +16,7 @@ final class ItemDetailViewController: UIViewController {
         didSet {
             self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
+            self.collectionView.ex.register(cellType: ItemDetailFoldersCell.self)
             self.collectionView.ex.register(cellType: ItemCell.self)
             self.collectionView.ex.register(reusableViewType: ItemDetailReusableView.self)
             self.collectionView.ex.register(reusableViewType: LabelReusableView.self)
@@ -33,6 +34,13 @@ final class ItemDetailViewController: UIViewController {
         }
     }
     
+    private struct Section {
+        static let detail = 0
+        static let folder = 1
+        static let item   = 2
+        static let count  = 3
+    }
+    
     private let disposeBag = DisposeBag()
     
     private var itemViewModel = ItemViewModel()
@@ -48,8 +56,6 @@ final class ItemDetailViewController: UIViewController {
     }
     
     deinit {
-        self.collectionView.delegate = nil
-        self.collectionView.dataSource = nil
         print("item detail view controller deinit")
     }
 }
@@ -57,7 +63,7 @@ final class ItemDetailViewController: UIViewController {
 // MARK: - UICollectionViewDelegate
 extension ItemDetailViewController: UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return Section.count
     }
 }
 
@@ -66,36 +72,40 @@ extension ItemDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
-        case 0: return 0
-        case 1: return self.itemViewModel.count
+        case Section.detail: return 0
+        case Section.folder: return 1
+        case Section.item:   return self.itemViewModel.count
         default: return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // このアイテムが含まれるフォルダ
-        // 関連アイテム
-        
-        let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
-        
-        cell.bind(item: self.itemViewModel[indexPath.row])
-        cell.rx.didReactionUpdate.subscribe(onNext: { [weak self] item in
-            self?.itemViewModel[indexPath.row] = item
-        }).disposed(by: cell.disposeBag)
-        
-        let inset  = self.layout.sectionInset
-        let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
-        cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
-        
-        return cell
+        switch indexPath.section {
+        case Section.item:
+            let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
+            
+            cell.bind(item: self.itemViewModel[indexPath.row])
+            cell.rx.didReactionUpdate.subscribe(onNext: { [weak self] item in
+                self?.itemViewModel[indexPath.row] = item
+            }).disposed(by: cell.disposeBag)
+            
+            let inset  = self.layout.sectionInset
+            let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
+            cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
+            return cell
+            
+        default:
+            let cell = collectionView.ex.dequeueReusableCell(with: ItemDetailFoldersCell.self, for: indexPath)
+            cell.cellWidth = self.collectionView.frame.width
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
-        print(self.view.ex.safeAreaInsets.bottom)
         switch indexPath.section {
-        case 0:
+        case Section.detail:
             let header = collectionView.ex.dequeueReusableView(with: ItemDetailReusableView.self, for: indexPath)
             
             let updateConstraints = { [weak self] in
@@ -123,6 +133,11 @@ extension ItemDetailViewController: UICollectionViewDataSource {
                 self?.navigationController?.pushViewController(itemDetailViewController, animated: true)
             }).disposed(by: header.disposeBag)
             
+            return header
+            
+        case Section.folder:
+            let header = collectionView.ex.dequeueReusableView(with: LabelReusableView.self, for: indexPath)
+            header.text = "このアイテムが含まれるフォルダ"
             return header
             
         default:
