@@ -158,7 +158,7 @@ extension ItemDetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         switch section {
         case 0:  return CGSize(width: collectionView.frame.size.width, height: 946)
-        default: return CGSize(width: collectionView.frame.size.width, height: 30)
+        default: return CGSize(width: collectionView.frame.size.width, height: 40)
         }
     }
 }
