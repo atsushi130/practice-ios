@@ -10,8 +10,7 @@ import UIKit
 
 final class ItemDetailFolderCell: UICollectionViewCell {
     
-    @IBOutlet weak var constraintsWidth: NSLayoutConstraint!
-    
+    @IBOutlet private weak var constraintsWidth: NSLayoutConstraint!
     @IBOutlet private weak var folderNameLabel: UILabel!
     @IBOutlet private weak var userIconView:    UserIconView!
     @IBOutlet private weak var userNameLabel:   UILabel!
