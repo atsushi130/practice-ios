@@ -33,6 +33,8 @@ final class ItemDetailFolderCell: UICollectionViewCell {
         }
     }
     
+    private let itemImages = [#imageLiteral(resourceName: "sample"), #imageLiteral(resourceName: "sample2"), #imageLiteral(resourceName: "sample8"), #imageLiteral(resourceName: "sample3"), #imageLiteral(resourceName: "sample4"), #imageLiteral(resourceName: "sample5"), #imageLiteral(resourceName: "sample6"), #imageLiteral(resourceName: "sample7"), #imageLiteral(resourceName: "sample1")]
+    
     var cellWidth: CGFloat = 0.0 {
         didSet { self.constraintsWidth.constant = self.cellWidth }
     }
@@ -58,6 +60,8 @@ extension ItemDetailFolderCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.ex.dequeueReusableCell(with: ImageCell.self, for: indexPath)
+        let cell = collectionView.ex.dequeueReusableCell(with: ImageCell.self, for: indexPath)
+        cell.image = self.itemImages[indexPath.row]
+        return cell
     }
 }
