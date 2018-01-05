@@ -33,7 +33,6 @@ final class ItemDetailFoldersCell: UICollectionViewCell {
     var cellWidth: CGFloat = 0.0 {
         didSet {
             self.constraintsWidth.constant = self.cellWidth
-            print(self.frame.size.width)
         }
     }
     
