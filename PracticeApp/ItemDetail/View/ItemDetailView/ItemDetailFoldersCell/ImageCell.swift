@@ -12,6 +12,11 @@ final class ImageCell: UICollectionViewCell {
     
     @IBOutlet private weak var imageView: UIImageView!
     
+    var image: UIImage? {
+        get { return self.imageView.image }
+        set { self.imageView.image = newValue }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.imageView.image = #imageLiteral(resourceName: "sample")
