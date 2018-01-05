@@ -26,7 +26,6 @@
 		0D2C193A1FFE9FCF0083466A /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19391FFE9FCF0083466A /* ImageCell.xib */; };
 		0D2C193C1FFEA0130083466A /* ItemDetailFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C193B1FFEA0130083466A /* ItemDetailFolderCell.xib */; };
 		0D2C193E1FFEA2AF0083466A /* ItemDetailFoldersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C193D1FFEA2AF0083466A /* ItemDetailFoldersCell.xib */; };
-		0D2C19411FFFA2D80083466A /* ItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C19401FFFA2D80083466A /* ItemLayout.swift */; };
 		0D485DB21FFD21F4004116AB /* ItemNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB11FFD21F4004116AB /* ItemNameView.swift */; };
 		0D485DB51FFD2289004116AB /* ItemLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB41FFD2289004116AB /* ItemLogView.swift */; };
 		0D485DB71FFD2309004116AB /* ItemActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D485DB61FFD2309004116AB /* ItemActionView.swift */; };
@@ -176,7 +175,6 @@
 		0D2C19391FFE9FCF0083466A /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		0D2C193B1FFEA0130083466A /* ItemDetailFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailFolderCell.xib; sourceTree = "<group>"; };
 		0D2C193D1FFEA2AF0083466A /* ItemDetailFoldersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailFoldersCell.xib; sourceTree = "<group>"; };
-		0D2C19401FFFA2D80083466A /* ItemLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLayout.swift; sourceTree = "<group>"; };
 		0D485DB11FFD21F4004116AB /* ItemNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNameView.swift; sourceTree = "<group>"; };
 		0D485DB41FFD2289004116AB /* ItemLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLogView.swift; sourceTree = "<group>"; };
 		0D485DB61FFD2309004116AB /* ItemActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionView.swift; sourceTree = "<group>"; };
@@ -386,14 +384,6 @@
 				0D2C193D1FFEA2AF0083466A /* ItemDetailFoldersCell.xib */,
 			);
 			path = ItemDetailFoldersCell;
-			sourceTree = "<group>";
-		};
-		0D2C193F1FFFA07C0083466A /* ItemLayout */ = {
-			isa = PBXGroup;
-			children = (
-				0D2C19401FFFA2D80083466A /* ItemLayout.swift */,
-			);
-			path = ItemLayout;
 			sourceTree = "<group>";
 		};
 		0D85A86E1FFCDCCD00A9C364 /* ReactionFooterView */ = {
@@ -661,7 +651,6 @@
 		75E596B61FF4D5AB00784269 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0D2C193F1FFFA07C0083466A /* ItemLayout */,
 				75E596B91FF4D61300784269 /* PinterestLayout */,
 				75E596C31FF4E2A200784269 /* ItemViewController.swift */,
 				75E596C51FF4E2B200784269 /* ItemViewController.storyboard */,
@@ -882,7 +871,6 @@
 				75E596B81FF4D5DA00784269 /* PinterestLayout.swift in Sources */,
 				759441931FF52E62001E4FD1 /* ItemViewModel.swift in Sources */,
 				75E5969C1FF383E200784269 /* LoginField.swift in Sources */,
-				0D2C19411FFFA2D80083466A /* ItemLayout.swift in Sources */,
 				0D2C191A1FFE207E0083466A /* LabelResusableView.swift in Sources */,
 				75E596BB1FF4D62A00784269 /* Const.swift in Sources */,
 				75E596AF1FF3DA2700784269 /* Account.swift in Sources */,
