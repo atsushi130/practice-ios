@@ -325,13 +325,13 @@
 			path = LabelReusableView;
 			sourceTree = "<group>";
 		};
-		0D2C191B1FFE659D0083466A /* User */ = {
+		0D2C191B1FFE659D0083466A /* MySumally */ = {
 			isa = PBXGroup;
 			children = (
 				0D2C191D1FFE65D80083466A /* View */,
 				0DA088361FFAB1AA00EE18CF /* Model */,
 			);
-			path = User;
+			path = MySumally;
 			sourceTree = "<group>";
 		};
 		0D2C191C1FFE65AB0083466A /* UserList */ = {
@@ -518,7 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				0D2C191C1FFE65AB0083466A /* UserList */,
-				0D2C191B1FFE659D0083466A /* User */,
+				0D2C191B1FFE659D0083466A /* MySumally */,
 				0DA0883D1FFAB33500EE18CF /* Brand */,
 				0DA0882D1FFAAFF900EE18CF /* ItemDetail */,
 				0D00B1BF1FFA4C4900DFCCE0 /* Main */,
