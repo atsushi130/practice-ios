@@ -29,7 +29,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyo-41-C3p">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="37"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base" translatesAutoresizingMaskIntoConstraints="NO" id="3tC-JT-y3B">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base_black" translatesAutoresizingMaskIntoConstraints="NO" id="GQt-C7-TML">
+                                <rect key="frame" x="5" y="10.5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GQt-C7-TML" secondAttribute="height" multiplier="1:1" id="J38-LF-Fwu"/>
+                                    <constraint firstAttribute="width" constant="16" id="Q6B-kl-2bh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wants_mark" translatesAutoresizingMaskIntoConstraints="NO" id="3tC-JT-y3B">
                                 <rect key="frame" x="5" y="10.5" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3tC-JT-y3B" secondAttribute="height" multiplier="1:1" id="1Ja-Fo-C81"/>
@@ -45,7 +52,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base" translatesAutoresizingMaskIntoConstraints="NO" id="ixT-Lb-2iT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ixT-Lb-2iT">
                                 <rect key="frame" x="334" y="10.5" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ixT-Lb-2iT" secondAttribute="height" multiplier="1:1" id="4nr-d4-rbK"/>
@@ -67,6 +74,7 @@
                             <constraint firstItem="ixT-Lb-2iT" firstAttribute="leading" secondItem="rag-Oz-X6a" secondAttribute="trailing" constant="5" id="5eZ-2W-02h"/>
                             <constraint firstItem="ixT-Lb-2iT" firstAttribute="centerY" secondItem="qyo-41-C3p" secondAttribute="centerY" id="AxU-95-upa"/>
                             <constraint firstAttribute="height" constant="37" id="JvT-Z1-IgU"/>
+                            <constraint firstItem="GQt-C7-TML" firstAttribute="leading" secondItem="qyo-41-C3p" secondAttribute="leading" constant="5" id="VZb-IQ-Hei"/>
                             <constraint firstItem="rag-Oz-X6a" firstAttribute="centerY" secondItem="qyo-41-C3p" secondAttribute="centerY" constant="2" id="WWj-gY-Vei"/>
                             <constraint firstItem="Cew-HC-sQW" firstAttribute="centerY" secondItem="qyo-41-C3p" secondAttribute="centerY" id="WoR-bW-CX9"/>
                             <constraint firstItem="3tC-JT-y3B" firstAttribute="leading" secondItem="qyo-41-C3p" secondAttribute="leading" constant="5" id="YQA-ZP-Rve"/>
@@ -74,6 +82,7 @@
                             <constraint firstItem="3tC-JT-y3B" firstAttribute="centerY" secondItem="qyo-41-C3p" secondAttribute="centerY" id="flh-s2-X4s"/>
                             <constraint firstAttribute="trailing" secondItem="ixT-Lb-2iT" secondAttribute="trailing" constant="5" id="hrt-5I-Umb"/>
                             <constraint firstItem="rag-Oz-X6a" firstAttribute="leading" secondItem="Cew-HC-sQW" secondAttribute="trailing" constant="2" id="nqm-mA-tTa"/>
+                            <constraint firstItem="GQt-C7-TML" firstAttribute="centerY" secondItem="qyo-41-C3p" secondAttribute="centerY" id="v4e-XK-epl"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11e-UC-US7">
@@ -138,6 +147,8 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="base" width="200" height="200"/>
+        <image name="arrow" width="200" height="200"/>
+        <image name="base_black" width="200" height="200"/>
+        <image name="wants_mark" width="200" height="200"/>
     </resources>
 </document>
