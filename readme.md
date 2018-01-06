@@ -7,6 +7,9 @@
 
 PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 
+![demo](https://user-images.githubusercontent.com/11363154/34643110-f3236a22-f361-11e7-9524-edb8f9d963d2.gif)
+
+
 ## Bootstrap
 ```
 ❯ git clone https://github.com/atsushi130/PracticeApp
