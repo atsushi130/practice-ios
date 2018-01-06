@@ -37,6 +37,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="mGA-wF-Blc" kind="relationship" relationship="viewControllers" id="MMa-FX-KHA"/>
+                        <segue destination="STo-Ya-isk" kind="relationship" relationship="viewControllers" id="Z9R-AK-YsM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaK-Kx-105" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -52,6 +53,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1D-A2-LIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="237" y="-286"/>
+        </scene>
+        <!--MySumallyViewController-->
+        <scene sceneID="Idh-oT-dVf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MySumallyViewController" id="STo-Ya-isk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fdT-uE-FKd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoM-1y-tPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="40"/>
         </scene>
     </scenes>
 </document>

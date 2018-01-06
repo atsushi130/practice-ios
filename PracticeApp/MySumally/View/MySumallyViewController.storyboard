@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Sumally View Controller-->
+        <!--マイサマリー-->
         <scene sceneID="Vsk-Y5-gu2">
             <objects>
                 <viewController id="lGb-sS-rUG" customClass="MySumallyViewController" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,6 +52,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tda-QL-p3x"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="マイサマリー" image="mysumally_off" selectedImage="mysumally_on" id="YqJ-2V-FRw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="USN-p0-eSO" id="v53-ye-Bb2"/>
                     </connections>
@@ -61,4 +63,8 @@
             <point key="canvasLocation" x="-210.40000000000001" y="176.76161919040482"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mysumally_off" width="25" height="23"/>
+        <image name="mysumally_on" width="25" height="23"/>
+    </resources>
 </document>

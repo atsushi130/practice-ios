@@ -31,6 +31,7 @@ final class MySumallyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Atsushi"
     }
 }
 
@@ -49,12 +50,12 @@ extension MySumallyViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.ex.dequeueReusableCell(with: ItemCollectionCell.self, for: indexPath)
         
-        let margin = self.layout.sectionInset.left + self.layout.sectionInset.right
-        cell.collectionViewWidth = self.collectionView.frame.size.width - margin - (cell.collectionViewMargin * 2)
-        
+        let margin   = self.layout.sectionInset.left + self.layout.sectionInset.right
         let cellType = self.cellTypes[indexPath.row]
+        
         switch cellType {
         case .folder:
             cell.collectionViewWidth = (self.collectionView.frame.size.width - self.layout.minimumInteritemSpacing - margin).ex.half.ex.floor - (cell.collectionViewMargin * 2)
