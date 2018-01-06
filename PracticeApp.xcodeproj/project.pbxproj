@@ -53,6 +53,8 @@
 		0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */; };
 		0DA0884E1FFAC7D100EE18CF /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */; };
 		0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */; };
+		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
+		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		759441931FF52E62001E4FD1 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759441921FF52E62001E4FD1 /* ItemViewModel.swift */; };
 		7594419C1FF6ABD0001E4FD1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */; };
 		75E596311FF272BD00784269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596301FF272BD00784269 /* AppDelegate.swift */; };
@@ -205,6 +207,8 @@
 		0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInformationView.swift; sourceTree = "<group>"; };
 		0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconView.swift; sourceTree = "<group>"; };
+		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
+		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		759441921FF52E62001E4FD1 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		75E5962D1FF272BD00784269 /* PracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,10 +358,10 @@
 		0D2C191D1FFE65D80083466A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DE64FF82001319700ACDEE5 /* NewFolderCell */,
+				0DE64FF72001318F00ACDEE5 /* ItemCollectionCell */,
 				0D2C19431FFFE5E80083466A /* UserIconView */,
 				0D2C19421FFFE5DD0083466A /* FollowButton */,
-				0D2C19441FFFE6F30083466A /* ItemCollectionCell.swift */,
-				0D2C19461FFFEAC80083466A /* ItemCollectionCell.xib */,
 				0D2C19491FFFF6A90083466A /* MySumallyViewController.swift */,
 				0D2C194B1FFFF7D80083466A /* MySumallyViewController.storyboard */,
 			);
@@ -501,6 +505,24 @@
 				0D2C19121FFD4AB50083466A /* ItemDetailViewController.storyboard */,
 			);
 			path = ItemDetailView;
+			sourceTree = "<group>";
+		};
+		0DE64FF72001318F00ACDEE5 /* ItemCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D2C19441FFFE6F30083466A /* ItemCollectionCell.swift */,
+				0D2C19461FFFEAC80083466A /* ItemCollectionCell.xib */,
+			);
+			path = ItemCollectionCell;
+			sourceTree = "<group>";
+		};
+		0DE64FF82001319700ACDEE5 /* NewFolderCell */ = {
+			isa = PBXGroup;
+			children = (
+				0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */,
+				0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */,
+			);
+			path = NewFolderCell;
 			sourceTree = "<group>";
 		};
 		759441911FF52E4F001E4FD1 /* ViewModel */ = {
@@ -835,6 +857,7 @@
 				0D2C19231FFE67590083466A /* FollowButton.xib in Resources */,
 				0D2C19471FFFEAC80083466A /* ItemCollectionCell.xib in Resources */,
 				0D68994A1FFBC028004640CE /* ReactionView.xib in Resources */,
+				0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */,
 				0D2C193C1FFEA0130083466A /* ItemDetailFolderCell.xib in Resources */,
 				75E596C61FF4E2B200784269 /* ItemViewController.storyboard in Resources */,
 				75E596381FF272BD00784269 /* Assets.xcassets in Resources */,
@@ -871,6 +894,7 @@
 				0D6899481FFBBED6004640CE /* ReactionView.swift in Sources */,
 				0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */,
 				0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */,
+				0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */,
 				0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */,
 				0DA0883A1FFAB1BF00EE18CF /* Userable.swift in Sources */,
 				0D2C19111FFD4A9B0083466A /* ItemDetailViewController.swift in Sources */,
