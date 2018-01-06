@@ -46,6 +46,20 @@ final class ItemCollectionCell: UICollectionViewCell {
         }
     }
     
+    enum CellType: String {
+        case wants  = "wants"
+        case haves  = "haves"
+        case adds   = "adds"
+        case folder = "folder"
+    }
+    
+    var cellType: CellType = .wants {
+        didSet {
+            self.iconView.image  = UIImage(named: "\(self.cellType.rawValue)_mark")
+            self.titleLabel.text = self.cellType.rawValue
+        }
+    }
+    
     var collectionViewWidth: CGFloat = 1.0 {
         didSet {
             self.collectionViewConstraintsWidth.constant  = self.collectionViewWidth
