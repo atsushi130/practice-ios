@@ -128,9 +128,9 @@ extension ItemDetailViewController: UICollectionViewDataSource {
             
             header.rx.willSegueToUserList.asDriver().drive(onNext: { [weak self] buttonType in
                 let storyboard = UIStoryboard(name: UserListViewController.ex.className, bundle: nil)
-                let itemDetailViewController = storyboard.instantiateInitialViewController() as! UserListViewController
-                itemDetailViewController.navigationItem.title = buttonType == .wants ? "wantしている人" : "haveしている人"
-                self?.navigationController?.pushViewController(itemDetailViewController, animated: true)
+                let userListViewController = storyboard.instantiateInitialViewController() as! UserListViewController
+                userListViewController.navigationItem.title = buttonType == .wants ? "wantしている人" : "haveしている人"
+                self?.navigationController?.pushViewController(userListViewController, animated: true)
             }).disposed(by: header.disposeBag)
             
             return header
