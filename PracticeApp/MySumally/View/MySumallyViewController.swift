@@ -14,7 +14,9 @@ final class MySumallyViewController: UIViewController {
         didSet {
             self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
+            self.collectionView.contentInset         = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
             self.collectionView.ex.register(cellType: ItemCollectionCell.self)
+            self.collectionView.ex.register(cellType: NewFolderCell.self)
         }
     }
     
@@ -27,11 +29,28 @@ final class MySumallyViewController: UIViewController {
         }
     }
     
-    private let cellTypes: [ItemCollectionCell.CellType] = [.wants, .haves, .adds, .folder, .folder]
+    private enum CellType {
+        case wants
+        case haves
+        case adds
+        case folder
+        case addFolder
+        
+        func toItemCollectionCellType() -> ItemCollectionCell.CellType? {
+            switch self {
+            case .wants:     return .wants
+            case .haves:     return .haves
+            case .adds:      return .adds
+            case .folder:    return .folder
+            case .addFolder: return nil
+            }
+        }
+    }
+    
+    private let cellTypes: [CellType] = [.wants, .haves, .adds, .folder, .addFolder]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Atsushi"
     }
 }
 
@@ -46,28 +65,33 @@ extension MySumallyViewController: UICollectionViewDelegate {
 extension MySumallyViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.cellTypes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.ex.dequeueReusableCell(with: ItemCollectionCell.self, for: indexPath)
-        
         let margin   = self.layout.sectionInset.left + self.layout.sectionInset.right
         let cellType = self.cellTypes[indexPath.row]
-        
+
         switch cellType {
         case .folder:
+            let cell = collectionView.ex.dequeueReusableCell(with: ItemCollectionCell.self, for: indexPath)
             cell.collectionViewWidth = (self.collectionView.frame.size.width - self.layout.minimumInteritemSpacing - margin).ex.half.ex.floor - (cell.collectionViewMargin * 2)
-            cell.matrix = ItemCollectionCell.Matrix(x: 3, y: 3)
+            cell.matrix   = ItemCollectionCell.Matrix(x: 3, y: 3)
+            cell.cellType = .folder
+            return cell
             
-        default:
+        case .wants, .haves, .adds:
+            let cell = collectionView.ex.dequeueReusableCell(with: ItemCollectionCell.self, for: indexPath)
             cell.collectionViewWidth = self.collectionView.frame.size.width - margin - (cell.collectionViewMargin * 2)
             cell.matrix = ItemCollectionCell.Matrix(x: 5, y: 3)
+            if let itemCollectionCellType = cellType.toItemCollectionCellType() { cell.cellType = itemCollectionCellType }
+            return cell
+            
+        case .addFolder:
+            let cell = collectionView.ex.dequeueReusableCell(with: NewFolderCell.self, for: indexPath)
+            cell.cellWidth = (self.collectionView.frame.size.width - self.layout.minimumInteritemSpacing - margin).ex.half.ex.floor
+            return cell
         }
-        
-        cell.cellType = self.cellTypes[indexPath.row]
-        
-        return cell
     }
 }
