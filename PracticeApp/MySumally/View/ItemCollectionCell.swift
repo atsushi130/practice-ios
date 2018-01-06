@@ -57,6 +57,9 @@ final class ItemCollectionCell: UICollectionViewCell {
         didSet {
             self.iconView.image  = UIImage(named: "\(self.cellType.rawValue)_mark")
             self.titleLabel.text = self.cellType.rawValue
+            if self.cellType == .folder {
+                self.countLabel.text = ""
+            }
         }
     }
     
