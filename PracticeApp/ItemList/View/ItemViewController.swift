@@ -16,6 +16,7 @@ final class ItemViewController: UIViewController {
         didSet {
             self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
+            self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
             self.collectionView.ex.register(cellType: ItemCell.self)
         }
     }
