@@ -7,7 +7,9 @@
 
 PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 
-![demo](https://user-images.githubusercontent.com/11363154/34643110-f3236a22-f361-11e7-9524-edb8f9d963d2.gif)
+<img width="250" alt="uitextview placeholder" src="https://user-images.githubusercontent.com/11363154/34643110-f3236a22-f361-11e7-9524-edb8f9d963d2.gif">
+<img width="250" alt="uitextview placeholder" src="https://user-images.githubusercontent.com/11363154/34643201-8d984162-f363-11e7-8764-c001e9783f62.gif">
+<img width="250" alt="uitextview placeholder" src="https://user-images.githubusercontent.com/11363154/34643264-af376c02-f364-11e7-82c0-d300dd061e3a.gif">
 
 
 ## Bootstrap
