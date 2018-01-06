@@ -12,5 +12,6 @@ final class NewFolderCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layer.cornerRadius = 3.0
     }
 }

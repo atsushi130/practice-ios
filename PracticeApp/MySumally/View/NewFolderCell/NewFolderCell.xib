@@ -6,25 +6,51 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W6</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3IA-mC-dZ9">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3IA-mC-dZ9" customClass="NewFolderCell" customModule="PracticeApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="172" height="206"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                 <rect key="frame" x="0.0" y="0.0" width="172" height="206"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add_folder" translatesAutoresizingMaskIntoConstraints="NO" id="P6w-PH-TOr">
-                        <rect key="frame" x="56" y="62" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_folder" translatesAutoresizingMaskIntoConstraints="NO" id="P6w-PH-TOr">
+                        <rect key="frame" x="62" y="69" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="CCZ-qn-fqz"/>
+                            <constraint firstAttribute="width" secondItem="P6w-PH-TOr" secondAttribute="height" multiplier="1:1" id="qlq-nz-n8t"/>
+                        </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規フォルダ作成" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52x-hy-xUq">
+                        <rect key="frame" x="47" y="121" width="78" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="78" id="6tW-rQ-2TQ"/>
+                            <constraint firstAttribute="height" constant="14" id="eDY-Jb-M8e"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="9"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="P6w-PH-TOr" firstAttribute="centerX" secondItem="3IA-mC-dZ9" secondAttribute="centerX" id="FgD-Ye-uPU"/>
+                <constraint firstItem="52x-hy-xUq" firstAttribute="centerX" secondItem="3IA-mC-dZ9" secondAttribute="centerX" id="Fs8-ZQ-c4j"/>
+                <constraint firstItem="52x-hy-xUq" firstAttribute="top" secondItem="P6w-PH-TOr" secondAttribute="bottom" constant="4" id="H4W-bw-dhv"/>
+                <constraint firstItem="P6w-PH-TOr" firstAttribute="centerY" secondItem="3IA-mC-dZ9" secondAttribute="centerY" constant="-10" id="pIh-4K-M84"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="S7p-P7-fYy"/>
             <point key="canvasLocation" x="-97" y="-17"/>
         </collectionViewCell>
