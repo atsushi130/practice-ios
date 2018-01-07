@@ -20,11 +20,7 @@ PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 ## Using Library
 - RxSwift
 - SnapKit
-- Realm
-- APIKit
 - UIFontComplate
-- Quick
-- Nimble
 - [SwiftExtensions](https://github.com/atsushi130/SwiftExtensions)
 
 ## Architecture
