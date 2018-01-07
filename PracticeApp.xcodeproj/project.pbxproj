@@ -525,6 +525,15 @@
 			path = NewFolderCell;
 			sourceTree = "<group>";
 		};
+		0DE64FFD2001FC2300ACDEE5 /* ReactionView */ = {
+			isa = PBXGroup;
+			children = (
+				0D6899471FFBBED5004640CE /* ReactionView.swift */,
+				0D6899491FFBC028004640CE /* ReactionView.xib */,
+			);
+			path = ReactionView;
+			sourceTree = "<group>";
+		};
 		759441911FF52E4F001E4FD1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -701,14 +710,13 @@
 		75E596B61FF4D5AB00784269 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DE64FFD2001FC2300ACDEE5 /* ReactionView */,
 				75E596B91FF4D61300784269 /* PinterestLayout */,
 				75E596C31FF4E2A200784269 /* ItemViewController.swift */,
 				75E596C51FF4E2B200784269 /* ItemViewController.storyboard */,
 				75E596BE1FF4E21800784269 /* ItemCell.swift */,
 				75E596C71FF4E2F300784269 /* ItemCell.xib */,
 				75E596C91FF4E82700784269 /* ItemButton.swift */,
-				0D6899471FFBBED5004640CE /* ReactionView.swift */,
-				0D6899491FFBC028004640CE /* ReactionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
