@@ -32,8 +32,8 @@ final class ReactionFooterView: UIView {
     }
     
     private func setup() {
-        self.wants.buttonType = .wants
-        self.haves.buttonType = .haves
+        self.wants.reactionType = .wants
+        self.haves.reactionType = .haves
         self.observe()
     }
     

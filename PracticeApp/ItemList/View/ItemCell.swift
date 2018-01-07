@@ -36,8 +36,8 @@ final class ItemCell: UICollectionViewCell {
     }
     
     private func setup() {
-        self.wants.buttonType = .wants
-        self.haves.buttonType = .haves
+        self.wants.reactionType = .wants
+        self.haves.reactionType = .haves
         self.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         self.observe()
     }

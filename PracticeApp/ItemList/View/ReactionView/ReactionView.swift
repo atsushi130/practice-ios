@@ -31,12 +31,12 @@ final class ReactionView: UIView, NibDesignable {
         set { self.markView.image = newValue }
     }
     
-    enum ButtonType: String {
+    enum ReactionType: String {
         case wants = "wants"
         case haves = "haves"
     }
     
-    var buttonType: ButtonType = .wants {
+    var reactionType: ReactionType = .wants {
         didSet {
             self.changeMark()
         }
@@ -69,7 +69,7 @@ final class ReactionView: UIView, NibDesignable {
     }
 
     private func changeMark() {
-        self.markView.image = UIImage(named: self.buttonType.rawValue + "_mark")
+        self.markView.image = UIImage(named: self.reactionType.rawValue + "_mark")
     }
     
     private func changeAnimation() {

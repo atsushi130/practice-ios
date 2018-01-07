@@ -26,8 +26,8 @@ final class ReactionFooterButtonView: UIView {
         didSet { self.reactionView.isOn = self.isOn }
     }
     
-    var buttonType: ReactionView.ButtonType = ReactionView.ButtonType.wants {
-        didSet { self.reactionView.buttonType = self.buttonType }
+    var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {
+        didSet { self.reactionView.reactionType = self.reactionType }
     }
     
     override func awakeFromNib() {

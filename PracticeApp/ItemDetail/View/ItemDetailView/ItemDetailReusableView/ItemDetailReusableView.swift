@@ -42,7 +42,7 @@ final class ItemDetailReusableView: UICollectionReusableView {
 }
 
 extension Reactive where Base: ItemDetailReusableView {
-    var willSegueToUserList: Driver<ReactionView.ButtonType> {
+    var willSegueToUserList: Driver<ReactionView.ReactionType> {
         return self.base.reactionBarsView.rx.willSegueToUserList
     }
 }

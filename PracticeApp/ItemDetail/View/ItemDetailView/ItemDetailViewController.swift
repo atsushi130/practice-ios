@@ -126,10 +126,10 @@ extension ItemDetailViewController: UICollectionViewDataSource {
                 updateConstraints()
             }).disposed(by: header.disposeBag)
             
-            header.rx.willSegueToUserList.asDriver().drive(onNext: { [weak self] buttonType in
+            header.rx.willSegueToUserList.asDriver().drive(onNext: { [weak self] reactionType in
                 let storyboard = UIStoryboard(name: UserListViewController.ex.className, bundle: nil)
                 let userListViewController = storyboard.instantiateInitialViewController() as! UserListViewController
-                userListViewController.navigationItem.title = buttonType == .wants ? "wantしている人" : "haveしている人"
+                userListViewController.navigationItem.title = reactionType == .wants ? "wantしている人" : "haveしている人"
                 self?.navigationController?.pushViewController(userListViewController, animated: true)
             }).disposed(by: header.disposeBag)
             
