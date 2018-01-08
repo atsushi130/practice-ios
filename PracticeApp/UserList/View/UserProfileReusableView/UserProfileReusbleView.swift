@@ -10,9 +10,12 @@ import UIKit
 
 final class UserProfileReusableView: UICollectionReusableView {
     
-    @IBOutlet private weak var userIconView:  UserIconView!
-    @IBOutlet private weak var profileButton: UIButton!
-    @IBOutlet private weak var
+    @IBOutlet private weak var userIconView:   UserIconView!
+    @IBOutlet private weak var userNameLabel:  UILabel!
+    @IBOutlet private weak var profileButton:  UIButton!
+    @IBOutlet private weak var funListView:    FunListView!
+    @IBOutlet private weak var followButton:   UIButton!
+    @IBOutlet private weak var followerButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
