@@ -15,7 +15,8 @@ final class FunListView: UIView {
             self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-            self.collectionView.ex.register(cellType: ItemCell.self)
+            self.collectionView.ex.register(cellType: FunCell.self)
+            self.collectionView.ex.register(cellType: FunLabelCell.self)
         }
     }
     
@@ -29,6 +30,7 @@ final class FunListView: UIView {
         }
     }
     
+    private let brands = ["NOMOS", "mercibeaucoup,"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,10 +47,12 @@ extension FunListView: UICollectionViewDelegate {
 extension FunListView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return self.brands.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
+        let cell = collectionView.ex.dequeueReusableCell(with: FunCell.self, for: indexPath)
+        cell.text = self.brands[indexPath.row]
+        return cell
     }
 }

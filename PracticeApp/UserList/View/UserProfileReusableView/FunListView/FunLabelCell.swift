@@ -6,4 +6,13 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class FunLabelCell: UICollectionViewCell {
+    
+    @IBOutlet private weak var label: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
