@@ -55,6 +55,14 @@
 		0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
+		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
+		0DE650032002376A00ACDEE5 /* UserProfileReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE650022002376A00ACDEE5 /* UserProfileReusableView.xib */; };
+		0DE650052002380700ACDEE5 /* FunListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650042002380700ACDEE5 /* FunListView.swift */; };
+		0DE6500920023C1500ACDEE5 /* FunCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6500820023C1500ACDEE5 /* FunCell.swift */; };
+		0DE6500B20023D0500ACDEE5 /* FunCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6500A20023D0500ACDEE5 /* FunCell.xib */; };
+		0DE6500D20023E3B00ACDEE5 /* FunLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6500C20023E3B00ACDEE5 /* FunLabelCell.swift */; };
+		0DE6500F20023E4600ACDEE5 /* FunLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6500E20023E4600ACDEE5 /* FunLabelCell.xib */; };
+		0DE6501120023F6100ACDEE5 /* FunListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6501020023F6100ACDEE5 /* FunListView.xib */; };
 		759441931FF52E62001E4FD1 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759441921FF52E62001E4FD1 /* ItemViewModel.swift */; };
 		7594419C1FF6ABD0001E4FD1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */; };
 		75E596311FF272BD00784269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596301FF272BD00784269 /* AppDelegate.swift */; };
@@ -209,6 +217,14 @@
 		0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconView.swift; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
+		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
+		0DE650022002376A00ACDEE5 /* UserProfileReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileReusableView.xib; sourceTree = "<group>"; };
+		0DE650042002380700ACDEE5 /* FunListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunListView.swift; sourceTree = "<group>"; };
+		0DE6500820023C1500ACDEE5 /* FunCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunCell.swift; sourceTree = "<group>"; };
+		0DE6500A20023D0500ACDEE5 /* FunCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FunCell.xib; sourceTree = "<group>"; };
+		0DE6500C20023E3B00ACDEE5 /* FunLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunLabelCell.swift; sourceTree = "<group>"; };
+		0DE6500E20023E4600ACDEE5 /* FunLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FunLabelCell.xib; sourceTree = "<group>"; };
+		0DE6501020023F6100ACDEE5 /* FunListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FunListView.xib; sourceTree = "<group>"; };
 		759441921FF52E62001E4FD1 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		75E5962D1FF272BD00784269 /* PracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -371,6 +387,7 @@
 		0D2C19241FFE6A530083466A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DE650062002380A00ACDEE5 /* UserProfileReusableView */,
 				0D2C19251FFE6A6C0083466A /* UserCell.swift */,
 				0D2C19271FFE70990083466A /* UserCell.xib */,
 				0D2C19291FFE80DC0083466A /* UserListViewController.swift */,
@@ -532,6 +549,29 @@
 				0D6899491FFBC028004640CE /* ReactionView.xib */,
 			);
 			path = ReactionView;
+			sourceTree = "<group>";
+		};
+		0DE650062002380A00ACDEE5 /* UserProfileReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				0DE6500720023C0700ACDEE5 /* FunListView */,
+				0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */,
+				0DE650022002376A00ACDEE5 /* UserProfileReusableView.xib */,
+			);
+			path = UserProfileReusableView;
+			sourceTree = "<group>";
+		};
+		0DE6500720023C0700ACDEE5 /* FunListView */ = {
+			isa = PBXGroup;
+			children = (
+				0DE650042002380700ACDEE5 /* FunListView.swift */,
+				0DE6500820023C1500ACDEE5 /* FunCell.swift */,
+				0DE6500A20023D0500ACDEE5 /* FunCell.xib */,
+				0DE6500C20023E3B00ACDEE5 /* FunLabelCell.swift */,
+				0DE6500E20023E4600ACDEE5 /* FunLabelCell.xib */,
+				0DE6501020023F6100ACDEE5 /* FunListView.xib */,
+			);
+			path = FunListView;
 			sourceTree = "<group>";
 		};
 		759441911FF52E4F001E4FD1 /* ViewModel */ = {
@@ -849,12 +889,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE6500B20023D0500ACDEE5 /* FunCell.xib in Resources */,
 				0D2C19211FFE65EE0083466A /* UserIconView.xib in Resources */,
 				0D2C193A1FFE9FCF0083466A /* ImageCell.xib in Resources */,
 				0DA088451FFABB7D00EE18CF /* ItemDetailReusableView.xib in Resources */,
 				75E5963B1FF272BD00784269 /* LaunchScreen.storyboard in Resources */,
 				0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */,
 				0D2C194C1FFFF7D80083466A /* MySumallyViewController.storyboard in Resources */,
+				0DE650032002376A00ACDEE5 /* UserProfileReusableView.xib in Resources */,
 				75E5968D1FF37E2700784269 /* LoginViewController.storyboard in Resources */,
 				75E596C81FF4E2F300784269 /* ItemCell.xib in Resources */,
 				0D2C19281FFE70990083466A /* UserCell.xib in Resources */,
@@ -862,9 +904,11 @@
 				0D2C193E1FFEA2AF0083466A /* ItemDetailFoldersCell.xib in Resources */,
 				0D2C192F1FFE825A0083466A /* UserListViewController.storyboard in Resources */,
 				0D2C19181FFE1FAB0083466A /* LabelReusableView.xib in Resources */,
+				0DE6501120023F6100ACDEE5 /* FunListView.xib in Resources */,
 				0D2C19231FFE67590083466A /* FollowButton.xib in Resources */,
 				0D2C19471FFFEAC80083466A /* ItemCollectionCell.xib in Resources */,
 				0D68994A1FFBC028004640CE /* ReactionView.xib in Resources */,
+				0DE6500F20023E4600ACDEE5 /* FunLabelCell.xib in Resources */,
 				0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */,
 				0D2C193C1FFEA0130083466A /* ItemDetailFolderCell.xib in Resources */,
 				75E596C61FF4E2B200784269 /* ItemViewController.storyboard in Resources */,
@@ -895,10 +939,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E596A21FF39EBD00784269 /* LoginFieldValidateViewModelable.swift in Sources */,
+				0DE6500920023C1500ACDEE5 /* FunCell.swift in Sources */,
 				0D00B1C11FFA4D2B00DFCCE0 /* MainTabController.swift in Sources */,
 				0D2C19451FFFE6F30083466A /* ItemCollectionCell.swift in Sources */,
 				75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */,
 				0DA088381FFAB1B800EE18CF /* User.swift in Sources */,
+				0DE6500D20023E3B00ACDEE5 /* FunLabelCell.swift in Sources */,
 				0D6899481FFBBED6004640CE /* ReactionView.swift in Sources */,
 				0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */,
 				0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */,
@@ -909,6 +955,7 @@
 				0D85A86D1FFCDCC600A9C364 /* ReactionFooterButtonView.swift in Sources */,
 				75E596C21FF4E25D00784269 /* Item.swift in Sources */,
 				75E5968F1FF37E3500784269 /* LoginViewController.swift in Sources */,
+				0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */,
 				0D85A8721FFCEA0400A9C364 /* ReactionViewModel.swift in Sources */,
 				0D85A86B1FFCDCA900A9C364 /* ReactionFooterView.swift in Sources */,
 				75E596CA1FF4E82700784269 /* ItemButton.swift in Sources */,
@@ -919,6 +966,7 @@
 				75E596331FF272BD00784269 /* ViewController.swift in Sources */,
 				0D485DB21FFD21F4004116AB /* ItemNameView.swift in Sources */,
 				0D2C192D1FFE82030083466A /* UserListViewModel.swift in Sources */,
+				0DE650052002380700ACDEE5 /* FunListView.swift in Sources */,
 				0D2C19261FFE6A6C0083466A /* UserCell.swift in Sources */,
 				0D2C19361FFE9D940083466A /* ItemDetailFoldersCell.swift in Sources */,
 				0D2C19321FFE9D810083466A /* ItemDetailFolderCell.swift in Sources */,
