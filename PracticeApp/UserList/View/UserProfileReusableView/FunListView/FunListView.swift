@@ -37,11 +37,9 @@ final class FunListView: UIView {
     }
 }
 
-extension FunListView: UICollectionViewDelegate {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-}
+// MARK: - UICollectionViewDelegate
+// numberOfSections is default implemented
+extension FunListView: UICollectionViewDelegate {}
 
 // MARK: - UICollectionViewDataSource
 extension FunListView: UICollectionViewDataSource {

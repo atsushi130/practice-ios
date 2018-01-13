@@ -54,12 +54,10 @@ final class MySumallyViewController: UIViewController {
     }
 }
 
+
 // MARK: - UICollectionViewDelegate
-extension MySumallyViewController: UICollectionViewDelegate {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-}
+// numberOfSections is default implemented
+extension MySumallyViewController: UICollectionViewDelegate {}
 
 // MARK: - UICollectionViewDataSource
 extension MySumallyViewController: UICollectionViewDataSource {

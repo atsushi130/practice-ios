@@ -31,11 +31,9 @@ final class UserListViewController: UIViewController {
     }
 }
 
-extension UserListViewController: UICollectionViewDelegate {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-}
+// MARK: - UICollectionViewDelegate
+// numberOfSections is default implemented
+extension UserListViewController: UICollectionViewDelegate {}
 
 extension UserListViewController: UICollectionViewDataSource {
     

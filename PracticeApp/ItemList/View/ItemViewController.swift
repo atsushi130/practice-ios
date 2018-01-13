@@ -46,11 +46,8 @@ final class ItemViewController: UIViewController {
 }
 
 // MARK: - UICollectionViewDelegate
-extension ItemViewController: UICollectionViewDelegate {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-}
+// numberOfSections is default implemented
+extension ItemViewController: UICollectionViewDelegate {}
 
 // MARK: - UICollectionViewDataSource
 extension ItemViewController: UICollectionViewDataSource {

@@ -42,11 +42,8 @@ final class ItemDetailFoldersCell: UICollectionViewCell {
 }
 
 // MARK: - UICollectionViewDelegate
-extension ItemDetailFoldersCell: UICollectionViewDelegate {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-}
+// numberOfSections is default implemented
+extension ItemDetailFoldersCell: UICollectionViewDelegate {}
 
 // MARK: - UICollectionViewDataSource
 extension ItemDetailFoldersCell: UICollectionViewDataSource {
