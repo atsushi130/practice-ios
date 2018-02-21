@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-is_init   = (ARGV[0] == 'init')
 is_update = (ARGV[0] == 'update')
 
 # Utility functions
@@ -38,23 +37,6 @@ end
 #######################################################
 # Setup environment
 
-# is installed Bundler ?
-`gem contents bundler`
-if $?.exitstatus == 1
-  log 'Installing Bundler'
-  `sudo gem install bundler`
-end
-
-# Gem installation
-log 'Installing Gem'
-`bundle install`
-
-if is_init
-  # Setup CocoaPods
-  log 'Setup CocoaPods'
-  `bundle exec pod setup`
-end
-
 # Carthage installation
 `which carthage`
 if $?.exitstatus == 1
@@ -64,18 +46,6 @@ end
 
 #######################################################
 # Libraries installation
-
-# CocoaPods
-if is_update
-  log 'Updating CocoaPods libraries'
-  msg = `bundle exec pod update`
-else
-  log 'Installing CocoaPods libraries'
-  msg = `bundle exec pod install`
-end
-if $?.exitstatus == 1
-  error msg
-end
 
 # Carthage
 if is_update
