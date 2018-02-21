@@ -15,7 +15,7 @@ PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 ```
 ❯ git clone https://github.com/atsushi130/PracticeApp
 ❯ cd PracticeApp
-❯ ./setup.rb init
+❯ ./setup.rb
 ```
 
 ## Using Library
