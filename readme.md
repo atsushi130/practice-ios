@@ -15,7 +15,7 @@ PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 ```
 ❯ git clone https://github.com/atsushi130/PracticeApp
 ❯ cd PracticeApp
-❯ carthage bootstrap --platform iOS
+❯ ./setup.rb init
 ```
 
 ## Using Library
