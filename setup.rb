@@ -50,10 +50,10 @@ end
 # Carthage
 if is_update
   log "Updating Carthage's libraries"
-  msg = `TOOLCHAINS=com.apple.dt.toolchain.Swift_3_2 carthage update --platform iOS --cache-builds`
+  msg = `TOOLCHAINS=com.apple.dt.toolchain.Swift_4_0 carthage update --platform iOS --cache-builds`
 else
   log "Installing Carthage's libraries"
-  msg = `TOOLCHAINS=com.apple.dt.toolchain.Swift_3_2 carthage bootstrap --platform iOS --cache-builds`
+  msg = `TOOLCHAINS=com.apple.dt.toolchain.Swift_4_0 carthage bootstrap --platform iOS --cache-builds`
 end
 if $?.exitstatus == 1
   error msg
