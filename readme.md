@@ -22,7 +22,7 @@ PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 - RxSwift
 - SnapKit
 - UIFontComplate
-- [SwiftExtensions](https://github.com/atsushi130/SwiftExtensions)
+- [SwiftTargetedExtensions](https://github.com/atsushi130/SwiftTargetedExtensions)
 
 ## Architecture
 - MVVM
