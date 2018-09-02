@@ -12,7 +12,7 @@ import RxCocoa
 struct ItemViewModel {
     
     fileprivate var items: [Item] = []
-    fileprivate let didChange = Variable<[Item]>([])
+    fileprivate let updateItems = Variable<[Item]>([])
     
     var count: Int {
         return self.items.count
@@ -21,7 +21,6 @@ struct ItemViewModel {
     subscript(_ index: Int) -> Item {
         get { return self.items[index] }
         set { self.items[index] = newValue }
-        
     }
     
     mutating func fetch() {
@@ -58,13 +57,13 @@ struct ItemViewModel {
             Item(name: "Main Item30", subName: "Sub Name30", isOn: (wants: true, haves: false), count: (wants: 0, haves: 0))
         ]
         
-        self.didChange.value = self.items
+        self.updateItems.value = self.items
     }
 }
 
 extension ItemViewModel: ReactiveCompatible {}
 extension Reactive where Base == ItemViewModel {
-    var didChange: Driver<[Item]> {
-        return self.base.didChange.asDriver()
+    var updateItems: Driver<[Item]> {
+        return self.base.updateItems.asDriver()
     }
 }
