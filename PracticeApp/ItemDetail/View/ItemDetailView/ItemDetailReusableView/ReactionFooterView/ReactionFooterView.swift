@@ -39,17 +39,21 @@ final class ReactionFooterView: UIView {
     
     private func observe() {
         
-        self.wants.rx.controlEvent(.touchUpInside).drive(onNext: { [weak self] in
-            guard let `self` = self else { return }
-            let isOn = ReactionViewModel.wants.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
-            self.bindState(isOn: isOn)
-        }).disposed(by: self.disposeBag)
+        self.wants.rx.controlEvent(.touchUpInside)
+            .drive(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                let isOn = ReactionViewModel.wants.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
+                self.bindState(isOn: isOn)
+            })
+            .disposed(by: self.disposeBag)
         
-        self.haves.rx.controlEvent(.touchUpInside).drive(onNext: { [weak self] in
-            guard let `self` = self else { return }
-            let isOn = ReactionViewModel.haves.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
-            self.bindState(isOn: isOn)
-        }).disposed(by: self.disposeBag)
+        self.haves.rx.controlEvent(.touchUpInside)
+            .drive(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                let isOn = ReactionViewModel.haves.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
+                self.bindState(isOn: isOn)
+            })
+            .disposed(by: self.disposeBag)
     }
     
     private func bindState(isOn: IsOn) {
@@ -67,7 +71,7 @@ extension Reactive where Base: ReactionFooterView {
         }
     }
     
-    var didStateUpdate: Driver<ReactionFooterView.IsOn> {
+    var updateState: Driver<ReactionFooterView.IsOn> {
         return self.base.updateStateEvent.asDriver(onErrorDriveWith: Driver.empty())
     }
 }
