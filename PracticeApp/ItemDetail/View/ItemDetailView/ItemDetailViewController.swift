@@ -48,9 +48,11 @@ final class ItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.itemViewModel.rx.didChange.drive(onNext: { [weak self] _ in
-            self?.collectionView.reloadData()
-        }).disposed(by: self.disposeBag)
+        self.itemViewModel.rx.updateItems
+            .drive(onNext: { [weak self] _ in
+                self?.collectionView.reloadData()
+            })
+            .disposed(by: self.disposeBag)
         
         self.itemViewModel.fetch()
     }
@@ -86,9 +88,11 @@ extension ItemDetailViewController: UICollectionViewDataSource {
             let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
             
             cell.bind(item: self.itemViewModel[indexPath.row])
-            cell.rx.didReactionUpdate.subscribe(onNext: { [weak self] item in
-                self?.itemViewModel[indexPath.row] = item
-            }).disposed(by: cell.disposeBag)
+            cell.rx.updateReaction
+                .subscribe(onNext: { [weak self] item in
+                    self?.itemViewModel[indexPath.row] = item
+                })
+                .disposed(by: cell.disposeBag)
             
             let inset  = self.layout.sectionInset
             let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
@@ -122,16 +126,20 @@ extension ItemDetailViewController: UICollectionViewDataSource {
             // initial
             updateConstraints()
             
-            self.collectionView.rx.didScroll.asDriver().drive(onNext: {
-                updateConstraints()
-            }).disposed(by: header.disposeBag)
+            self.collectionView.rx.didScroll.asDriver()
+                .drive(onNext: {
+                    updateConstraints()
+                })
+                .disposed(by: header.disposeBag)
             
-            header.rx.willSegueToUserList.asDriver().drive(onNext: { [weak self] reactionType in
-                let storyboard = UIStoryboard(name: UserListViewController.ex.className, bundle: nil)
-                let userListViewController = storyboard.instantiateInitialViewController() as! UserListViewController
-                userListViewController.navigationItem.title = reactionType == .wants ? "wantしている人" : "haveしている人"
-                self?.navigationController?.pushViewController(userListViewController, animated: true)
-            }).disposed(by: header.disposeBag)
+            header.rx.willSegueToUserList.asDriver()
+                .drive(onNext: { [weak self] reactionType in
+                    let storyboard = UIStoryboard(name: UserListViewController.ex.className, bundle: nil)
+                    let userListViewController = storyboard.instantiateInitialViewController() as! UserListViewController
+                    userListViewController.navigationItem.title = reactionType == .wants ? "wantしている人" : "haveしている人"
+                    self?.navigationController?.pushViewController(userListViewController, animated: true)
+                })
+                .disposed(by: header.disposeBag)
             
             return header
             
