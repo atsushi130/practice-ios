@@ -89,7 +89,7 @@ final class ItemCell: UICollectionViewCell {
 }
 
 extension Reactive where Base: ItemCell {
-    var didReactionUpdate: Observable<Item> {
+    var updateReaction: Observable<Item> {
         return self.base.itemUpdateEvent
     }
 }
