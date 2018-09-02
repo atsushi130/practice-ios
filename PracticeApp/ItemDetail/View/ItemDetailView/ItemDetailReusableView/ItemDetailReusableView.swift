@@ -28,8 +28,8 @@ final class ItemDetailReusableView: UICollectionReusableView {
     }
     
     private func observe() {
-        self.reactionBarsView.rx.didStateUpdate.drive(self.reactionFooterView.rx.isOn).disposed(by: self.disposeBag)
-        self.reactionFooterView.rx.didStateUpdate.drive(self.reactionBarsView.rx.isOn).disposed(by: self.disposeBag)
+        self.reactionBarsView.rx.updateState.drive(self.reactionFooterView.rx.isOn).disposed(by: self.disposeBag)
+        self.reactionFooterView.rx.updateState.drive(self.reactionBarsView.rx.isOn).disposed(by: self.disposeBag)
     }
     
     func bind(itemDetail: ItemDetail) {
