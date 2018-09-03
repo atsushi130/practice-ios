@@ -8,6 +8,7 @@
 
 import RxSwift
 import RxCocoa
+import Connectable
 
 struct ItemViewModel {
     
@@ -61,9 +62,9 @@ struct ItemViewModel {
     }
 }
 
-extension ItemViewModel: ReactiveCompatible {}
-extension Reactive where Base == ItemViewModel {
+extension ItemViewModel: Connectable {}
+extension OutputSpace where Definer == ItemViewModel {
     var updateItems: Driver<[Item]> {
-        return self.base.updateItems.asDriver()
+        return self.definer.updateItems.asDriver()
     }
 }
