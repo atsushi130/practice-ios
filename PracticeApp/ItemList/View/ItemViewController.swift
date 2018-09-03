@@ -37,7 +37,7 @@ final class ItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.itemViewModel.rx.updateItems
+        self.itemViewModel.out.updateItems
             .drive(onNext: { [weak self] _ in
                 self?.collectionView.reloadData()
             })
