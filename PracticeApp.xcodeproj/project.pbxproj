@@ -53,6 +53,8 @@
 		0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */; };
 		0DA0884E1FFAC7D100EE18CF /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */; };
 		0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */; };
+		0DD8FC0C213D908F0075D874 /* Connectable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FC0B213D908F0075D874 /* Connectable.framework */; };
+		0DD8FC0D213D909B0075D874 /* Connectable.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC0B213D908F0075D874 /* Connectable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -142,6 +144,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0DD8FC0D213D909B0075D874 /* Connectable.framework in CopyFiles */,
 				0DA0882C1FFA8BBA00EE18CF /* UIFontComplete.framework in CopyFiles */,
 				75E596791FF378FB00784269 /* APIKit.framework in CopyFiles */,
 				75E5967A1FF378FB00784269 /* Realm.framework in CopyFiles */,
@@ -215,6 +218,7 @@
 		0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInformationView.swift; sourceTree = "<group>"; };
 		0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconView.swift; sourceTree = "<group>"; };
+		0DD8FC0B213D908F0075D874 /* Connectable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Connectable.framework; path = Carthage/Build/iOS/Connectable.framework; sourceTree = SOURCE_ROOT; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 				75E5966F1FF378C600784269 /* RealmSwift.framework in Frameworks */,
 				75E596751FF378C600784269 /* APIKit.framework in Frameworks */,
 				0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */,
+				0DD8FC0C213D908F0075D874 /* Connectable.framework in Frameworks */,
 				75E596711FF378C600784269 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,6 +661,7 @@
 		75E5965F1FF3788800784269 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC0B213D908F0075D874 /* Connectable.framework */,
 				0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */,
 				75E596691FF378C500784269 /* APIKit.framework */,
 				75E5966B1FF378C500784269 /* Nimble.framework */,
