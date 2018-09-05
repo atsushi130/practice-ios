@@ -41,10 +41,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
-                                <connections>
-                                    <outlet property="dataSource" destination="SMw-1H-8ve" id="TfB-EM-NVO"/>
-                                    <outlet property="delegate" destination="SMw-1H-8ve" id="ArG-bn-vPG"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
