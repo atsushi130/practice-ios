@@ -49,6 +49,7 @@ final class ItemViewController: UIViewController {
                 let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
                 cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
                 return cell
+            default: return ItemCell()
             }
         })
     }()
@@ -56,49 +57,16 @@ final class ItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView.delegate = self
-        
         self.viewModel.out.updateItems
-            .drive(onNext: { [weak self] _ in
-                self?.collectionView.reloadData()
-            })
+            .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.disposeBag)
         
-        self.viewModel.fetch()
+        self.collectionView.rx.modelSelected(ItemSectionItem.self)
+            .subscribe(onNext: { [weak self] _ in
+                let storyboard = UIStoryboard(name: ItemDetailViewController.ex.className, bundle: nil)
+                let itemDetailViewController = storyboard.instantiateInitialViewController() as! ItemDetailViewController
+                self?.navigationController?.pushViewController(itemDetailViewController, animated: true)
+            })
+            .disposed(by: self.disposeBag)
     }
 }
-
-// MARK: - UICollectionViewDelegate
-// numberOfSections is default implemented
-extension ItemViewController: UICollectionViewDelegate {}
-
-// MARK: - UICollectionViewDataSource
-extension ItemViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModel.items.value.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
-        
-        cell.bind(item: self.viewModel.items.value[indexPath.row])
-        cell.rx.updateReaction
-            .map { item in return (item, indexPath.row) }
-            .bind(to: self.viewModel.in.item)
-            .disposed(by: cell.disposeBag)
-        
-        let inset  = self.layout.sectionInset
-        let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
-        cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: ItemDetailViewController.ex.className, bundle: nil)
-        let itemDetailViewController = storyboard.instantiateInitialViewController() as! ItemDetailViewController
-        self.navigationController?.pushViewController(itemDetailViewController, animated: true)
-    }
-}
-
