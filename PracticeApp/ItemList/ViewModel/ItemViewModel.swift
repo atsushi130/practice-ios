@@ -14,7 +14,7 @@ final class ItemViewModel {
     
     let items = BehaviorRelay<[Item]>(value: [])
     
-    func fetch() {
+    init() {
         let items = [
             Item(id: "1", name: "Main Item1", subName: "Sub Name1", isOn: (wants: true, haves: false), count: (wants: 0, haves: 0)),
             Item(id: "2", name: "Main Item2", subName: "Sub Name2", isOn: (wants: true, haves: false), count: (wants: 0, haves: 0)),
@@ -54,8 +54,32 @@ final class ItemViewModel {
 
 extension ItemViewModel: Connectable {}
 extension OutputSpace where Definer: ItemViewModel {
-    var updateItems: Driver<[Item]> {
-        return self.definer.items.asDriver()
+    
+    var updateItems: Observable<[ItemSectionModel]> {
+        return self.definer.items
+            .map { items in
+                return items.map { item in ItemSectionItem.normalItem(item: item) }
+            }
+            .map { items -> [ItemSectionModel] in
+                return [ItemSectionModel.normalSection(items: items)]
+            }
+            .share(replay: 1, scope: .forever)
+    }
+    
+    // FIXME: to ItemDetailViewModel
+    var updateDetailItems: Observable<[ItemSectionModel]> {
+        return self.definer.items
+            .map { items in
+                return items.map { item in ItemSectionItem.normalItem(item: item) }
+            }
+            .map { items -> [ItemSectionModel] in
+                return [
+                    .detailSection,
+                    .folderSection(item: .folderItem),
+                    .normalSection(items: items)
+                ]
+            }
+            .share(replay: 1, scope: .forever)
     }
 }
 
