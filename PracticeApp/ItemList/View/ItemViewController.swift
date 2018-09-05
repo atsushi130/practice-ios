@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 final class ItemViewController: UIViewController {
     
@@ -31,19 +32,39 @@ final class ItemViewController: UIViewController {
         }
     }
     
-    private let disposeBag    = DisposeBag()
-    private var itemViewModel = ItemViewModel()
+    private let disposeBag = DisposeBag()
+    private var viewModel  = ItemViewModel()
     
+    private lazy var dataSource = {
+        return RxCollectionViewSectionedReloadDataSource<ItemSectionModel>(configureCell: { (dataSource, _, indexPath, sectionItem) in
+            switch sectionItem {
+            case let .normalItem(item):
+                let cell = self.collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
+                cell.bind(item: item)
+                cell.rx.updateReaction
+                    .map { item in return (item, indexPath.row) }
+                    .bind(to: self.viewModel.in.item)
+                    .disposed(by: cell.disposeBag)
+                let inset  = self.layout.sectionInset
+                let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
+                cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
+                return cell
+            }
+        })
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.itemViewModel.out.updateItems
+        self.collectionView.delegate = self
+        
+        self.viewModel.out.updateItems
             .drive(onNext: { [weak self] _ in
                 self?.collectionView.reloadData()
             })
             .disposed(by: self.disposeBag)
         
-        self.itemViewModel.fetch()
+        self.viewModel.fetch()
     }
 }
 
@@ -55,24 +76,22 @@ extension ItemViewController: UICollectionViewDelegate {}
 extension ItemViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.itemViewModel.count
+        return self.viewModel.items.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
         
-        cell.bind(item: self.itemViewModel[indexPath.row])
+        cell.bind(item: self.viewModel.items.value[indexPath.row])
         cell.rx.updateReaction
-            .subscribe(onNext: { [weak self] item in
-                self?.itemViewModel[indexPath.row] = item
-            })
+            .map { item in return (item, indexPath.row) }
+            .bind(to: self.viewModel.in.item)
             .disposed(by: cell.disposeBag)
         
         let inset  = self.layout.sectionInset
         let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
         cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
-
         return cell
     }
     
