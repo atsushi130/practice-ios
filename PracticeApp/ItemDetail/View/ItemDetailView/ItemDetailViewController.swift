@@ -42,19 +42,18 @@ final class ItemDetailViewController: UIViewController {
     }
     
     private let disposeBag = DisposeBag()
-    
-    private var itemViewModel = ItemViewModel()
+    private let viewModel  = ItemViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.itemViewModel.out.updateItems
+        self.viewModel.out.updateItems
             .drive(onNext: { [weak self] _ in
                 self?.collectionView.reloadData()
             })
             .disposed(by: self.disposeBag)
         
-        self.itemViewModel.fetch()
+        self.viewModel.fetch()
     }
     
     deinit {
@@ -76,7 +75,7 @@ extension ItemDetailViewController: UICollectionViewDataSource {
         switch section {
         case Section.detail: return 0
         case Section.folder: return 1
-        case Section.item:   return self.itemViewModel.count
+        case Section.item:   return self.viewModel.items.value.count
         default: return 0
         }
     }
@@ -86,12 +85,10 @@ extension ItemDetailViewController: UICollectionViewDataSource {
         switch indexPath.section {
         case Section.item:
             let cell = collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
-            
-            cell.bind(item: self.itemViewModel[indexPath.row])
+            cell.bind(item: self.viewModel.items.value[indexPath.row])
             cell.rx.updateReaction
-                .subscribe(onNext: { [weak self] item in
-                    self?.itemViewModel[indexPath.row] = item
-                })
+                .map { item in return (item, indexPath.row) }
+                .bind(to: self.viewModel.in.item)
                 .disposed(by: cell.disposeBag)
             
             let inset  = self.layout.sectionInset
