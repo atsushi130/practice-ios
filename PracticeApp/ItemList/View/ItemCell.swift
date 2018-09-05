@@ -44,17 +44,25 @@ final class ItemCell: UICollectionViewCell {
     
     private func observe() {
         
-        self.wants.rx.controlEvent(.touchUpInside).drive(onNext: { [weak self] in
-            guard let `self` = self else { return }
-            let isOn = ReactionViewModel.wants.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
-            self.bindState(isOn: isOn)
-        }).disposed(by: self.disposeBag)
+        self.wants.rx.controlEvent(.touchUpInside)
+            .map { [weak self] _ -> ReactionViewModel.IsOn in
+                guard let `self` = self else { return ReactionViewModel.IsOn(wants: true, haves: true) }
+                return ReactionViewModel.wants.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
+            }
+            .drive(onNext: { [weak self] isOn in
+                self?.bindState(isOn: isOn)
+            })
+            .disposed(by: self.disposeBag)
         
-        self.haves.rx.controlEvent(.touchUpInside).drive(onNext: { [weak self] in
-            guard let `self` = self else { return }
-            let isOn = ReactionViewModel.haves.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
-            self.bindState(isOn: isOn)
-        }).disposed(by: self.disposeBag)
+        self.haves.rx.controlEvent(.touchUpInside)
+            .map { [weak self] _ -> ReactionViewModel.IsOn in
+                guard let `self` = self else { return ReactionViewModel.IsOn(wants: false, haves: false) }
+                return ReactionViewModel.haves.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
+            }
+            .drive(onNext: { [weak self] isOn in
+                self?.bindState(isOn: isOn)
+            })
+            .disposed(by: self.disposeBag)
     }
     
     func bind(item: Item) {
