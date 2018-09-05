@@ -55,6 +55,11 @@
 		0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */; };
 		0DD8FC0C213D908F0075D874 /* Connectable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FC0B213D908F0075D874 /* Connectable.framework */; };
 		0DD8FC0D213D909B0075D874 /* Connectable.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC0B213D908F0075D874 /* Connectable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DD8FC0F213EE5110075D874 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FC0E213EE5110075D874 /* Differentiator.framework */; };
+		0DD8FC11213EE5190075D874 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FC10213EE5180075D874 /* RxDataSources.framework */; };
+		0DD8FC12213EE5220075D874 /* RxDataSources.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC10213EE5180075D874 /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DD8FC13213EE5220075D874 /* Differentiator.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC0E213EE5110075D874 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DD8FC15213EE5630075D874 /* ItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC14213EE5630075D874 /* ItemDataSource.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -144,6 +149,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0DD8FC12213EE5220075D874 /* RxDataSources.framework in CopyFiles */,
+				0DD8FC13213EE5220075D874 /* Differentiator.framework in CopyFiles */,
 				0DD8FC0D213D909B0075D874 /* Connectable.framework in CopyFiles */,
 				0DA0882C1FFA8BBA00EE18CF /* UIFontComplete.framework in CopyFiles */,
 				75E596791FF378FB00784269 /* APIKit.framework in CopyFiles */,
@@ -219,6 +226,9 @@
 		0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		0DA0884F1FFAD4E600EE18CF /* UserIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconView.swift; sourceTree = "<group>"; };
 		0DD8FC0B213D908F0075D874 /* Connectable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Connectable.framework; path = Carthage/Build/iOS/Connectable.framework; sourceTree = SOURCE_ROOT; };
+		0DD8FC0E213EE5110075D874 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = SOURCE_ROOT; };
+		0DD8FC10213EE5180075D874 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = SOURCE_ROOT; };
+		0DD8FC14213EE5630075D874 /* ItemDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDataSource.swift; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -289,6 +299,8 @@
 				75E596701FF378C600784269 /* Result.framework in Frameworks */,
 				75E596761FF378C600784269 /* SwiftExtensions.framework in Frameworks */,
 				75E596731FF378C600784269 /* RxSwift.framework in Frameworks */,
+				0DD8FC11213EE5190075D874 /* RxDataSources.framework in Frameworks */,
+				0DD8FC0F213EE5110075D874 /* Differentiator.framework in Frameworks */,
 				75E5966F1FF378C600784269 /* RealmSwift.framework in Frameworks */,
 				75E596751FF378C600784269 /* APIKit.framework in Frameworks */,
 				0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */,
@@ -661,6 +673,8 @@
 		75E5965F1FF3788800784269 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC10213EE5180075D874 /* RxDataSources.framework */,
+				0DD8FC0E213EE5110075D874 /* Differentiator.framework */,
 				0DD8FC0B213D908F0075D874 /* Connectable.framework */,
 				0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */,
 				75E596691FF378C500784269 /* APIKit.framework */,
@@ -782,6 +796,7 @@
 			children = (
 				75E596C11FF4E25D00784269 /* Item.swift */,
 				0DA088311FFAB03A00EE18CF /* Itemable.swift */,
+				0DD8FC14213EE5630075D874 /* ItemDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -947,6 +962,7 @@
 				75E596A21FF39EBD00784269 /* LoginFieldValidateViewModelable.swift in Sources */,
 				0DE6500920023C1500ACDEE5 /* FunCell.swift in Sources */,
 				0D00B1C11FFA4D2B00DFCCE0 /* MainTabController.swift in Sources */,
+				0DD8FC15213EE5630075D874 /* ItemDataSource.swift in Sources */,
 				0D2C19451FFFE6F30083466A /* ItemCollectionCell.swift in Sources */,
 				75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */,
 				0DA088381FFAB1B800EE18CF /* User.swift in Sources */,
