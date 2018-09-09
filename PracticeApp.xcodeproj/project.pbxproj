@@ -72,6 +72,7 @@
 		0DD8FC71214554780075D874 /* ItemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC70214554780075D874 /* ItemCoordinator.swift */; };
 		0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC73214557C00075D874 /* MySumallyConfigurator.swift */; };
 		0DD8FC76214558770075D874 /* ItemConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC75214558770075D874 /* ItemConfigurator.swift */; };
+		0DD8FC78214560730075D874 /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC77214560730075D874 /* Observable+.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -253,6 +254,7 @@
 		0DD8FC70214554780075D874 /* ItemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCoordinator.swift; sourceTree = "<group>"; };
 		0DD8FC73214557C00075D874 /* MySumallyConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySumallyConfigurator.swift; sourceTree = "<group>"; };
 		0DD8FC75214558770075D874 /* ItemConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemConfigurator.swift; sourceTree = "<group>"; };
+		0DD8FC77214560730075D874 /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 			isa = PBXGroup;
 			children = (
 				7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */,
+				0DD8FC77214560730075D874 /* Observable+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1061,6 +1064,7 @@
 				0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */,
 				0D85A8721FFCEA0400A9C364 /* ReactionViewModel.swift in Sources */,
 				0D85A86B1FFCDCA900A9C364 /* ReactionFooterView.swift in Sources */,
+				0DD8FC78214560730075D874 /* Observable+.swift in Sources */,
 				75E596CA1FF4E82700784269 /* ItemButton.swift in Sources */,
 				75E596951FF37E7B00784269 /* LoginButton.swift in Sources */,
 				75E596B31FF3F17500784269 /* LoginApi.swift in Sources */,
