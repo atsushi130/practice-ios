@@ -18,5 +18,6 @@ extension OutputSpace where Definer: MySumallyViewModel {
             .map { $0.map(MySumallySectionItem.normalItem) }
             .map(MySumallySectionModel.normalSection)
             .map { [$0] }
+            .share(replay: 1, scope: .forever)
     }
 }
