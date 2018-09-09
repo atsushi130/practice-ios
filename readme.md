@@ -20,12 +20,16 @@ PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 
 ## Using Library
 - RxSwift
+- RxDataSources
+- NSObject+Rx
 - SnapKit
 - UIFontComplate
 - [SwiftTargetedExtensions](https://github.com/atsushi130/SwiftTargetedExtensions)
+- [Connectable](https://github.com/atsushi130/Connectable)
 
 ## Architecture
 - MVVM
+- Coordinator
 
 ## License
 PracticeApp is available under the MIT license. See the [LICENSE file](https://github.com/atsushi130/PracticeApp/blob/master/license).
