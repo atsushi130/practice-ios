@@ -9,11 +9,18 @@
 import RxSwift
 import RxCocoa
 import Connectable
+import NSObject_Rx
 
-final class ItemViewModel {
+final class ItemViewModel: Connectable {
     
     private let coordinator: ItemCoordinator
+    private let disposeBag = DisposeBag()
+    
     let items = BehaviorRelay<[Item]>(value: [])
+    
+    fileprivate lazy var itemSelected = AnyObserver<Void> { event in
+        self.coordinator.transition(to: .detail)
+    }
     
     init(coordinator: ItemCoordinator) {
         
@@ -56,7 +63,7 @@ final class ItemViewModel {
     }
 }
 
-extension ItemViewModel: Connectable {}
+// MARK: - Output
 extension OutputSpace where Definer: ItemViewModel {
     var updateItems: Observable<[ItemSectionModel]> {
         return self.definer.items
@@ -70,7 +77,13 @@ extension OutputSpace where Definer: ItemViewModel {
     }
 }
 
+// MARK: - Input
 extension InputSpace where Definer: ItemViewModel {
+    
+    var itemSelected: AnyObserver<Void> {
+        return self.definer.itemSelected
+    }
+    
     var item: Binder<(Item, Int)> {
         return Binder(self.definer) { element, value in
             let (item, index) = value
