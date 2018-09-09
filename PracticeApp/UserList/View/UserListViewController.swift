@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import CoordinatorKit
+
+extension UserListViewController: RoutableViewController {
+    typealias ViewControllerConfigurator = UserListConfigurator
+    typealias Dependency = Void
+}
 
 final class UserListViewController: UIViewController {
     
