@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import CoordinatorKit
+
+struct ItemDetailConfigurator: Configurator {
+    typealias VC = ItemDetailViewController
+    static func configure(with vc: ItemDetailConfigurator.VC, dependency: VC.Dependency) {}
+}
