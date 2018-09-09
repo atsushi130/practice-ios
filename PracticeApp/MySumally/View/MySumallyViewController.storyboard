@@ -37,10 +37,6 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="lGb-sS-rUG" id="T0Y-wQ-U72"/>
-                                    <outlet property="delegate" destination="lGb-sS-rUG" id="tVR-rs-Qjs"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
