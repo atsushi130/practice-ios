@@ -70,6 +70,8 @@
 		0DD8FC6B21454C9B0075D874 /* CoordinatorKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DD8FC6E214553610075D874 /* ItemDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC6D214553610075D874 /* ItemDetailConfigurator.swift */; };
 		0DD8FC71214554780075D874 /* ItemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC70214554780075D874 /* ItemCoordinator.swift */; };
+		0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC73214557C00075D874 /* MySumallyConfigurator.swift */; };
+		0DD8FC76214558770075D874 /* ItemConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC75214558770075D874 /* ItemConfigurator.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -249,6 +251,8 @@
 		0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoordinatorKit.framework; path = Carthage/Build/iOS/CoordinatorKit.framework; sourceTree = SOURCE_ROOT; };
 		0DD8FC6D214553610075D874 /* ItemDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailConfigurator.swift; sourceTree = "<group>"; };
 		0DD8FC70214554780075D874 /* ItemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCoordinator.swift; sourceTree = "<group>"; };
+		0DD8FC73214557C00075D874 /* MySumallyConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySumallyConfigurator.swift; sourceTree = "<group>"; };
+		0DD8FC75214558770075D874 /* ItemConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemConfigurator.swift; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -395,6 +399,7 @@
 		0D2C191B1FFE659D0083466A /* MySumally */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC72214557AA0075D874 /* Coordinator */,
 				0DD8FC1B2144C1670075D874 /* ViewModel */,
 				0D2C191D1FFE65D80083466A /* View */,
 				0DA088361FFAB1AA00EE18CF /* Model */,
@@ -596,6 +601,15 @@
 			isa = PBXGroup;
 			children = (
 				0DD8FC70214554780075D874 /* ItemCoordinator.swift */,
+				0DD8FC75214558770075D874 /* ItemConfigurator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0DD8FC72214557AA0075D874 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0DD8FC73214557C00075D874 /* MySumallyConfigurator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1044,6 +1058,7 @@
 				75E596C21FF4E25D00784269 /* Item.swift in Sources */,
 				75E5968F1FF37E3500784269 /* LoginViewController.swift in Sources */,
 				0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */,
+				0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */,
 				0D85A8721FFCEA0400A9C364 /* ReactionViewModel.swift in Sources */,
 				0D85A86B1FFCDCA900A9C364 /* ReactionFooterView.swift in Sources */,
 				75E596CA1FF4E82700784269 /* ItemButton.swift in Sources */,
@@ -1078,6 +1093,7 @@
 				0D485DB51FFD2289004116AB /* ItemLogView.swift in Sources */,
 				0DA0884E1FFAC7D100EE18CF /* FollowButton.swift in Sources */,
 				0DA0883C1FFAB2F200EE18CF /* Category.swift in Sources */,
+				0DD8FC76214558770075D874 /* ItemConfigurator.swift in Sources */,
 				75E596AC1FF3DA1100784269 /* LoginViewModel.swift in Sources */,
 				0DA088401FFAB34100EE18CF /* Brand.swift in Sources */,
 				75E596311FF272BD00784269 /* AppDelegate.swift in Sources */,
