@@ -12,7 +12,7 @@ import CoordinatorKit
 struct ItemConfigurator: Configurator {
     typealias VC = ItemViewController
     static func configure(with vc: ItemConfigurator.VC, dependency: ItemConfigurator.VC.Dependency) {
-        let coordinator = ItemCoordinator()
+        let coordinator = ItemCoordinator(viewController: vc)
         vc.viewModel = ItemViewModel(coordinator: coordinator)
     }
 }
