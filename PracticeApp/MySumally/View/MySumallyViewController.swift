@@ -37,7 +37,7 @@ final class MySumallyViewController: UIViewController {
         return RxCollectionViewSectionedReloadDataSource<MySumallySectionModel>(configureCell: { (dataSource, _, indexPath, sectionItem) in
             switch sectionItem {
             case let .normalItem(cellType):
-                let margin   = self.layout.sectionInset.left + self.layout.sectionInset.right
+                let margin = self.layout.sectionInset.left + self.layout.sectionInset.right
                 switch cellType {
                 case .folder:
                     let cell = self.collectionView.ex.dequeueReusableCell(with: ItemCollectionCell.self, for: indexPath)
