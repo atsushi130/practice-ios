@@ -13,7 +13,7 @@
         <!--マイサマリー-->
         <scene sceneID="Vsk-Y5-gu2">
             <objects>
-                <viewController id="lGb-sS-rUG" customClass="MySumallyViewController" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MySumallyViewController" id="lGb-sS-rUG" customClass="MySumallyViewController" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KvU-jq-PRS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
