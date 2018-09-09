@@ -10,14 +10,11 @@ import Foundation
 import RxDataSources
 
 enum ItemSectionModel {
-    case detailSection
     case normalSection(items: [ItemSectionItem])
-    case folderSection(item: ItemSectionItem) // FIXME: to ItemDetailSectionModel
 }
 
 enum ItemSectionItem {
     case normalItem(item: Item)
-    case folderItem // FIXME: to ItemDetailSectionModel
 }
 
 extension ItemSectionModel: SectionModelType {
@@ -26,12 +23,8 @@ extension ItemSectionModel: SectionModelType {
     
     var items: [ItemSectionItem] {
         switch self {
-        case .detailSection:
-            return []
         case let .normalSection(items):
             return items
-        case let .folderSection(item):
-            return [item]
         }
     }
     
