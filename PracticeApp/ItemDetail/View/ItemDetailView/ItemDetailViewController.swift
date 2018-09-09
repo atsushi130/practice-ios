@@ -24,16 +24,16 @@ final class ItemDetailViewController: UIViewController {
         }
     }
     
-    private var layout: UICollectionViewFlowLayout! = UICollectionViewFlowLayout() {
-        didSet {
-            // self sizing by autolayout
-            self.layout.estimatedItemSize   = CGSize(width: 1.0, height: 1.0)
-            self.layout.headerReferenceSize = CGSize(width: 1.0, height: 1.0)
-            self.layout.sectionInset        = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-            self.layout.minimumLineSpacing      = 10
-            self.layout.minimumInteritemSpacing = 10
-        }
-    }
+    private lazy var layout: UICollectionViewFlowLayout = {
+        // self sizing by autolayout
+        let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize   = CGSize(width: 1.0, height: 1.0)
+        layout.headerReferenceSize = CGSize(width: 1.0, height: 1.0)
+        layout.sectionInset        = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.minimumLineSpacing      = 10
+        layout.minimumInteritemSpacing = 10
+        return layout
+    }()
     
     private struct Section {
         static let detail = 0
