@@ -10,12 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import CoordinatorKit
 
 final class ItemDetailViewController: UIViewController {
-    
+
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.ex.register(cellType: ItemDetailFoldersCell.self)
             self.collectionView.ex.register(cellType: ItemCell.self)
@@ -68,8 +68,8 @@ final class ItemDetailViewController: UIViewController {
                 }
             },
             configureSupplementaryView: { (dataSource, _, kind, indexPath) in
-                switch indexPath.section {
-                case Section.detail:
+                switch dataSource[indexPath.section] {
+                case .detailSection:
                     let header = self.collectionView.ex.dequeueReusableView(with: ItemDetailReusableView.self, for: indexPath)
                     
                     let updateConstraints = { [weak self] in
@@ -103,14 +103,14 @@ final class ItemDetailViewController: UIViewController {
                     
                     return header
                     
-                case Section.folder:
+                case .folderSection(_, let title):
                     let header = self.collectionView.ex.dequeueReusableView(with: LabelReusableView.self, for: indexPath)
-                    header.text = "このアイテムが含まれるフォルダ"
+                    header.text = title
                     return header
                     
-                default:
+                case .normalSection(_, let title):
                     let header = self.collectionView.ex.dequeueReusableView(with: LabelReusableView.self, for: indexPath)
-                    header.text = "関連アイテム"
+                    header.text = title
                     return header
                 }
             }
@@ -123,11 +123,6 @@ final class ItemDetailViewController: UIViewController {
         self.viewModel.out.updateItems
             .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.disposeBag)
-        
-    }
-    
-    deinit {
-        print("item detail view controller deinit")
     }
 }
 
