@@ -11,8 +11,8 @@ import RxDataSources
 
 enum ItemDetailSectionModel {
     case detailSection
-    case normalSection(items: [ItemDetailSectionItem])
-    case folderSection(item: ItemDetailSectionItem)
+    case normalSection(items: [ItemDetailSectionItem], title: String)
+    case folderSection(item: ItemDetailSectionItem, title: String)
 }
 
 enum ItemDetailSectionItem {
@@ -28,9 +28,9 @@ extension ItemDetailSectionModel: SectionModelType {
         switch self {
         case .detailSection:
             return []
-        case let .normalSection(items):
+        case let .normalSection(items, _):
             return items
-        case let .folderSection(item):
+        case let .folderSection(item, _):
             return [item]
         }
     }
