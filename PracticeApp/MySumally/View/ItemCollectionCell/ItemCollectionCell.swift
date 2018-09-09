@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftExtensions
 
 final class ItemCollectionCell: UICollectionViewCell {
     
@@ -46,11 +47,12 @@ final class ItemCollectionCell: UICollectionViewCell {
         }
     }
     
-    enum CellType: String {
-        case wants  = "wants"
-        case haves  = "haves"
-        case adds   = "adds"
-        case folder = "folder"
+    enum CellType: String, CaseIterable {
+        case wants     = "wants"
+        case haves     = "haves"
+        case adds      = "adds"
+        case folder    = "folder"
+        case addFolder = "addFolder"
     }
     
     var cellType: CellType = .wants {
