@@ -11,6 +11,12 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 import NSObject_Rx
+import CoordinatorKit
+
+extension ItemViewController: RoutableViewController {
+    typealias ViewControllerConfigurator = ItemConfigurator
+    typealias Dependency = Void
+}
 
 final class ItemViewController: UIViewController {
     
@@ -32,7 +38,7 @@ final class ItemViewController: UIViewController {
         return layout
     }()
     
-    private var viewModel  = ItemViewModel()
+    var viewModel: ItemViewModel!
     
     private lazy var dataSource = {
         return RxCollectionViewSectionedReloadDataSource<ItemSectionModel>(configureCell: { (dataSource, _, indexPath, sectionItem) in
