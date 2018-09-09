@@ -12,19 +12,17 @@ final class UserListViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.ex.register(cellType: UserCell.self)
         }
     }
     
-    private var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() {
-        didSet {
-            self.layout.itemSize = CGSize(width: self.collectionView.frame.size.width, height: 120)
-            self.layout.minimumLineSpacing = 0
-            
-        }
-    }
+    private lazy var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: self.collectionView.frame.size.width, height: 120)
+        layout.minimumLineSpacing = 0
+        return layout
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
