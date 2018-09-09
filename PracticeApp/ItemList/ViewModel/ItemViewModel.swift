@@ -12,9 +12,13 @@ import Connectable
 
 final class ItemViewModel {
     
+    private let coordinator: ItemCoordinator
     let items = BehaviorRelay<[Item]>(value: [])
     
-    init() {
+    init(coordinator: ItemCoordinator) {
+        
+        self.coordinator = coordinator
+        
         let items = [
             Item(id: "1", name: "Main Item1", subName: "Sub Name1", isOn: (wants: true, haves: false), count: (wants: 0, haves: 0)),
             Item(id: "2", name: "Main Item2", subName: "Sub Name2", isOn: (wants: true, haves: false), count: (wants: 0, haves: 0)),
