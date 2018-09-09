@@ -23,14 +23,14 @@ final class ItemDetailFolderCell: UICollectionViewCell {
         }
     }
     
-    private var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() {
-        didSet {
-            let width = self.collectionView.frame.size.width / 3
-            self.layout.itemSize = CGSize(width: width, height: width)
-            self.layout.minimumLineSpacing      = 0
-            self.layout.minimumInteritemSpacing = 0
-        }
-    }
+    private lazy var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        let width = self.collectionView.frame.size.width / 3
+        layout.itemSize = CGSize(width: width, height: width)
+        layout.minimumLineSpacing      = 0
+        layout.minimumInteritemSpacing = 0
+        return layout
+    }()
     
     private let itemImages = [#imageLiteral(resourceName: "sample"), #imageLiteral(resourceName: "sample2"), #imageLiteral(resourceName: "sample8"), #imageLiteral(resourceName: "sample3"), #imageLiteral(resourceName: "sample4"), #imageLiteral(resourceName: "sample5"), #imageLiteral(resourceName: "sample6"), #imageLiteral(resourceName: "sample7"), #imageLiteral(resourceName: "sample1")]
     
