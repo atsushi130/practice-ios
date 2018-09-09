@@ -10,29 +10,28 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import NSObject_Rx
 
 final class ItemViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
             self.collectionView.ex.register(cellType: ItemCell.self)
         }
     }
     
-    private var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() {
-        didSet {
-            // self sizing by autolayout
-            self.layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
-            self.layout.sectionInset      = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-            self.layout.minimumLineSpacing      = 10
-            self.layout.minimumInteritemSpacing = 10
-        }
-    }
+    private lazy var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        // self sizing by autolayout
+        layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+        layout.sectionInset      = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.minimumLineSpacing      = 10
+        layout.minimumInteritemSpacing = 10
+        return layout
+    }()
     
-    private let disposeBag = DisposeBag()
     private var viewModel  = ItemViewModel()
     
     private lazy var dataSource = {
@@ -49,7 +48,6 @@ final class ItemViewController: UIViewController {
                 let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
                 cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
                 return cell
-            default: return ItemCell()
             }
         })
     }()
@@ -59,7 +57,7 @@ final class ItemViewController: UIViewController {
         
         self.viewModel.out.updateItems
             .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
-            .disposed(by: self.disposeBag)
+            .disposed(by: self.rx.disposeBag)
         
         self.collectionView.rx.modelSelected(ItemSectionItem.self)
             .subscribe(onNext: { [weak self] _ in
@@ -67,6 +65,6 @@ final class ItemViewController: UIViewController {
                 let itemDetailViewController = storyboard.instantiateInitialViewController() as! ItemDetailViewController
                 self?.navigationController?.pushViewController(itemDetailViewController, animated: true)
             })
-            .disposed(by: self.disposeBag)
+            .disposed(by: self.rx.disposeBag)
     }
 }
