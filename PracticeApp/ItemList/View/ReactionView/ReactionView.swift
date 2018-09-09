@@ -34,6 +34,12 @@ final class ReactionView: UIView, NibDesignable {
     enum ReactionType: String {
         case wants = "wants"
         case haves = "haves"
+        var title: String {
+            switch self {
+            case .wants: return "wantしている人"
+            case .haves: return "haveしている人"
+            }
+        }
     }
     
     var reactionType: ReactionType = .wants {
