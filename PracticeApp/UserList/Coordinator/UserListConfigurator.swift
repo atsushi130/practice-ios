@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import CoordinatorKit
+
+struct UserListConfigurator: Configurator {
+    typealias VC = UserListViewController
+}
