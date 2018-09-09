@@ -47,8 +47,7 @@ final class ItemDetailViewController: UIViewController {
         static let count  = 3
     }
     
-    private let disposeBag = DisposeBag()
-    private let viewModel  = ItemDetailViewModel()
+    var viewModel: ItemDetailViewModel!
     
     private lazy var dataSource = {
         return RxCollectionViewSectionedReloadDataSource<ItemDetailSectionModel>(
@@ -69,7 +68,8 @@ final class ItemDetailViewController: UIViewController {
                     let cell = self.collectionView.ex.dequeueReusableCell(with: ItemDetailFoldersCell.self, for: indexPath)
                     cell.cellWidth = self.collectionView.frame.width
                     return cell
-                default: return ItemCell()
+                default:
+                    fatalError()
                 }
             },
             configureSupplementaryView: { (dataSource, _, kind, indexPath) in
@@ -98,12 +98,7 @@ final class ItemDetailViewController: UIViewController {
                         .disposed(by: header.disposeBag)
                     
                     header.rx.willSegueToUserList.asDriver()
-                        .drive(onNext: { [weak self] reactionType in
-                            let storyboard = UIStoryboard(name: UserListViewController.ex.className, bundle: nil)
-                            let userListViewController = storyboard.instantiateInitialViewController() as! UserListViewController
-                            userListViewController.navigationItem.title = reactionType == .wants ? "wantしている人" : "haveしている人"
-                            self?.navigationController?.pushViewController(userListViewController, animated: true)
-                        })
+                        .drive(self.viewModel.in.tappedUserList)
                         .disposed(by: header.disposeBag)
                     
                     return header
@@ -124,10 +119,18 @@ final class ItemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.rx.setDelegate(self).disposed(by: self.disposeBag)
+        
+        self.collectionView.rx.setDelegate(self)
+            .disposed(by: self.rx.disposeBag)
+        
         self.viewModel.out.updateItems
             .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
-            .disposed(by: self.disposeBag)
+            .disposed(by: self.rx.disposeBag)
+        
+        self.collectionView.rx.modelSelected(ItemDetailSectionItem.self).asObservable()
+            .discarded
+            .subscribe(self.viewModel.in.selectedItem)
+            .disposed(by: self.rx.disposeBag)
     }
 }
 
