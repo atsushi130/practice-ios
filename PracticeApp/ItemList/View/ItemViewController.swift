@@ -65,11 +65,9 @@ final class ItemViewController: UIViewController {
             .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.rx.disposeBag)
         
-        self.collectionView.rx.modelSelected(ItemSectionItem.self)
-            .subscribe(onNext: { [weak self] _ in
-                let itemDetailViewController = ItemDetailViewController.instantiate()
-                self?.navigationController?.pushViewController(itemDetailViewController, animated: true)
-            })
+        self.collectionView.rx.modelSelected(ItemSectionItem.self).asObservable()
+            .discarded
+            .subscribe(self.viewModel.in.itemSelected)
             .disposed(by: self.rx.disposeBag)
     }
 }
