@@ -22,13 +22,13 @@ final class ItemDetailFoldersCell: UICollectionViewCell {
         }
     }
     
-    private var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() {
-        didSet {
-            self.layout.itemSize        = CGSize(width: 150, height: 205)
-            self.layout.sectionInset    = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-            self.layout.scrollDirection = .horizontal
-        }
-    }
+    private lazy var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize        = CGSize(width: 150, height: 205)
+        layout.sectionInset    = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.scrollDirection = .horizontal
+        return layout
+    }()
     
     var cellWidth: CGFloat = 0.0 {
         didSet {
