@@ -60,6 +60,12 @@
 		0DD8FC12213EE5220075D874 /* RxDataSources.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC10213EE5180075D874 /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DD8FC13213EE5220075D874 /* Differentiator.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC0E213EE5110075D874 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DD8FC15213EE5630075D874 /* ItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC14213EE5630075D874 /* ItemDataSource.swift */; };
+		0DD8FC182143EB5F0075D874 /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC172143EB5F0075D874 /* ItemDetailViewModel.swift */; };
+		0DD8FC1A2143EBAD0075D874 /* ItemDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC192143EBAD0075D874 /* ItemDetailDataSource.swift */; };
+		0DD8FC1D2144C1780075D874 /* MySumallyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC1C2144C1780075D874 /* MySumallyViewModel.swift */; };
+		0DD8FC1F2144C1AD0075D874 /* MySumallyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */; };
+		0DD8FC232144CD620075D874 /* NSObject_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FC222144CD620075D874 /* NSObject_Rx.framework */; };
+		0DD8FC242144CD6B0075D874 /* NSObject_Rx.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC222144CD620075D874 /* NSObject_Rx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -149,6 +155,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0DD8FC242144CD6B0075D874 /* NSObject_Rx.framework in CopyFiles */,
 				0DD8FC12213EE5220075D874 /* RxDataSources.framework in CopyFiles */,
 				0DD8FC13213EE5220075D874 /* Differentiator.framework in CopyFiles */,
 				0DD8FC0D213D909B0075D874 /* Connectable.framework in CopyFiles */,
@@ -229,6 +236,11 @@
 		0DD8FC0E213EE5110075D874 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = SOURCE_ROOT; };
 		0DD8FC10213EE5180075D874 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = SOURCE_ROOT; };
 		0DD8FC14213EE5630075D874 /* ItemDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDataSource.swift; sourceTree = "<group>"; };
+		0DD8FC172143EB5F0075D874 /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
+		0DD8FC192143EBAD0075D874 /* ItemDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailDataSource.swift; sourceTree = "<group>"; };
+		0DD8FC1C2144C1780075D874 /* MySumallyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySumallyViewModel.swift; sourceTree = "<group>"; };
+		0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySumallyDataSource.swift; sourceTree = "<group>"; };
+		0DD8FC222144CD620075D874 /* NSObject_Rx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSObject_Rx.framework; path = Carthage/Build/iOS/NSObject_Rx.framework; sourceTree = SOURCE_ROOT; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -293,6 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD8FC232144CD620075D874 /* NSObject_Rx.framework in Frameworks */,
 				75E596741FF378C600784269 /* SnapKit.framework in Frameworks */,
 				75E5966C1FF378C600784269 /* Realm.framework in Frameworks */,
 				75E596721FF378C600784269 /* RxCocoa.framework in Frameworks */,
@@ -373,6 +386,7 @@
 		0D2C191B1FFE659D0083466A /* MySumally */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC1B2144C1670075D874 /* ViewModel */,
 				0D2C191D1FFE65D80083466A /* View */,
 				0DA088361FFAB1AA00EE18CF /* Model */,
 			);
@@ -481,6 +495,7 @@
 		0DA0882D1FFAAFF900EE18CF /* ItemDetail */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC162143EB4B0075D874 /* ViewModel */,
 				0DA088411FFABB3E00EE18CF /* View */,
 				0DA0882E1FFAB00200EE18CF /* Model */,
 			);
@@ -492,6 +507,7 @@
 			children = (
 				0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */,
 				0DA0883B1FFAB2F200EE18CF /* Category.swift */,
+				0DD8FC192143EBAD0075D874 /* ItemDetailDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,6 +517,7 @@
 			children = (
 				0DA088371FFAB1B800EE18CF /* User.swift */,
 				0DA088391FFAB1BF00EE18CF /* Userable.swift */,
+				0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -539,6 +556,22 @@
 				0D2C19121FFD4AB50083466A /* ItemDetailViewController.storyboard */,
 			);
 			path = ItemDetailView;
+			sourceTree = "<group>";
+		};
+		0DD8FC162143EB4B0075D874 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0DD8FC172143EB5F0075D874 /* ItemDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0DD8FC1B2144C1670075D874 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0DD8FC1C2144C1780075D874 /* MySumallyViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0DE64FF72001318F00ACDEE5 /* ItemCollectionCell */ = {
@@ -673,6 +706,7 @@
 		75E5965F1FF3788800784269 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC222144CD620075D874 /* NSObject_Rx.framework */,
 				0DD8FC10213EE5180075D874 /* RxDataSources.framework */,
 				0DD8FC0E213EE5110075D874 /* Differentiator.framework */,
 				0DD8FC0B213D908F0075D874 /* Connectable.framework */,
@@ -963,12 +997,14 @@
 				0DE6500920023C1500ACDEE5 /* FunCell.swift in Sources */,
 				0D00B1C11FFA4D2B00DFCCE0 /* MainTabController.swift in Sources */,
 				0DD8FC15213EE5630075D874 /* ItemDataSource.swift in Sources */,
+				0DD8FC1D2144C1780075D874 /* MySumallyViewModel.swift in Sources */,
 				0D2C19451FFFE6F30083466A /* ItemCollectionCell.swift in Sources */,
 				75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */,
 				0DA088381FFAB1B800EE18CF /* User.swift in Sources */,
 				0DE6500D20023E3B00ACDEE5 /* FunLabelCell.swift in Sources */,
 				0D6899481FFBBED6004640CE /* ReactionView.swift in Sources */,
 				0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */,
+				0DD8FC182143EB5F0075D874 /* ItemDetailViewModel.swift in Sources */,
 				0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */,
 				0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */,
 				0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */,
@@ -987,6 +1023,7 @@
 				0D2C19381FFE9FA00083466A /* ImageCell.swift in Sources */,
 				75E596331FF272BD00784269 /* ViewController.swift in Sources */,
 				0D485DB21FFD21F4004116AB /* ItemNameView.swift in Sources */,
+				0DD8FC1F2144C1AD0075D874 /* MySumallyDataSource.swift in Sources */,
 				0D2C192D1FFE82030083466A /* UserListViewModel.swift in Sources */,
 				0DE650052002380700ACDEE5 /* FunListView.swift in Sources */,
 				0D2C19261FFE6A6C0083466A /* UserCell.swift in Sources */,
@@ -1015,6 +1052,7 @@
 				0DA088401FFAB34100EE18CF /* Brand.swift in Sources */,
 				75E596311FF272BD00784269 /* AppDelegate.swift in Sources */,
 				75E596C41FF4E2A200784269 /* ItemViewController.swift in Sources */,
+				0DD8FC1A2143EBAD0075D874 /* ItemDetailDataSource.swift in Sources */,
 				0DA0884A1FFABD1200EE18CF /* ReactionBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
