@@ -63,8 +63,8 @@ extension OutputSpace where Definer: ItemDetailViewModel {
             .map { items -> [ItemDetailSectionModel] in
                 return [
                     .detailSection,
-                    .folderSection(item: .folderItem),
-                    .normalSection(items: items)
+                    .folderSection(item: .folderItem, title: "このアイテムが含まれるフォルダ"),
+                    .normalSection(items: items, title: "関連アイテム")
                 ]
             }
             .share(replay: 1, scope: .forever)
