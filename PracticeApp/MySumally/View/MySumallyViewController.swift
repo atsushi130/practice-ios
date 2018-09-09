@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxDataSources
 import NSObject_Rx
+import CoordinatorKit
+
+extension MySumallyViewController: RoutableViewController {
+    typealias ViewControllerConfigurator = MySumallyConfigurator
+    typealias Dependency = Void
+}
 
 final class MySumallyViewController: UIViewController {
     
