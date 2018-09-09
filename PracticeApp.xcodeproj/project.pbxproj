@@ -68,6 +68,7 @@
 		0DD8FC242144CD6B0075D874 /* NSObject_Rx.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC222144CD620075D874 /* NSObject_Rx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DD8FC6A21454C6E0075D874 /* CoordinatorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */; };
 		0DD8FC6B21454C9B0075D874 /* CoordinatorKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DD8FC6E214553610075D874 /* ItemDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC6D214553610075D874 /* ItemDetailConfigurator.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -245,6 +246,7 @@
 		0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySumallyDataSource.swift; sourceTree = "<group>"; };
 		0DD8FC222144CD620075D874 /* NSObject_Rx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSObject_Rx.framework; path = Carthage/Build/iOS/NSObject_Rx.framework; sourceTree = SOURCE_ROOT; };
 		0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoordinatorKit.framework; path = Carthage/Build/iOS/CoordinatorKit.framework; sourceTree = SOURCE_ROOT; };
+		0DD8FC6D214553610075D874 /* ItemDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailConfigurator.swift; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 		0DA0882D1FFAAFF900EE18CF /* ItemDetail */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC6C2145534A0075D874 /* Coordinator */,
 				0DD8FC162143EB4B0075D874 /* ViewModel */,
 				0DA088411FFABB3E00EE18CF /* View */,
 				0DA0882E1FFAB00200EE18CF /* Model */,
@@ -577,6 +580,14 @@
 				0DD8FC1C2144C1780075D874 /* MySumallyViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0DD8FC6C2145534A0075D874 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0DD8FC6D214553610075D874 /* ItemDetailConfigurator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		0DE64FF72001318F00ACDEE5 /* ItemCollectionCell */ = {
@@ -1017,6 +1028,7 @@
 				0DA0883A1FFAB1BF00EE18CF /* Userable.swift in Sources */,
 				0D2C19111FFD4A9B0083466A /* ItemDetailViewController.swift in Sources */,
 				0D85A86D1FFCDCC600A9C364 /* ReactionFooterButtonView.swift in Sources */,
+				0DD8FC6E214553610075D874 /* ItemDetailConfigurator.swift in Sources */,
 				75E596C21FF4E25D00784269 /* Item.swift in Sources */,
 				75E5968F1FF37E3500784269 /* LoginViewController.swift in Sources */,
 				0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */,
