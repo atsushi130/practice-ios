@@ -19,6 +19,7 @@ final class MainTabController: UITabBarController {
     private func setup() {
         self.setupNavigationBar()
         self.setupTabBar()
+        self.setupTabBarController()
         self.delegate = self
     }
     
@@ -32,6 +33,12 @@ final class MainTabController: UITabBarController {
         UITabBar.appearance().unselectedItemTintColor = UIColor.ex.hex(string: "A1A1A1")
         guard let font = UIFont(font: .hiraginoSansW6, size: 10) else { return }
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.theme], for: .selected)
+    }
+    
+    private func setupTabBarController() {
+        let itemViewController      = ItemViewController.instantiate()
+        let mySumallyViewController = MySumallyViewController.instantiate()
+        self.setViewControllers([itemViewController, mySumallyViewController], animated: false)
     }
 }
 
