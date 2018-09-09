@@ -61,8 +61,7 @@ final class ItemViewController: UIViewController {
         
         self.collectionView.rx.modelSelected(ItemSectionItem.self)
             .subscribe(onNext: { [weak self] _ in
-                let storyboard = UIStoryboard(name: ItemDetailViewController.ex.className, bundle: nil)
-                let itemDetailViewController = storyboard.instantiateInitialViewController() as! ItemDetailViewController
+                let itemDetailViewController = ItemDetailViewController.instantiate()
                 self?.navigationController?.pushViewController(itemDetailViewController, animated: true)
             })
             .disposed(by: self.rx.disposeBag)
