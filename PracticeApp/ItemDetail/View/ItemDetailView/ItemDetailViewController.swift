@@ -43,10 +43,10 @@ final class ItemDetailViewController: UIViewController {
     }
     
     private let disposeBag = DisposeBag()
-    private let viewModel  = ItemViewModel()
+    private let viewModel  = ItemDetailViewModel()
     
     private lazy var dataSource = {
-        return RxCollectionViewSectionedReloadDataSource<ItemSectionModel>(
+        return RxCollectionViewSectionedReloadDataSource<ItemDetailSectionModel>(
             configureCell: { (dataSource, _, indexPath, sectionItem) in
                 switch (dataSource[indexPath.section], sectionItem) {
                 case let (.normalSection, .normalItem(item)):
@@ -120,7 +120,7 @@ final class ItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.rx.setDelegate(self).disposed(by: self.disposeBag)
-        self.viewModel.out.updateDetailItems
+        self.viewModel.out.updateItems
             .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.disposeBag)
         
