@@ -66,6 +66,8 @@
 		0DD8FC1F2144C1AD0075D874 /* MySumallyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */; };
 		0DD8FC232144CD620075D874 /* NSObject_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FC222144CD620075D874 /* NSObject_Rx.framework */; };
 		0DD8FC242144CD6B0075D874 /* NSObject_Rx.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC222144CD620075D874 /* NSObject_Rx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DD8FC6A21454C6E0075D874 /* CoordinatorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */; };
+		0DD8FC6B21454C9B0075D874 /* CoordinatorKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -155,6 +157,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0DD8FC6B21454C9B0075D874 /* CoordinatorKit.framework in CopyFiles */,
 				0DD8FC242144CD6B0075D874 /* NSObject_Rx.framework in CopyFiles */,
 				0DD8FC12213EE5220075D874 /* RxDataSources.framework in CopyFiles */,
 				0DD8FC13213EE5220075D874 /* Differentiator.framework in CopyFiles */,
@@ -241,6 +244,7 @@
 		0DD8FC1C2144C1780075D874 /* MySumallyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySumallyViewModel.swift; sourceTree = "<group>"; };
 		0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySumallyDataSource.swift; sourceTree = "<group>"; };
 		0DD8FC222144CD620075D874 /* NSObject_Rx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSObject_Rx.framework; path = Carthage/Build/iOS/NSObject_Rx.framework; sourceTree = SOURCE_ROOT; };
+		0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoordinatorKit.framework; path = Carthage/Build/iOS/CoordinatorKit.framework; sourceTree = SOURCE_ROOT; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -311,6 +315,7 @@
 				75E596721FF378C600784269 /* RxCocoa.framework in Frameworks */,
 				75E596701FF378C600784269 /* Result.framework in Frameworks */,
 				75E596761FF378C600784269 /* SwiftExtensions.framework in Frameworks */,
+				0DD8FC6A21454C6E0075D874 /* CoordinatorKit.framework in Frameworks */,
 				75E596731FF378C600784269 /* RxSwift.framework in Frameworks */,
 				0DD8FC11213EE5190075D874 /* RxDataSources.framework in Frameworks */,
 				0DD8FC0F213EE5110075D874 /* Differentiator.framework in Frameworks */,
@@ -706,6 +711,7 @@
 		75E5965F1FF3788800784269 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC6921454C6E0075D874 /* CoordinatorKit.framework */,
 				0DD8FC222144CD620075D874 /* NSObject_Rx.framework */,
 				0DD8FC10213EE5180075D874 /* RxDataSources.framework */,
 				0DD8FC0E213EE5110075D874 /* Differentiator.framework */,
