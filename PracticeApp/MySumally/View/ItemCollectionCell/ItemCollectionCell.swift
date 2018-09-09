@@ -21,20 +21,19 @@ final class ItemCollectionCell: UICollectionViewCell {
 
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.ex.register(cellType: ImageCell.self)
         }
     }
     
-    private var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() {
-        didSet {
-            self.layout.itemSize     = CGSize(width: 1.0, height: 1.0)
-            self.layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            self.layout.minimumLineSpacing = 0
-            self.layout.minimumInteritemSpacing = 0
-        }
-    }
+    private lazy var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize     = CGSize(width: 1.0, height: 1.0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing      = 0
+        layout.minimumInteritemSpacing = 0
+        return layout
+    }()
     
     struct Matrix {
         let x: Int
