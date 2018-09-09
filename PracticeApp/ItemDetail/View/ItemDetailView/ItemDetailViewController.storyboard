@@ -13,7 +13,7 @@
         <!--Item Detail View Controller-->
         <scene sceneID="DlI-rW-KUP">
             <objects>
-                <viewController id="SMw-1H-8ve" customClass="ItemDetailViewController" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemDetailViewController" id="SMw-1H-8ve" customClass="ItemDetailViewController" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yMU-yy-kZW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
