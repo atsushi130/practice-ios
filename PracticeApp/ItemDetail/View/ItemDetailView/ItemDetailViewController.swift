@@ -12,6 +12,11 @@ import RxCocoa
 import RxDataSources
 import CoordinatorKit
 
+extension ItemDetailViewController: RoutableViewController {
+    typealias ViewControllerConfigurator = ItemDetailConfigurator
+    typealias Dependency = Void
+}
+
 final class ItemDetailViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView! {
