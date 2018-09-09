@@ -13,7 +13,7 @@
         <!--ホーム-->
         <scene sceneID="9ff-eA-yWe">
             <objects>
-                <viewController id="OXS-cK-E2e" customClass="ItemViewController" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemViewController" id="OXS-cK-E2e" customClass="ItemViewController" customModule="PracticeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BoK-4R-UlX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
