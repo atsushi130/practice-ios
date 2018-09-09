@@ -54,7 +54,6 @@ final class ItemViewModel {
 
 extension ItemViewModel: Connectable {}
 extension OutputSpace where Definer: ItemViewModel {
-    
     var updateItems: Observable<[ItemSectionModel]> {
         return self.definer.items
             .map { items in
@@ -62,22 +61,6 @@ extension OutputSpace where Definer: ItemViewModel {
             }
             .map { items -> [ItemSectionModel] in
                 return [ItemSectionModel.normalSection(items: items)]
-            }
-            .share(replay: 1, scope: .forever)
-    }
-    
-    // FIXME: to ItemDetailViewModel
-    var updateDetailItems: Observable<[ItemSectionModel]> {
-        return self.definer.items
-            .map { items in
-                return items.map { item in ItemSectionItem.normalItem(item: item) }
-            }
-            .map { items -> [ItemSectionModel] in
-                return [
-                    .detailSection,
-                    .folderSection(item: .folderItem),
-                    .normalSection(items: items)
-                ]
             }
             .share(replay: 1, scope: .forever)
     }
