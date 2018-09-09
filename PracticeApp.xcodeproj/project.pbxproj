@@ -73,6 +73,8 @@
 		0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC73214557C00075D874 /* MySumallyConfigurator.swift */; };
 		0DD8FC76214558770075D874 /* ItemConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC75214558770075D874 /* ItemConfigurator.swift */; };
 		0DD8FC78214560730075D874 /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC77214560730075D874 /* Observable+.swift */; };
+		0DD8FC7B2145773E0075D874 /* UserListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC7A2145773E0075D874 /* UserListConfigurator.swift */; };
+		0DD8FC7D214578580075D874 /* ItemDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC7C214578580075D874 /* ItemDetailCoordinator.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -255,6 +257,8 @@
 		0DD8FC73214557C00075D874 /* MySumallyConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySumallyConfigurator.swift; sourceTree = "<group>"; };
 		0DD8FC75214558770075D874 /* ItemConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemConfigurator.swift; sourceTree = "<group>"; };
 		0DD8FC77214560730075D874 /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
+		0DD8FC7A2145773E0075D874 /* UserListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListConfigurator.swift; sourceTree = "<group>"; };
+		0DD8FC7C214578580075D874 /* ItemDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCoordinator.swift; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -412,6 +416,7 @@
 		0D2C191C1FFE65AB0083466A /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC79214577300075D874 /* Coordinator */,
 				0D2C192B1FFE81F60083466A /* ViewModel */,
 				0D2C19241FFE6A530083466A /* View */,
 			);
@@ -595,6 +600,7 @@
 			isa = PBXGroup;
 			children = (
 				0DD8FC6D214553610075D874 /* ItemDetailConfigurator.swift */,
+				0DD8FC7C214578580075D874 /* ItemDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -612,6 +618,14 @@
 			isa = PBXGroup;
 			children = (
 				0DD8FC73214557C00075D874 /* MySumallyConfigurator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0DD8FC79214577300075D874 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0DD8FC7A2145773E0075D874 /* UserListConfigurator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1052,6 +1066,7 @@
 				0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */,
 				0DD8FC182143EB5F0075D874 /* ItemDetailViewModel.swift in Sources */,
 				0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */,
+				0DD8FC7B2145773E0075D874 /* UserListConfigurator.swift in Sources */,
 				0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */,
 				0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */,
 				0DA0883A1FFAB1BF00EE18CF /* Userable.swift in Sources */,
@@ -1081,6 +1096,7 @@
 				75E596911FF37E6100784269 /* LoginView.swift in Sources */,
 				75E596A41FF39F5500784269 /* AccountValidateViewModel.swift in Sources */,
 				7594419C1FF6ABD0001E4FD1 /* UIColor+.swift in Sources */,
+				0DD8FC7D214578580075D874 /* ItemDetailCoordinator.swift in Sources */,
 				0DA088321FFAB03A00EE18CF /* Itemable.swift in Sources */,
 				0D485DB71FFD2309004116AB /* ItemActionView.swift in Sources */,
 				75E596BF1FF4E21800784269 /* ItemCell.swift in Sources */,
