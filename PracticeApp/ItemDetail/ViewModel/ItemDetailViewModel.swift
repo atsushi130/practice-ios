@@ -11,11 +11,25 @@ import RxSwift
 import RxCocoa
 import Connectable
 
-final class ItemDetailViewModel {
+final class ItemDetailViewModel: Connectable {
     
+    private let coordinator: ItemDetailCoordinator
     let items = BehaviorRelay<[Item]>(value: [])
     
-    init() {
+    fileprivate lazy var tappedUserList = AnyObserver<ReactionView.ReactionType> { event in
+        if case let .next(reactionType) = event {
+            self.coordinator.transition(to: .userList(reactionType: reactionType))
+        }
+    }
+    
+    fileprivate lazy var selectedItem = AnyObserver<Void> { event in
+        self.coordinator.transition(to: .detail)
+    }
+    
+    init(coordinator: ItemDetailCoordinator) {
+        
+        self.coordinator = coordinator
+        
         let items = [
             Item(id: "1", name: "Main Item1", subName: "Sub Name1", isOn: (wants: true, haves: false), count: (wants: 0, haves: 0)),
             Item(id: "2", name: "Main Item2", subName: "Sub Name2", isOn: (wants: true, haves: false), count: (wants: 0, haves: 0)),
@@ -53,7 +67,7 @@ final class ItemDetailViewModel {
     }
 }
 
-extension ItemDetailViewModel: Connectable {}
+// MARK: - Output
 extension OutputSpace where Definer: ItemDetailViewModel {
     var updateItems: Observable<[ItemDetailSectionModel]> {
         return self.definer.items
@@ -71,7 +85,17 @@ extension OutputSpace where Definer: ItemDetailViewModel {
     }
 }
 
+// MARK: - Input
 extension InputSpace where Definer: ItemDetailViewModel {
+    
+    var tappedUserList: AnyObserver<ReactionView.ReactionType> {
+        return self.definer.tappedUserList
+    }
+    
+    var selectedItem: AnyObserver<Void> {
+        return self.definer.selectedItem
+    }
+    
     var item: Binder<(Item, Int)> {
         return Binder(self.definer) { element, value in
             let (item, index) = value
