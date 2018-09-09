@@ -15,7 +15,6 @@ final class ItemDetailFoldersCell: UICollectionViewCell {
     
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.showsHorizontalScrollIndicator = false
             self.collectionView.ex.register(cellType: ItemDetailFolderCell.self)
