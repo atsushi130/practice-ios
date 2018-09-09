@@ -12,7 +12,6 @@ final class FunListView: UIView {
     
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            self.layout = UICollectionViewFlowLayout()
             self.collectionView.collectionViewLayout = self.layout
             self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
             self.collectionView.ex.register(cellType: FunCell.self)
@@ -20,15 +19,15 @@ final class FunListView: UIView {
         }
     }
     
-    private var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() {
-        didSet {
-            // self sizing by autolayout
-            self.layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
-            self.layout.sectionInset      = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-            self.layout.minimumLineSpacing      = 10
-            self.layout.minimumInteritemSpacing = 10
-        }
-    }
+    private lazy var layout: UICollectionViewFlowLayout = {
+        // self sizing by autolayout
+        let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+        layout.sectionInset      = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.minimumLineSpacing      = 10
+        layout.minimumInteritemSpacing = 10
+        return layout
+    }()
     
     private let brands = ["NOMOS", "mercibeaucoup,"]
     
