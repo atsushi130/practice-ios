@@ -75,6 +75,7 @@
 		0DD8FC78214560730075D874 /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC77214560730075D874 /* Observable+.swift */; };
 		0DD8FC7B2145773E0075D874 /* UserListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC7A2145773E0075D874 /* UserListConfigurator.swift */; };
 		0DD8FC7D214578580075D874 /* ItemDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FC7C214578580075D874 /* ItemDetailCoordinator.swift */; };
+		0DD8FC81214623C90075D874 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8FC80214623C90075D874 /* items.json */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -259,6 +260,7 @@
 		0DD8FC77214560730075D874 /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
 		0DD8FC7A2145773E0075D874 /* UserListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListConfigurator.swift; sourceTree = "<group>"; };
 		0DD8FC7C214578580075D874 /* ItemDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCoordinator.swift; sourceTree = "<group>"; };
+		0DD8FC80214623C90075D874 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -630,6 +632,22 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		0DD8FC7E214621C30075D874 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0DD8FC7F214621CC0075D874 /* Json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0DD8FC7F214621CC0075D874 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				0DD8FC80214623C90075D874 /* items.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		0DE64FF72001318F00ACDEE5 /* ItemCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +741,7 @@
 		75E5962F1FF272BD00784269 /* PracticeApp */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC7E214621C30075D874 /* Resources */,
 				0D2C191C1FFE65AB0083466A /* UserList */,
 				0D2C191B1FFE659D0083466A /* MySumally */,
 				0DA0883D1FFAB33500EE18CF /* Brand */,
@@ -1005,6 +1024,7 @@
 			files = (
 				0DE6500B20023D0500ACDEE5 /* FunCell.xib in Resources */,
 				0D2C19211FFE65EE0083466A /* UserIconView.xib in Resources */,
+				0DD8FC81214623C90075D874 /* items.json in Resources */,
 				0D2C193A1FFE9FCF0083466A /* ImageCell.xib in Resources */,
 				0DA088451FFABB7D00EE18CF /* ItemDetailReusableView.xib in Resources */,
 				75E5963B1FF272BD00784269 /* LaunchScreen.storyboard in Resources */,
