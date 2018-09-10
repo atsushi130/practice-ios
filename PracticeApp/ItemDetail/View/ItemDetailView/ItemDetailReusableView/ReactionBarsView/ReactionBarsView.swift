@@ -63,17 +63,11 @@ import RxCocoa
             .disposed(by: self.disposeBag)
         
         self.wants.rx.willSegueToUserList
-            .drive(onNext: { [weak self] in
-                guard let `self` = self else { return }
-                self.segueEvent.onNext(.wants)
-            })
+            .subscribe(self.segueEvent)
             .disposed(by: self.disposeBag)
         
         self.haves.rx.willSegueToUserList
-            .drive(onNext: { [weak self] in
-                guard let `self` = self else { return }
-                self.segueEvent.onNext(.haves)
-            })
+            .subscribe(self.segueEvent)
             .disposed(by: self.disposeBag)
     }
     
@@ -92,11 +86,11 @@ extension Reactive where Base: ReactionBarsView {
         }
     }
     
-    var updateState: Driver<ReactionBarsView.IsOn> {
-        return self.base.updateStateEvent.asDriver(onErrorDriveWith: Driver.empty())
+    var updateState: Observable<ReactionBarsView.IsOn> {
+        return self.base.updateStateEvent
     }
     
-    var willSegueToUserList: Driver<ReactionView.ReactionType> {
-        return self.base.segueEvent.asDriver(onErrorDriveWith: Driver.empty())
+    var willSegueToUserList: Observable<ReactionView.ReactionType> {
+        return self.base.segueEvent
     }
 }
