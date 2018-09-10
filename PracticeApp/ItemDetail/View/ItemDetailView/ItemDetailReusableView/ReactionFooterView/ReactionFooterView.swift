@@ -71,7 +71,7 @@ extension Reactive where Base: ReactionFooterView {
         }
     }
     
-    var updateState: Driver<ReactionFooterView.IsOn> {
-        return self.base.updateStateEvent.asDriver(onErrorDriveWith: Driver.empty())
+    var updateState: Observable<ReactionFooterView.IsOn> {
+        return self.base.updateStateEvent
     }
 }
