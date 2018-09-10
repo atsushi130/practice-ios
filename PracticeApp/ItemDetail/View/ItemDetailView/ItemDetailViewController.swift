@@ -40,13 +40,6 @@ final class ItemDetailViewController: UIViewController {
         return layout
     }()
     
-    private struct Section {
-        static let detail = 0
-        static let folder = 1
-        static let item   = 2
-        static let count  = 3
-    }
-    
     var viewModel: ItemDetailViewModel!
     private var headerDisposeBag = DisposeBag()
     
