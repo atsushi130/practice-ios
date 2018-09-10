@@ -90,10 +90,6 @@ final class ItemCell: UICollectionViewCell {
         // able to refarence attributes of cell has sized by auto layout.
         return super.preferredLayoutAttributesFitting(layoutAttributes)
     }
-    
-    deinit {
-        print("deinit item cell")
-    }
 }
 
 extension Reactive where Base: ItemCell {
