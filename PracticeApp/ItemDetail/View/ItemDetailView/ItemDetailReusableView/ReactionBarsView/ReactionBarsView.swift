@@ -24,7 +24,7 @@ import RxCocoa
     private let disposeBag = DisposeBag()
     typealias IsOn = (wants: Bool, haves: Bool)
     fileprivate let updateStateEvent = PublishSubject<IsOn>()
-    fileprivate let segueEvent       = PublishSubject<ReactionView.ReactionType>()
+    fileprivate let tappedUserList   = PublishSubject<ReactionView.ReactionType>()
     
     fileprivate var isOn: IsOn = IsOn(wants: false, haves: false) {
         didSet {
@@ -62,12 +62,12 @@ import RxCocoa
             })
             .disposed(by: self.disposeBag)
         
-        self.wants.rx.willSegueToUserList
-            .subscribe(self.segueEvent)
+        self.wants.rx.tappedUserList
+            .subscribe(self.tappedUserList)
             .disposed(by: self.disposeBag)
         
-        self.haves.rx.willSegueToUserList
-            .subscribe(self.segueEvent)
+        self.haves.rx.tappedUserList
+            .subscribe(self.tappedUserList)
             .disposed(by: self.disposeBag)
     }
     
@@ -90,7 +90,7 @@ extension Reactive where Base: ReactionBarsView {
         return self.base.updateStateEvent
     }
     
-    var willSegueToUserList: Observable<ReactionView.ReactionType> {
-        return self.base.segueEvent
+    var tappedUserList: Observable<ReactionView.ReactionType> {
+        return self.base.tappedUserList
     }
 }

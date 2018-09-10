@@ -99,7 +99,7 @@ final class ItemDetailViewController: UIViewController {
                         })
                         .disposed(by: self.headerDisposeBag)
                     
-                    header.rx.willSegueToUserList
+                    header.rx.tappedUserList
                         .subscribe(self.viewModel.in.tappedUserList)
                         .disposed(by: self.headerDisposeBag)
                     

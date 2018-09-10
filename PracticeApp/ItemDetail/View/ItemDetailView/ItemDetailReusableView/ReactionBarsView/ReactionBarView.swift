@@ -37,7 +37,7 @@ extension Reactive where Base: ReactionBarView {
         return self.base.button.rx.controlEvent(controlEvent).asDriver().throttle(self.base.reactionView.animationDuration)
     }
     
-    var willSegueToUserList: Observable<ReactionView.ReactionType> {
+    var tappedUserList: Observable<ReactionView.ReactionType> {
         return self.base.userListButton.rx.controlEvent(.touchUpInside)
             .map { self.base.reactionType }
     }

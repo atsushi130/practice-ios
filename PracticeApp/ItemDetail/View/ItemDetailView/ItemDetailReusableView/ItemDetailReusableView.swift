@@ -40,15 +40,10 @@ final class ItemDetailReusableView: UICollectionReusableView, NibInstantiatable 
     func bind(itemDetail: ItemDetail) {
         self.itemNameView.bind(name: (main: itemDetail.name, sub: itemDetail.subName))
     }
-    
-    deinit {
-        print("deinit item detail reusable view")
-    }
 }
 
 extension Reactive where Base: ItemDetailReusableView {
-    var willSegueToUserList: Observable<ReactionView.ReactionType> {
-        return self.base.reactionBarsView.rx.willSegueToUserList
-            .debounce(0.1, scheduler: MainScheduler.instance)
+    var tappedUserList: Observable<ReactionView.ReactionType> {
+        return self.base.reactionBarsView.rx.tappedUserList
     }
 }
