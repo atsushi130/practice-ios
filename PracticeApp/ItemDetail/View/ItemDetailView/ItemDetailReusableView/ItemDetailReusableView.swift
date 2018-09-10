@@ -9,8 +9,9 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftExtensions
 
-final class ItemDetailReusableView: UICollectionReusableView {
+final class ItemDetailReusableView: UICollectionReusableView, NibInstantiatable {
     
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet fileprivate weak var reactionBarsView: ReactionBarsView!
@@ -28,8 +29,12 @@ final class ItemDetailReusableView: UICollectionReusableView {
     }
     
     private func observe() {
-        self.reactionBarsView.rx.updateState.drive(self.reactionFooterView.rx.isOn).disposed(by: self.disposeBag)
-        self.reactionFooterView.rx.updateState.drive(self.reactionBarsView.rx.isOn).disposed(by: self.disposeBag)
+        self.reactionBarsView.rx.updateState
+            .subscribe(self.reactionFooterView.rx.isOn)
+            .disposed(by: self.disposeBag)
+        self.reactionFooterView.rx.updateState
+            .subscribe(self.reactionBarsView.rx.isOn)
+            .disposed(by: self.disposeBag)
     }
     
     func bind(itemDetail: ItemDetail) {
@@ -42,7 +47,8 @@ final class ItemDetailReusableView: UICollectionReusableView {
 }
 
 extension Reactive where Base: ItemDetailReusableView {
-    var willSegueToUserList: Driver<ReactionView.ReactionType> {
+    var willSegueToUserList: Observable<ReactionView.ReactionType> {
         return self.base.reactionBarsView.rx.willSegueToUserList
+            .debounce(0.1, scheduler: MainScheduler.instance)
     }
 }
