@@ -48,6 +48,7 @@ final class ItemDetailViewController: UIViewController {
     }
     
     var viewModel: ItemDetailViewModel!
+    private var headerDisposeBag = DisposeBag()
     
     private lazy var dataSource = {
         return RxCollectionViewSectionedReloadDataSource<ItemDetailSectionModel>(
@@ -76,6 +77,7 @@ final class ItemDetailViewController: UIViewController {
                 switch dataSource[indexPath.section] {
                 case .detailSection:
                     let header = self.collectionView.ex.dequeueReusableView(with: ItemDetailReusableView.self, for: indexPath)
+                    self.headerDisposeBag = DisposeBag()
                     
                     let updateConstraints = { [weak self] in
                         guard let `self` = self else { return }
@@ -95,11 +97,11 @@ final class ItemDetailViewController: UIViewController {
                         .drive(onNext: {
                             updateConstraints()
                         })
-                        .disposed(by: header.disposeBag)
+                        .disposed(by: self.headerDisposeBag)
                     
-                    header.rx.willSegueToUserList.asDriver()
-                        .drive(self.viewModel.in.tappedUserList)
-                        .disposed(by: header.disposeBag)
+                    header.rx.willSegueToUserList
+                        .subscribe(self.viewModel.in.tappedUserList)
+                        .disposed(by: self.headerDisposeBag)
                     
                     return header
                     
