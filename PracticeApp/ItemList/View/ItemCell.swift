@@ -24,7 +24,7 @@ final class ItemCell: UICollectionViewCell {
     
     private var item: Model.Item? = nil
     let disposeBag = DisposeBag()
-    private let updateReactionState = PublishSubject<ReactionState>()
+    private let updateReactions = PublishSubject<Reactions>()
 
     var cellWidth: CGFloat = 0.0 {
         didSet { self.imageConstraintsWidth.constant = self.cellWidth }
@@ -45,22 +45,21 @@ final class ItemCell: UICollectionViewCell {
     private func observe() {
         
         self.wants.rx.controlEvent(.touchUpInside)
-            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
-            .map { ReactionViewModel.wants.changeState(to: $0) }
-            .drive(self.updateReactionState)
+            .do (onNext: { self.item?.reaction.switch(of: .wants) })
+            .map { self.item!.reaction }
+            .drive(self.updateReactions)
             .disposed(by: self.disposeBag)
         
         self.haves.rx.controlEvent(.touchUpInside)
-            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
-            .map { ReactionViewModel.haves.changeState(to: $0) }
-            .drive(self.updateReactionState)
+            .do (onNext: { self.item?.reaction.switch(of: .haves) })
+            .map { self.item!.reaction }
+            .drive(self.updateReactions)
             .disposed(by: self.disposeBag)
         
-        self.updateReactionState
-            .do(onNext: { reactionState in
-                self.item?.updateReactionState(wants: reactionState.wants, haves: reactionState.haves)
-                self.wants.isVoted = reactionState.wants
-                self.haves.isVoted = reactionState.haves
+        self.updateReactions
+            .do(onNext: { reactions in
+                self.wants.isVoted = reactions.wants.state
+                self.haves.isVoted = reactions.haves.state
             })
             .subscribe()
             .disposed(by: self.disposeBag)
