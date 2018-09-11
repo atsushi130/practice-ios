@@ -22,8 +22,8 @@ final class ReactionFooterButtonView: UIView {
         set { self.layer.cornerRadius = newValue }
     }
     
-    var isOn: Bool = false {
-        didSet { self.reactionView.isOn = self.isOn }
+    var isVoted: Bool = false {
+        didSet { self.reactionView.isVoted = self.isVoted }
     }
     
     var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {
@@ -32,7 +32,7 @@ final class ReactionFooterButtonView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.isOn = self.reactionView.isOn
+        self.isVoted = self.reactionView.isVoted
     }
 }
 

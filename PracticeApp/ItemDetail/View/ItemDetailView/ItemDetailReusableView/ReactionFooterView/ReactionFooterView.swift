@@ -16,13 +16,13 @@ final class ReactionFooterView: UIView {
     @IBOutlet private weak var haves: ReactionFooterButtonView!
 
     private let disposeBag = DisposeBag()
-    typealias IsOn = (wants: Bool, haves: Bool)
-    fileprivate let updateStateEvent = PublishSubject<IsOn>()
+    typealias Reaction = (wants: Bool, haves: Bool)
+    fileprivate let updateStateEvent = PublishSubject<Reaction>()
     
-    fileprivate var isOn: IsOn = IsOn(wants: false, haves: false) {
+    fileprivate var reaction = Reaction(wants: false, haves: false) {
         didSet {
-            self.wants.isOn = isOn.wants
-            self.haves.isOn = isOn.haves
+            self.wants.isVoted = self.reaction.wants
+            self.haves.isVoted = self.reaction.haves
         }
     }
     
@@ -42,36 +42,36 @@ final class ReactionFooterView: UIView {
         self.wants.rx.controlEvent(.touchUpInside)
             .drive(onNext: { [weak self] in
                 guard let `self` = self else { return }
-                let isOn = ReactionViewModel.wants.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
-                self.bindState(isOn: isOn)
+                let reaction = ReactionViewModel.wants.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
+                self.bindState(reaction: reaction)
             })
             .disposed(by: self.disposeBag)
         
         self.haves.rx.controlEvent(.touchUpInside)
             .drive(onNext: { [weak self] in
                 guard let `self` = self else { return }
-                let isOn = ReactionViewModel.haves.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
-                self.bindState(isOn: isOn)
+                let reaction = ReactionViewModel.haves.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
+                self.bindState(reaction: reaction)
             })
             .disposed(by: self.disposeBag)
     }
     
-    private func bindState(isOn: IsOn) {
-        self.wants.isOn = isOn.wants
-        self.haves.isOn = isOn.haves
-        self.updateStateEvent.onNext(isOn)
+    private func bindState(reaction: Reaction) {
+        self.wants.isVoted = reaction.wants
+        self.haves.isVoted = reaction.haves
+        self.updateStateEvent.onNext(reaction)
     }
 }
 
 extension Reactive where Base: ReactionFooterView {
     
-    var isOn: Binder<ReactionFooterView.IsOn> {
+    var isOn: Binder<Reaction> {
         return Binder(self.base) { element, value in
-            element.isOn = value
+            element.reaction = value
         }
     }
     
-    var updateState: Observable<ReactionFooterView.IsOn> {
+    var updateState: Observable<Reaction> {
         return self.base.updateStateEvent
     }
 }

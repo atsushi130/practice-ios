@@ -22,8 +22,8 @@ final class ItemButton: UIView {
     
     private let disposeBag = DisposeBag()
     
-    var isOn: Bool = false {
-        didSet { self.reactionView.isOn = self.isOn }
+    var isVoted: Bool = false {
+        didSet { self.reactionView.isVoted = self.isVoted }
     }
     
     var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {

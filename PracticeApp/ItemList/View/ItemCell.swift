@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import Model
 
 final class ItemCell: UICollectionViewCell {
 
@@ -21,9 +22,8 @@ final class ItemCell: UICollectionViewCell {
     @IBOutlet private weak var imageConstraintsWidth:  NSLayoutConstraint!
     @IBOutlet private weak var imageConstraintsHeight: NSLayoutConstraint!
     
-    private var item: Item? = nil
+    private var item: Model.Item? = nil
     let disposeBag = DisposeBag()
-    private typealias IsOn = (wants: Bool, haves: Bool)
 
     var cellWidth: CGFloat = 0.0 {
         didSet { self.imageConstraintsWidth.constant = self.cellWidth }
@@ -44,38 +44,39 @@ final class ItemCell: UICollectionViewCell {
     private func observe() {
         
         self.wants.rx.controlEvent(.touchUpInside)
-            .map { [weak self] _ -> ReactionViewModel.IsOn in
-                guard let `self` = self else { return ReactionViewModel.IsOn(wants: true, haves: true) }
-                return ReactionViewModel.wants.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
+            .map { [weak self] _ -> Reaction in
+                guard let `self` = self else { return Reaction(wants: true, haves: true) }
+                return ReactionViewModel.wants.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
             }
-            .drive(onNext: { [weak self] isOn in
-                self?.bindState(isOn: isOn)
+            .drive(onNext: { [weak self] reaction in
+                self?.bindState(reaction: reaction)
             })
             .disposed(by: self.disposeBag)
         
         self.haves.rx.controlEvent(.touchUpInside)
-            .map { [weak self] _ -> ReactionViewModel.IsOn in
-                guard let `self` = self else { return ReactionViewModel.IsOn(wants: false, haves: false) }
-                return ReactionViewModel.haves.changeState(isOn: IsOn(wants: self.wants.isOn, haves: self.haves.isOn))
+            .map { [weak self] _ -> Reaction in
+                guard let `self` = self else { return Reaction(wants: false, haves: false) }
+                return ReactionViewModel.haves.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
             }
-            .drive(onNext: { [weak self] isOn in
-                self?.bindState(isOn: isOn)
+            .drive(onNext: { [weak self] reaction in
+                self?.bindState(reaction: reaction)
             })
             .disposed(by: self.disposeBag)
     }
     
-    func bind(item: Item) {
+    func bind(item: Model.Item) {
         self.item = item
         self.mainNameLabel.text = item.name
         self.subNameLabel.text  = item.subName
-        self.wants.isOn = item.isOn.wants
-        self.haves.isOn = item.isOn.haves
+        self.wants.isVoted = item.reaction.wants.state
+        self.haves.isVoted = item.reaction.haves.state
     }
     
-    private func bindState(isOn: IsOn) {
-        self.item?.isOn = isOn
-        self.wants.isOn = isOn.wants
-        self.haves.isOn = isOn.haves
+    private func bindState(reaction: Reaction) {
+        self.item?.reaction.wants.state = reaction.wants
+        self.item?.reaction.haves.state = reaction.haves
+        self.wants.isVoted = reaction.wants
+        self.haves.isVoted = reaction.haves
     }
     
     private func imageSizeFit(imageSize: CGSize) {

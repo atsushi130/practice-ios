@@ -17,8 +17,8 @@ final class ReactionBarView: UIView {
     @IBOutlet private weak var countLabel:         UILabel!
     @IBOutlet fileprivate weak var userListButton: UIButton!
     
-    var isOn: Bool = false {
-        didSet { self.reactionView.isOn = self.isOn }
+    var isVoted: Bool = false {
+        didSet { self.reactionView.isVoted = self.isVoted }
     }
     
     var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {
@@ -27,7 +27,7 @@ final class ReactionBarView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.isOn = self.reactionView.isOn
+        self.isVoted = self.reactionView.isVoted
     }
 }
 

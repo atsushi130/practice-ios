@@ -48,7 +48,7 @@ final class ReactionView: UIView, NibDesignable {
         }
     }
     
-    var isOn = false {
+    var isVoted = false {
         didSet {
             self.changeAnimation()
         }
@@ -80,7 +80,7 @@ final class ReactionView: UIView, NibDesignable {
     
     private func changeAnimation() {
         
-        switch self.isOn {
+        switch self.isVoted {
         case true:
             UIView.animate(withDuration: Const.animationDuration,
                            delay: 0,

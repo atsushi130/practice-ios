@@ -10,27 +10,25 @@ enum ReactionViewModel {
     
     case wants
     case haves
-    
-    typealias IsOn = (wants: Bool, haves: Bool)
-    
-    func changeState(isOn: IsOn) -> IsOn {
+
+    func changeState(reaction: Reaction) -> Reaction {
         switch self {
-        case .wants: return self.changeWantsState(isOn: isOn)
-        case .haves: return self.changeHavesState(isOn: isOn)
+        case .wants: return self.changeWantsState(reaction: reaction)
+        case .haves: return self.changeHavesState(reaction: reaction)
         }
     }
     
-    private func changeWantsState(isOn: IsOn) -> IsOn {
-        switch isOn.haves {
-        case true:  return IsOn(wants: true, haves: false)
-        case false: return IsOn(wants: !isOn.wants, haves: isOn.haves)
+    private func changeWantsState(reaction: Reaction) -> Reaction {
+        switch reaction.haves {
+        case true:  return Reaction(wants: true, haves: false)
+        case false: return Reaction(wants: !reaction.wants, haves: reaction.haves)
         }
     }
     
-    private func changeHavesState(isOn: IsOn) -> IsOn {
-        switch isOn.wants {
-        case true:  return IsOn(wants: false, haves: true)
-        case false: return IsOn(wants: isOn.wants, haves: !isOn.haves)
+    private func changeHavesState(reaction: Reaction) -> Reaction {
+        switch reaction.wants {
+        case true:  return Reaction(wants: false, haves: true)
+        case false: return Reaction(wants: reaction.wants, haves: !reaction.haves)
         }
     }
 }
