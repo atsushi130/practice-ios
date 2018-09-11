@@ -12,16 +12,16 @@ import RxCocoa
 
 final class ReactionFooterView: UIView {
     
-    @IBOutlet private weak var wants: ReactionFooterButtonView!
-    @IBOutlet private weak var haves: ReactionFooterButtonView!
+    @IBOutlet fileprivate weak var wants: ReactionFooterButtonView!
+    @IBOutlet fileprivate weak var haves: ReactionFooterButtonView!
 
     private let disposeBag = DisposeBag()
-    fileprivate let updateStateEvent = PublishSubject<Reaction>()
+    fileprivate let updateStateEvent = PublishSubject<ReactionState>()
     
-    fileprivate var reaction = Reaction(wants: false, haves: false) {
+    fileprivate var reactionState = ReactionState(wants: false, haves: false) {
         didSet {
-            self.wants.isVoted = self.reaction.wants
-            self.haves.isVoted = self.reaction.haves
+            self.wants.isVoted = self.reactionState.wants
+            self.haves.isVoted = self.reactionState.haves
         }
     }
     
@@ -39,38 +39,32 @@ final class ReactionFooterView: UIView {
     private func observe() {
         
         self.wants.rx.controlEvent(.touchUpInside)
-            .drive(onNext: { [weak self] in
-                guard let `self` = self else { return }
-                let reaction = ReactionViewModel.wants.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
-                self.bindState(reaction: reaction)
-            })
+            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
+            .map { ReactionViewModel.wants.changeState(to: $0) }
+            .drive(self.updateStateEvent)
             .disposed(by: self.disposeBag)
         
         self.haves.rx.controlEvent(.touchUpInside)
-            .drive(onNext: { [weak self] in
-                guard let `self` = self else { return }
-                let reaction = ReactionViewModel.haves.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
-                self.bindState(reaction: reaction)
-            })
+            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
+            .map { ReactionViewModel.haves.changeState(to: $0) }
+            .drive(self.updateStateEvent)
             .disposed(by: self.disposeBag)
-    }
-    
-    private func bindState(reaction: Reaction) {
-        self.wants.isVoted = reaction.wants
-        self.haves.isVoted = reaction.haves
-        self.updateStateEvent.onNext(reaction)
     }
 }
 
 extension Reactive where Base: ReactionFooterView {
     
-    var isOn: Binder<Reaction> {
+    var reactionState: Binder<ReactionState> {
         return Binder(self.base) { element, value in
-            element.reaction = value
+            element.reactionState = value
         }
     }
     
-    var updateState: Observable<Reaction> {
+    var updateState: Observable<ReactionState> {
         return self.base.updateStateEvent
+            .do(onNext: { reactionState in
+                self.base.wants.isVoted = reactionState.wants
+                self.base.haves.isVoted = reactionState.haves
+            })
     }
 }
