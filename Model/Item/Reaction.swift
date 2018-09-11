@@ -29,10 +29,80 @@ public enum Reaction {
     
     mutating public func update(state: Bool) {
         switch self {
-        case let .wants(_, count):
-            self = .wants(state: state, count: count)
-        case let .haves(_, count):
-            self = .haves(state: state, count: count)
+        case let .wants(_, count): self = .wants(state: state, count: count)
+        case let .haves(_, count): self = .haves(state: state, count: count)
+        }
+    }
+    
+    mutating public func `switch`() {
+        switch self {
+        case let .wants(state, count): self = .wants(state: !state, count: count)
+        case let .haves(state, count): self = .haves(state: !state, count: count)
+        }
+    }
+    
+    mutating public func turnOn() {
+        switch self {
+        case let .wants(_, count): self = .wants(state: true, count: count)
+        case let .haves(_, count): self = .haves(state: true, count: count)
+        }
+    }
+    
+    mutating public func turnOff() {
+        switch self {
+        case let .wants(_, count): self = .wants(state: false, count: count)
+        case let .haves(_, count): self = .haves(state: false, count: count)
+        }
+    }
+}
+
+public final class Reactions: Decodable {
+    public var wants: Reaction
+    public var haves: Reaction
+    
+    static var `default`: Reactions {
+        return Reactions()
+    }
+    
+    public typealias ReactionType = ReactionCodingKeys
+    public enum ReactionCodingKeys: String, CodingKey {
+        case wants
+        case haves
+    }
+    
+    fileprivate enum ReactionValueCodingKeys: String, CodingKey {
+        case state
+        case count
+    }
+    
+    private init() {
+        self.wants = Reaction.wants(state: false, count: 0)
+        self.haves = Reaction.haves(state: false, count: 0)
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: ReactionCodingKeys.self)
+        let wantsValues = try values.nestedContainer(keyedBy: ReactionValueCodingKeys.self, forKey: .wants)
+        let havesValues = try values.nestedContainer(keyedBy: ReactionValueCodingKeys.self, forKey: .haves)
+        
+        self.wants = Reaction.wants(
+            state: try wantsValues.decode(Bool.self, forKey: .state),
+            count: try wantsValues.decode(Int.self, forKey: .count)
+        )
+        self.haves = Reaction.haves(
+            state: try havesValues.decode(Bool.self, forKey: .state),
+            count: try havesValues.decode(Int.self, forKey: .count)
+        )
+    }
+    
+    func `switch`(of reactionType: ReactionType) {
+        switch reactionType {
+        case .wants:
+            self.wants.switch()
+            self.haves.turnOff()
+        case .haves:
+            self.haves.switch()
+            self.wants.turnOff()
         }
     }
 }
