@@ -8,6 +8,7 @@
 
 import Foundation
 import RxDataSources
+import Model
 
 enum ItemDetailSectionModel {
     case detailSection
@@ -16,7 +17,7 @@ enum ItemDetailSectionModel {
 }
 
 enum ItemDetailSectionItem {
-    case normalItem(item: Item)
+    case normalItem(item: Model.Item)
     case folderItem // FIXME: to ItemDetailSectionModel
 }
 

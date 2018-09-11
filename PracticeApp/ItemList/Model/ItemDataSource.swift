@@ -8,13 +8,14 @@
 
 import Foundation
 import RxDataSources
+import Model
 
 enum ItemSectionModel {
     case normalSection(items: [ItemSectionItem])
 }
 
 enum ItemSectionItem {
-    case normalItem(item: Item)
+    case normalItem(item: Model.Item)
 }
 
 extension ItemSectionModel: SectionModelType {

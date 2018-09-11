@@ -18,7 +18,7 @@ final class ItemViewModel: Connectable {
     private let coordinator: ItemCoordinator
     private let disposeBag = DisposeBag()
     
-    let items = BehaviorRelay<[Item]>(value: [])
+    let items = BehaviorRelay<[Model.Item]>(value: [])
     
     fileprivate lazy var itemSelected = AnyObserver<Void> { event in
         self.coordinator.transition(to: .detail)
@@ -29,13 +29,13 @@ final class ItemViewModel: Connectable {
         self.coordinator = coordinator
         
         ApiClient.ItemService.shared.fetchAll()
-            .map { items in
-                return items.map { item in
-                    let isOn  = (wants: item.reaction.wants.state, haves: item.reaction.haves.state)
-                    let count = (wants: item.reaction.wants.count, haves: item.reaction.haves.count)
-                    return Item(id: item.id, name: item.name, subName: item.subName, isOn: isOn, count: count)
-                }
-            }
+            // .map { items in
+            //     return items.map { item in
+            //         let isOn  = (wants: item.reaction.wants.state, haves: item.reaction.haves.state)
+            //         let count = (wants: item.reaction.wants.count, haves: item.reaction.haves.count)
+            //         return Item(id: item.id, name: item.name, subName: item.subName, isOn: isOn, count: count)
+            //     }
+            // }
             .asDriver(onErrorJustReturn: [])
             .drive(self.items)
             .disposed(by: self.disposeBag)
