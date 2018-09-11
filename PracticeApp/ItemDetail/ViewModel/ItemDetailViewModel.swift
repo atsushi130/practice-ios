@@ -75,14 +75,5 @@ extension InputSpace where Definer: ItemDetailViewModel {
     var selectedItem: AnyObserver<Void> {
         return self.definer.selectedItem
     }
-    
-    var item: Binder<(Item, Int)> {
-        return Binder(self.definer) { element, value in
-            let (item, index) = value
-            var items = element.items.value
-            items[index] = item
-            element.items.accept(items)
-        }
-    }
 }
 
