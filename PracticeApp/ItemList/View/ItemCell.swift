@@ -24,6 +24,7 @@ final class ItemCell: UICollectionViewCell {
     
     private var item: Model.Item? = nil
     let disposeBag = DisposeBag()
+    private let updateReactionState = PublishSubject<ReactionState>()
 
     var cellWidth: CGFloat = 0.0 {
         didSet { self.imageConstraintsWidth.constant = self.cellWidth }
@@ -44,23 +45,24 @@ final class ItemCell: UICollectionViewCell {
     private func observe() {
         
         self.wants.rx.controlEvent(.touchUpInside)
-            .map { [weak self] _ -> Reaction in
-                guard let `self` = self else { return Reaction(wants: true, haves: true) }
-                return ReactionViewModel.wants.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
-            }
-            .drive(onNext: { [weak self] reaction in
-                self?.bindState(reaction: reaction)
-            })
+            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
+            .map { ReactionViewModel.wants.changeState(to: $0) }
+            .drive(self.updateReactionState)
             .disposed(by: self.disposeBag)
         
         self.haves.rx.controlEvent(.touchUpInside)
-            .map { [weak self] _ -> Reaction in
-                guard let `self` = self else { return Reaction(wants: false, haves: false) }
-                return ReactionViewModel.haves.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
-            }
-            .drive(onNext: { [weak self] reaction in
-                self?.bindState(reaction: reaction)
+            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
+            .map { ReactionViewModel.haves.changeState(to: $0) }
+            .drive(self.updateReactionState)
+            .disposed(by: self.disposeBag)
+        
+        self.updateReactionState
+            .do(onNext: { reactionState in
+                self.item?.updateReactionState(wants: reactionState.wants, haves: reactionState.haves)
+                self.wants.isVoted = reactionState.wants
+                self.haves.isVoted = reactionState.haves
             })
+            .subscribe()
             .disposed(by: self.disposeBag)
     }
     
@@ -71,14 +73,7 @@ final class ItemCell: UICollectionViewCell {
         self.wants.isVoted = item.reaction.wants.state
         self.haves.isVoted = item.reaction.haves.state
     }
-    
-    private func bindState(reaction: Reaction) {
-        self.item?.reaction.wants.state = reaction.wants
-        self.item?.reaction.haves.state = reaction.haves
-        self.wants.isVoted = reaction.wants
-        self.haves.isVoted = reaction.haves
-    }
-    
+
     private func imageSizeFit(imageSize: CGSize) {
         let fitScale = imageSize.width / self.cellWidth
         self.imageConstraintsHeight.constant = imageSize.height * fitScale
