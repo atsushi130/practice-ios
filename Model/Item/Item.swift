@@ -8,9 +8,9 @@
 
 import Foundation
 
-public struct Item: Decodable {
+public final class Item: Decodable {
     public let id: String
     public let name: String
     public let subName: String
-    public let reaction: Reaction
+    public var reaction: Reaction
 }
