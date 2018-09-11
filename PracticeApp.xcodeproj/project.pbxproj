@@ -37,7 +37,6 @@
 		0D68994A1FFBC028004640CE /* ReactionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6899491FFBC028004640CE /* ReactionView.xib */; };
 		0D85A86B1FFCDCA900A9C364 /* ReactionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85A86A1FFCDCA900A9C364 /* ReactionFooterView.swift */; };
 		0D85A86D1FFCDCC600A9C364 /* ReactionFooterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85A86C1FFCDCC600A9C364 /* ReactionFooterButtonView.swift */; };
-		0D85A8721FFCEA0400A9C364 /* ReactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85A8711FFCEA0400A9C364 /* ReactionViewModel.swift */; };
 		0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; };
 		0DA0882C1FFA8BBA00EE18CF /* UIFontComplete.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DA088301FFAB01000EE18CF /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */; };
@@ -285,7 +284,6 @@
 		0D6899491FFBC028004640CE /* ReactionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionView.xib; sourceTree = "<group>"; };
 		0D85A86A1FFCDCA900A9C364 /* ReactionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionFooterView.swift; sourceTree = "<group>"; };
 		0D85A86C1FFCDCC600A9C364 /* ReactionFooterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionFooterButtonView.swift; sourceTree = "<group>"; };
-		0D85A8711FFCEA0400A9C364 /* ReactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionViewModel.swift; sourceTree = "<group>"; };
 		0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIFontComplete.framework; path = Carthage/Build/iOS/UIFontComplete.framework; sourceTree = SOURCE_ROOT; };
 		0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		0DA088311FFAB03A00EE18CF /* Itemable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itemable.swift; sourceTree = "<group>"; };
@@ -841,7 +839,6 @@
 			isa = PBXGroup;
 			children = (
 				759441921FF52E62001E4FD1 /* ItemViewModel.swift */,
-				0D85A8711FFCEA0400A9C364 /* ReactionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1344,7 +1341,6 @@
 				75E5968F1FF37E3500784269 /* LoginViewController.swift in Sources */,
 				0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */,
 				0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */,
-				0D85A8721FFCEA0400A9C364 /* ReactionViewModel.swift in Sources */,
 				0D85A86B1FFCDCA900A9C364 /* ReactionFooterView.swift in Sources */,
 				0DD8FC78214560730075D874 /* Observable+.swift in Sources */,
 				75E596CA1FF4E82700784269 /* ItemButton.swift in Sources */,
