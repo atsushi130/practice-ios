@@ -29,11 +29,11 @@ final class ItemDetailReusableView: UICollectionReusableView, NibInstantiatable 
     }
     
     private func observe() {
-        self.reactionBarsView.rx.updateState
-            .subscribe(self.reactionFooterView.rx.reactionState)
+        self.reactionBarsView.rx.updateReactions
+            .subscribe(self.reactionFooterView.rx.reactions)
             .disposed(by: self.disposeBag)
-        self.reactionFooterView.rx.updateState
-            .subscribe(self.reactionBarsView.rx.reactionState)
+        self.reactionFooterView.rx.updateReactions
+            .subscribe(self.reactionBarsView.rx.reactions)
             .disposed(by: self.disposeBag)
     }
     
