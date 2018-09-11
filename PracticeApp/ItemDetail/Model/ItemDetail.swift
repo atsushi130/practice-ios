@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Model
 
 struct ItemDetail: Itemable {
     let name: String
@@ -18,5 +19,5 @@ struct ItemDetail: Itemable {
     let categories: [Category]
     let registrant: User
     let createAt: Date
-    let associateItems: [Item]
+    let associateItems: [Model.Item]
 }
