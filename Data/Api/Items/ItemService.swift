@@ -11,10 +11,13 @@ import RxSwift
 import Model
 
 public extension ApiClient {
+    
+    // MARK: - Service
     public final class ItemService {
         public static let shared = ItemService()
         private init() {}
         
+        // MARK: - Endpoint
         enum Endpoint {
             case fetchAll
         }
@@ -32,7 +35,11 @@ extension ApiClient.ItemService.Endpoint {
     }
 }
 
+// MARK: Interface
 public extension ApiClient.ItemService {
+    
+    /// Fetch all items
+    /// - Returns: all items
     public func fetchAll() -> Observable<[Model.Item]> {
         let data = try! Data(contentsOf: Endpoint.fetchAll.url)
         let items = try! JSONDecoder().decode([Model.Item].self, from: data)
