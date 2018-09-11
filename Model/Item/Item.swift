@@ -14,11 +14,3 @@ public final class Item: Decodable {
     public let subName: String
     public var reaction: Reactions
 }
-
-// MARK: - Behavior
-public extension Item {
-    public func updateReactionState(wants: Bool, haves: Bool) {
-        self.reaction.wants.update(state: wants)
-        self.reaction.haves.update(state: haves)
-    }
-}
