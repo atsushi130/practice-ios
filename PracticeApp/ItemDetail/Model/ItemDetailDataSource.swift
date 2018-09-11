@@ -17,8 +17,8 @@ enum ItemDetailSectionModel {
 }
 
 enum ItemDetailSectionItem {
-    case normalItem(item: Model.Item)
-    case folderItem // FIXME: to ItemDetailSectionModel
+    case normalItem(item: Item)
+    case folderItem
 }
 
 extension ItemDetailSectionModel: SectionModelType {

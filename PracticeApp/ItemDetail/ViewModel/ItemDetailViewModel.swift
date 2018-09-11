@@ -17,7 +17,7 @@ final class ItemDetailViewModel: Connectable {
     
     private let coordinator: ItemDetailCoordinator
     private let disposeBag = DisposeBag()
-    let items = BehaviorRelay<[Model.Item]>(value: [])
+    let items = BehaviorRelay<[Item]>(value: [])
     
     fileprivate lazy var tappedUserList = AnyObserver<ReactionView.ReactionType> { event in
         if case let .next(reactionType) = event {

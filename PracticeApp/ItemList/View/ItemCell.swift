@@ -22,7 +22,7 @@ final class ItemCell: UICollectionViewCell {
     @IBOutlet private weak var imageConstraintsWidth:  NSLayoutConstraint!
     @IBOutlet private weak var imageConstraintsHeight: NSLayoutConstraint!
     
-    private var item: Model.Item? = nil
+    private var item: Item? = nil
     let disposeBag = DisposeBag()
     private let updateReactions = PublishSubject<Reactions>()
 
@@ -65,7 +65,7 @@ final class ItemCell: UICollectionViewCell {
             .disposed(by: self.disposeBag)
     }
     
-    func bind(item: Model.Item) {
+    func bind(item: Item) {
         self.item = item
         self.mainNameLabel.text = item.name
         self.subNameLabel.text  = item.subName

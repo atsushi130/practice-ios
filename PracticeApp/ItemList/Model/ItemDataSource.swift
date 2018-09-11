@@ -15,7 +15,7 @@ enum ItemSectionModel {
 }
 
 enum ItemSectionItem {
-    case normalItem(item: Model.Item)
+    case normalItem(item: Item)
 }
 
 extension ItemSectionModel: SectionModelType {

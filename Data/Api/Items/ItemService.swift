@@ -40,9 +40,9 @@ public extension ApiClient.ItemService {
     
     /// Fetch all items
     /// - Returns: all items
-    public func fetchAll() -> Observable<[Model.Item]> {
+    public func fetchAll() -> Observable<[Item]> {
         let data = try! Data(contentsOf: Endpoint.fetchAll.url)
-        let items = try! JSONDecoder().decode([Model.Item].self, from: data)
+        let items = try! JSONDecoder().decode([Item].self, from: data)
         return Observable.just(items)
     }
 }

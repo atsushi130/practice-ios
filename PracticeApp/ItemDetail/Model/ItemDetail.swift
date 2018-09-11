@@ -19,5 +19,5 @@ struct ItemDetail: Itemable {
     let categories: [Category]
     let registrant: User
     let createAt: Date
-    let associateItems: [Model.Item]
+    let associateItems: [Item]
 }
