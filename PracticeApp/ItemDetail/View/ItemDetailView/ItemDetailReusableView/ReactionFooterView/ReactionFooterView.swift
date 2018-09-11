@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Model
 
 final class ReactionFooterView: UIView {
     
@@ -16,12 +17,12 @@ final class ReactionFooterView: UIView {
     @IBOutlet fileprivate weak var haves: ReactionFooterButtonView!
 
     private let disposeBag = DisposeBag()
-    fileprivate let updateStateEvent = PublishSubject<ReactionState>()
+    fileprivate let updateStateEvent = PublishSubject<Reactions>()
     
-    fileprivate var reactionState = ReactionState(wants: false, haves: false) {
+    fileprivate var reactions = Reactions.default {
         didSet {
-            self.wants.isVoted = self.reactionState.wants
-            self.haves.isVoted = self.reactionState.haves
+            self.wants.isVoted = self.reactions.wants.state
+            self.haves.isVoted = self.reactions.haves.state
         }
     }
     
@@ -39,14 +40,14 @@ final class ReactionFooterView: UIView {
     private func observe() {
         
         self.wants.rx.controlEvent(.touchUpInside)
-            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
-            .map { ReactionViewModel.wants.changeState(to: $0) }
+            .do(onNext: { self.reactions.switch(of: .wants) })
+            .map { self.reactions }
             .drive(self.updateStateEvent)
             .disposed(by: self.disposeBag)
         
         self.haves.rx.controlEvent(.touchUpInside)
-            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
-            .map { ReactionViewModel.haves.changeState(to: $0) }
+            .do(onNext: { self.reactions.switch(of: .haves) })
+            .map { self.reactions }
             .drive(self.updateStateEvent)
             .disposed(by: self.disposeBag)
     }
@@ -54,17 +55,17 @@ final class ReactionFooterView: UIView {
 
 extension Reactive where Base: ReactionFooterView {
     
-    var reactionState: Binder<ReactionState> {
+    var reactions: Binder<Reactions> {
         return Binder(self.base) { element, value in
-            element.reactionState = value
+            element.reactions = value
         }
     }
     
-    var updateState: Observable<ReactionState> {
+    var updateReactions: Observable<Reactions> {
         return self.base.updateStateEvent
-            .do(onNext: { reactionState in
-                self.base.wants.isVoted = reactionState.wants
-                self.base.haves.isVoted = reactionState.haves
+            .do(onNext: { reactions in
+                self.base.wants.isVoted = reactions.wants.state
+                self.base.haves.isVoted = reactions.haves.state
             })
     }
 }
