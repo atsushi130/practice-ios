@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-typealias Reaction = (wants: Bool, haves: Bool)
+typealias ReactionState = (wants: Bool, haves: Bool)
 
 @IBDesignable final class ReactionBarsView: UIView {
     
@@ -24,13 +24,13 @@ typealias Reaction = (wants: Bool, haves: Bool)
     }
     
     private let disposeBag = DisposeBag()
-    fileprivate let updateStateEvent = PublishSubject<Reaction>()
+    fileprivate let updateStateEvent = PublishSubject<ReactionState>()
     fileprivate let tappedUserList   = PublishSubject<ReactionView.ReactionType>()
     
-    fileprivate var reaction: Reaction = Reaction(wants: false, haves: false) {
+    fileprivate var reactionState: ReactionState = ReactionState(wants: false, haves: false) {
         didSet {
-            self.wants.isVoted = reaction.wants
-            self.haves.isVoted = reaction.haves
+            self.wants.isVoted = self.reactionState.wants
+            self.haves.isVoted = self.reactionState.haves
         }
     }
 
@@ -48,19 +48,15 @@ typealias Reaction = (wants: Bool, haves: Bool)
     private func observe() {
         
         self.wants.rx.controlEvent(.touchUpInside)
-            .drive(onNext: { [weak self] in
-                guard let `self` = self else { return }
-                let reaction = ReactionViewModel.wants.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
-                self.bindState(reaction: reaction)
-            })
+            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
+            .map { ReactionViewModel.wants.changeState(to: $0) }
+            .drive(self.updateStateEvent)
             .disposed(by: self.disposeBag)
         
         self.haves.rx.controlEvent(.touchUpInside)
-            .drive(onNext: { [weak self] in
-                guard let `self` = self else { return }
-                let reaction = ReactionViewModel.haves.changeState(reaction: Reaction(wants: self.wants.isVoted, haves: self.haves.isVoted))
-                self.bindState(reaction: reaction)
-            })
+            .map { ReactionState(wants: self.wants.isVoted, haves: self.haves.isVoted) }
+            .map { ReactionViewModel.haves.changeState(to: $0) }
+            .drive(self.updateStateEvent)
             .disposed(by: self.disposeBag)
         
         self.wants.rx.tappedUserList
@@ -71,24 +67,22 @@ typealias Reaction = (wants: Bool, haves: Bool)
             .subscribe(self.tappedUserList)
             .disposed(by: self.disposeBag)
     }
-    
-    private func bindState(reaction: Reaction) {
-        self.wants.isVoted = reaction.wants
-        self.haves.isVoted = reaction.haves
-        self.updateStateEvent.onNext(reaction)
-    }
 }
 
 extension Reactive where Base: ReactionBarsView {
     
-    var isOn: Binder<Reaction> {
+    var reactionState: Binder<ReactionState> {
         return Binder(self.base) { element, value in
-            element.reaction = value
+            element.reactionState = value
         }
     }
     
-    var updateState: Observable<Reaction> {
+    var updateState: Observable<ReactionState> {
         return self.base.updateStateEvent
+            .do(onNext: { reactionState in
+                self.base.wants.isVoted = reactionState.wants
+                self.base.haves.isVoted = reactionState.haves
+            })
     }
     
     var tappedUserList: Observable<ReactionView.ReactionType> {
