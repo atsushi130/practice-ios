@@ -8,10 +8,10 @@
 
 import Foundation
 
-public struct Reaction: Decodable {
+public final class Reaction: Decodable {
     
-    public let wants: (state: Bool, count: Int)
-    public let haves: (state: Bool, count: Int)
+    public var wants: (state: Bool, count: Int)
+    public var haves: (state: Bool, count: Int)
     
     private enum CodingKeys: String, CodingKey {
         case wants
