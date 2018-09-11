@@ -24,8 +24,7 @@ final class ItemCell: UICollectionViewCell {
     private var item: Item? = nil
     let disposeBag = DisposeBag()
     private typealias IsOn = (wants: Bool, haves: Bool)
-    fileprivate let itemUpdateEvent = PublishSubject<Item>()
-    
+
     var cellWidth: CGFloat = 0.0 {
         didSet { self.imageConstraintsWidth.constant = self.cellWidth }
     }
@@ -77,8 +76,6 @@ final class ItemCell: UICollectionViewCell {
         self.item?.isOn = isOn
         self.wants.isOn = isOn.wants
         self.haves.isOn = isOn.haves
-        guard let item = self.item else { return }
-        self.itemUpdateEvent.onNext(item)
     }
     
     private func imageSizeFit(imageSize: CGSize) {
@@ -89,11 +86,5 @@ final class ItemCell: UICollectionViewCell {
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         // able to refarence attributes of cell has sized by auto layout.
         return super.preferredLayoutAttributesFitting(layoutAttributes)
-    }
-}
-
-extension Reactive where Base: ItemCell {
-    var updateReaction: Observable<Item> {
-        return self.base.itemUpdateEvent
     }
 }

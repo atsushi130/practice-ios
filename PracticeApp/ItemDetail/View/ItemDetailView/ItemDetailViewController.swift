@@ -50,10 +50,6 @@ final class ItemDetailViewController: UIViewController {
                 case let (.normalSection, .normalItem(item)):
                     let cell = self.collectionView.ex.dequeueReusableCell(with: ItemCell.self, for: indexPath)
                     cell.bind(item: item)
-                    cell.rx.updateReaction
-                        .map { item in return (item, indexPath.row) }
-                        .bind(to: self.viewModel.in.item)
-                        .disposed(by: cell.disposeBag)
                     let inset  = self.layout.sectionInset
                     let margin = self.layout.minimumInteritemSpacing + inset.left + inset.right
                     cell.cellWidth = (self.collectionView.frame.size.width - margin).ex.half.ex.floor
