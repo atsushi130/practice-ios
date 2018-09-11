@@ -11,8 +11,6 @@ import RxSwift
 import RxCocoa
 import Model
 
-typealias ReactionState = (wants: Bool, haves: Bool)
-
 @IBDesignable final class ReactionBarsView: UIView {
     
     @IBOutlet fileprivate weak var wants: ReactionBarView!
