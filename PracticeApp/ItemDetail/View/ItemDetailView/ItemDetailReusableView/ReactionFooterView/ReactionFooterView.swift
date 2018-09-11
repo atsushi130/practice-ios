@@ -16,7 +16,6 @@ final class ReactionFooterView: UIView {
     @IBOutlet private weak var haves: ReactionFooterButtonView!
 
     private let disposeBag = DisposeBag()
-    typealias Reaction = (wants: Bool, haves: Bool)
     fileprivate let updateStateEvent = PublishSubject<Reaction>()
     
     fileprivate var reaction = Reaction(wants: false, haves: false) {
