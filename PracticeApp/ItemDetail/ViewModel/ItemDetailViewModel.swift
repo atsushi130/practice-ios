@@ -34,13 +34,6 @@ final class ItemDetailViewModel: Connectable {
         self.coordinator = coordinator
         
         ApiClient.ItemService.shared.fetchAll()
-            // .map { items in
-            //     return items.map { item in
-            //         let isOn  = (wants: item.reaction.wants.state, haves: item.reaction.haves.state)
-            //         let count = (wants: item.reaction.wants.count, haves: item.reaction.haves.count)
-            //         return Item(id: item.id, name: item.name, subName: item.subName, isOn: isOn, count: count)
-            //     }
-            // }
             .asDriver(onErrorJustReturn: [])
             .drive(self.items)
             .disposed(by: self.disposeBag)
