@@ -60,7 +60,7 @@ public final class Reactions: Decodable {
     public var wants: Reaction
     public var haves: Reaction
     
-    static var `default`: Reactions {
+    public static var `default`: Reactions {
         return Reactions()
     }
     
@@ -95,7 +95,7 @@ public final class Reactions: Decodable {
         )
     }
     
-    func `switch`(of reactionType: ReactionType) {
+    public func `switch`(of reactionType: ReactionType) {
         switch reactionType {
         case .wants:
             self.wants.switch()
