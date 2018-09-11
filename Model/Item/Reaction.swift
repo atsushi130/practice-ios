@@ -8,29 +8,31 @@
 
 import Foundation
 
-public final class Reaction: Decodable {
+public enum Reaction {
     
-    public var wants: (state: Bool, count: Int)
-    public var haves: (state: Bool, count: Int)
+    case wants(state: Bool, count: Int)
+    case haves(state: Bool, count: Int)
     
-    private enum CodingKeys: String, CodingKey {
-        case wants
-        case haves
+    public var state: Bool {
+        switch self {
+        case let .wants(state, _): return state
+        case let .haves(state, _): return state
+        }
     }
     
-    private enum NestedKeys: String, CodingKey {
-        case state
-        case count
+    public var count: Int {
+        switch self {
+        case let .wants(_, count): return count
+        case let .haves(_, count): return count
+        }
     }
     
-    public init(from decoder: Decoder) throws {
-        
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        
-        let wants = try values.nestedContainer(keyedBy: NestedKeys.self, forKey: .wants)
-        self.wants = (state: try wants.decode(Bool.self, forKey: .state), count: try wants.decode(Int.self, forKey: .count))
-        
-        let haves = try values.nestedContainer(keyedBy: NestedKeys.self, forKey: .haves)
-        self.haves = (state: try haves.decode(Bool.self, forKey: .state), count: try haves.decode(Int.self, forKey: .count))
+    mutating public func update(state: Bool) {
+        switch self {
+        case let .wants(_, count):
+            self = .wants(state: state, count: count)
+        case let .haves(_, count):
+            self = .haves(state: state, count: count)
+        }
     }
 }
