@@ -102,6 +102,8 @@
 		0DD8FCE22146C1100075D874 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FCD62146C0F40075D874 /* Model.framework */; };
 		0DD8FCE52146C1420075D874 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCE42146C1420075D874 /* Item.swift */; };
 		0DD8FCE72146C1A60075D874 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCE62146C1A60075D874 /* Reaction.swift */; };
+		0DD8FCEB214938D60075D874 /* ReactionBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8FCEA214938D60075D874 /* ReactionBarView.xib */; };
+		0DD8FCED214939D20075D874 /* ReactionBarsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8FCEC214939D20075D874 /* ReactionBarsView.xib */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -292,7 +294,7 @@
 		0DA0883F1FFAB34100EE18CF /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		0DA088421FFABB5400EE18CF /* ItemDetailReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailReusableView.swift; sourceTree = "<group>"; };
 		0DA088441FFABB7D00EE18CF /* ItemDetailReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailReusableView.xib; sourceTree = "<group>"; };
-		0DA088471FFABC8C00EE18CF /* ReactionBarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionBarsView.swift; sourceTree = "<group>"; };
+		0DA088471FFABC8C00EE18CF /* ReactionBarsView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ReactionBarsView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		0DA088491FFABD1200EE18CF /* ReactionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionBarView.swift; sourceTree = "<group>"; };
 		0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInformationView.swift; sourceTree = "<group>"; };
 		0DA0884D1FFAC7D100EE18CF /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
@@ -328,6 +330,8 @@
 		0DD8FCD92146C0F40075D874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DD8FCE42146C1420075D874 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0DD8FCE62146C1A60075D874 /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		0DD8FCEA214938D60075D874 /* ReactionBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionBarView.xib; sourceTree = "<group>"; };
+		0DD8FCEC214939D20075D874 /* ReactionBarsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionBarsView.xib; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -592,6 +596,8 @@
 			children = (
 				0DA088471FFABC8C00EE18CF /* ReactionBarsView.swift */,
 				0DA088491FFABD1200EE18CF /* ReactionBarView.swift */,
+				0DD8FCEA214938D60075D874 /* ReactionBarView.xib */,
+				0DD8FCEC214939D20075D874 /* ReactionBarsView.xib */,
 			);
 			path = ReactionBarsView;
 			sourceTree = "<group>";
@@ -1249,6 +1255,7 @@
 				0D2C19211FFE65EE0083466A /* UserIconView.xib in Resources */,
 				0DD8FC81214623C90075D874 /* items.json in Resources */,
 				0D2C193A1FFE9FCF0083466A /* ImageCell.xib in Resources */,
+				0DD8FCEB214938D60075D874 /* ReactionBarView.xib in Resources */,
 				0DA088451FFABB7D00EE18CF /* ItemDetailReusableView.xib in Resources */,
 				75E5963B1FF272BD00784269 /* LaunchScreen.storyboard in Resources */,
 				0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */,
@@ -1261,6 +1268,7 @@
 				0D2C193E1FFEA2AF0083466A /* ItemDetailFoldersCell.xib in Resources */,
 				0D2C192F1FFE825A0083466A /* UserListViewController.storyboard in Resources */,
 				0D2C19181FFE1FAB0083466A /* LabelReusableView.xib in Resources */,
+				0DD8FCED214939D20075D874 /* ReactionBarsView.xib in Resources */,
 				0DE6501120023F6100ACDEE5 /* FunListView.xib in Resources */,
 				0D2C19231FFE67590083466A /* FollowButton.xib in Resources */,
 				0D2C19471FFFEAC80083466A /* ItemCollectionCell.xib in Resources */,
