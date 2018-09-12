@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemInformationTextView" customModule="PracticeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImageView" destination="WI8-da-z55" id="hu4-sA-XHb"/>
+                <outlet property="textLabel" destination="OGv-5R-ZaM" id="xJN-gk-sjJ"/>
+                <outlet property="titleLabel" destination="87j-Sk-ySa" id="bHk-VH-Iqg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fMx-h8-zoN">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDO-83-ywS">
+                    <rect key="frame" x="0.0" y="0.0" width="94" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="検索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87j-Sk-ySa">
+                            <rect key="frame" x="8" y="9.5" width="78" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="LVk-ul-0Ds"/>
+                                <constraint firstAttribute="height" constant="20" id="YPT-jh-sfE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                            <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="87j-Sk-ySa" secondAttribute="trailing" constant="8" id="7ie-hS-Pxc"/>
+                        <constraint firstItem="87j-Sk-ySa" firstAttribute="centerY" secondItem="dDO-83-ywS" secondAttribute="centerY" id="d7H-Tk-7Ac"/>
+                        <constraint firstItem="87j-Sk-ySa" firstAttribute="leading" secondItem="dDO-83-ywS" secondAttribute="leading" constant="8" id="yvJ-YU-XwR"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="WI8-da-z55">
+                    <rect key="frame" x="104" y="12.5" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="WI8-da-z55" secondAttribute="height" multiplier="1:1" id="X8J-gx-rWp"/>
+                        <constraint firstAttribute="width" constant="15" id="nTJ-BU-8r5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nomos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGv-5R-ZaM">
+                    <rect key="frame" x="122.5" y="10" width="244.5" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Eho-ty-Ldo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dDO-83-ywS" firstAttribute="top" secondItem="fMx-h8-zoN" secondAttribute="top" id="471-wt-B5q"/>
+                <constraint firstItem="OGv-5R-ZaM" firstAttribute="centerY" secondItem="fMx-h8-zoN" secondAttribute="centerY" id="5xw-tq-REJ"/>
+                <constraint firstItem="WI8-da-z55" firstAttribute="centerY" secondItem="fMx-h8-zoN" secondAttribute="centerY" id="BLy-tz-wd1"/>
+                <constraint firstAttribute="trailing" secondItem="OGv-5R-ZaM" secondAttribute="trailing" constant="8" id="Ici-Z6-AUx"/>
+                <constraint firstItem="dDO-83-ywS" firstAttribute="width" secondItem="fMx-h8-zoN" secondAttribute="width" multiplier="1:4" id="JEQ-Bs-z3w"/>
+                <constraint firstItem="WI8-da-z55" firstAttribute="leading" secondItem="dDO-83-ywS" secondAttribute="trailing" constant="10" id="cIk-Fk-1Tb"/>
+                <constraint firstItem="dDO-83-ywS" firstAttribute="leading" secondItem="fMx-h8-zoN" secondAttribute="leading" id="nNB-qm-dG0"/>
+                <constraint firstAttribute="bottom" secondItem="dDO-83-ywS" secondAttribute="bottom" id="oNH-0n-can"/>
+                <constraint firstItem="OGv-5R-ZaM" firstAttribute="leading" secondItem="WI8-da-z55" secondAttribute="trailing" constant="4" id="ues-vb-tx6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="pxt-VD-ea5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="29" height="29"/>
+    </resources>
+</document>
