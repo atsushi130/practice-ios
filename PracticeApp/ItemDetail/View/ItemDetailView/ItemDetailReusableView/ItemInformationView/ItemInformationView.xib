@@ -11,7 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemInformationView" customModule="PracticeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="brandView" destination="ZUB-1A-fpm" id="TBm-Kt-jtr"/>
+                <outlet property="categoryView" destination="Guz-js-cIg" id="npo-Kr-yiX"/>
+                <outlet property="searchView" destination="PGn-Xj-J2T" id="elB-2c-RRG"/>
+                <outlet property="sourceWebView" destination="p3g-Dq-P5a" id="ZA9-AA-JLp"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ExE-ie-gko">
             <rect key="frame" x="0.0" y="0.0" width="345" height="210"/>
