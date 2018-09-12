@@ -10,8 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Model
+import SwiftExtensions
 
-@IBDesignable final class ReactionBarsView: UIView {
+@IBDesignable
+final class ReactionBarsView: UIView, NibDesignable {
     
     @IBOutlet fileprivate weak var wants: ReactionBarView!
     @IBOutlet fileprivate weak var haves: ReactionBarView!
@@ -20,6 +22,18 @@ import Model
     var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set { self.layer.cornerRadius = newValue }
+    }
+    
+    @IBInspectable
+    var wantsMarkImage: UIImage? {
+        get { return self.wants.markImage }
+        set { self.wants.markImage = newValue }
+    }
+    
+    @IBInspectable
+    var havesMarkImage: UIImage? {
+        get { return self.haves.markImage }
+        set { self.haves.markImage = newValue }
     }
     
     private let disposeBag = DisposeBag()
@@ -36,6 +50,16 @@ import Model
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setup()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.configureNib()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.configureNib()
     }
     
     private func setup() {
