@@ -104,6 +104,10 @@
 		0DD8FCE72146C1A60075D874 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCE62146C1A60075D874 /* Reaction.swift */; };
 		0DD8FCEB214938D60075D874 /* ReactionBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8FCEA214938D60075D874 /* ReactionBarView.xib */; };
 		0DD8FCED214939D20075D874 /* ReactionBarsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8FCEC214939D20075D874 /* ReactionBarsView.xib */; };
+		0DD8FCEF21496D270075D874 /* ItemInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8FCEE21496D270075D874 /* ItemInformationView.xib */; };
+		0DD8FCF121496E0C0075D874 /* ItemInformationBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCF021496E0C0075D874 /* ItemInformationBrandView.swift */; };
+		0DD8FCF321496E1E0075D874 /* ItemInformationTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCF221496E1E0075D874 /* ItemInformationTextView.swift */; };
+		0DD8FCF621496E670075D874 /* ItemInformationBrandView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8FCF521496E670075D874 /* ItemInformationBrandView.xib */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -332,6 +336,10 @@
 		0DD8FCE62146C1A60075D874 /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
 		0DD8FCEA214938D60075D874 /* ReactionBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionBarView.xib; sourceTree = "<group>"; };
 		0DD8FCEC214939D20075D874 /* ReactionBarsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionBarsView.xib; sourceTree = "<group>"; };
+		0DD8FCEE21496D270075D874 /* ItemInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInformationView.xib; sourceTree = "<group>"; };
+		0DD8FCF021496E0C0075D874 /* ItemInformationBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInformationBrandView.swift; sourceTree = "<group>"; };
+		0DD8FCF221496E1E0075D874 /* ItemInformationTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInformationTextView.swift; sourceTree = "<group>"; };
+		0DD8FCF521496E670075D874 /* ItemInformationBrandView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInformationBrandView.xib; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -606,6 +614,10 @@
 			isa = PBXGroup;
 			children = (
 				0DA0884B1FFAC21300EE18CF /* ItemInformationView.swift */,
+				0DD8FCEE21496D270075D874 /* ItemInformationView.xib */,
+				0DD8FCF021496E0C0075D874 /* ItemInformationBrandView.swift */,
+				0DD8FCF221496E1E0075D874 /* ItemInformationTextView.swift */,
+				0DD8FCF521496E670075D874 /* ItemInformationBrandView.xib */,
 			);
 			path = ItemInformationView;
 			sourceTree = "<group>";
@@ -1267,6 +1279,8 @@
 				0D2C19131FFD4AB50083466A /* ItemDetailViewController.storyboard in Resources */,
 				0D2C193E1FFEA2AF0083466A /* ItemDetailFoldersCell.xib in Resources */,
 				0D2C192F1FFE825A0083466A /* UserListViewController.storyboard in Resources */,
+				0DD8FCF621496E670075D874 /* ItemInformationBrandView.xib in Resources */,
+				0DD8FCEF21496D270075D874 /* ItemInformationView.xib in Resources */,
 				0D2C19181FFE1FAB0083466A /* LabelReusableView.xib in Resources */,
 				0DD8FCED214939D20075D874 /* ReactionBarsView.xib in Resources */,
 				0DE6501120023F6100ACDEE5 /* FunListView.xib in Resources */,
@@ -1337,6 +1351,7 @@
 				0DA088501FFAD4E600EE18CF /* UserIconView.swift in Sources */,
 				0DD8FC7B2145773E0075D874 /* UserListConfigurator.swift in Sources */,
 				0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */,
+				0DD8FCF121496E0C0075D874 /* ItemInformationBrandView.swift in Sources */,
 				0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */,
 				0DA0883A1FFAB1BF00EE18CF /* Userable.swift in Sources */,
 				0D2C19111FFD4A9B0083466A /* ItemDetailViewController.swift in Sources */,
@@ -1357,6 +1372,7 @@
 				0DD8FC1F2144C1AD0075D874 /* MySumallyDataSource.swift in Sources */,
 				0D2C192D1FFE82030083466A /* UserListViewModel.swift in Sources */,
 				0DE650052002380700ACDEE5 /* FunListView.swift in Sources */,
+				0DD8FCF321496E1E0075D874 /* ItemInformationTextView.swift in Sources */,
 				0D2C19261FFE6A6C0083466A /* UserCell.swift in Sources */,
 				0D2C19361FFE9D940083466A /* ItemDetailFoldersCell.swift in Sources */,
 				0D2C19321FFE9D810083466A /* ItemDetailFolderCell.swift in Sources */,
