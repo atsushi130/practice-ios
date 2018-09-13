@@ -6,5 +6,5 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-struct Category {
+public struct Category {
 }
