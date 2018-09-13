@@ -123,6 +123,7 @@
 		0DFA7F10214A79BA008F3286 /* ItemActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA7F0F214A79BA008F3286 /* ItemActionView.xib */; };
 		0DFA7F13214AA4E8008F3286 /* ItemNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA7F12214AA4E8008F3286 /* ItemNameView.xib */; };
 		0DFA7F15214AA625008F3286 /* ReactionFooterButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA7F14214AA625008F3286 /* ReactionFooterButtonView.xib */; };
+		0DFA7F17214AA7E1008F3286 /* ReactionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA7F16214AA7E1008F3286 /* ReactionFooterView.xib */; };
 		759441931FF52E62001E4FD1 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759441921FF52E62001E4FD1 /* ItemViewModel.swift */; };
 		7594419C1FF6ABD0001E4FD1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */; };
 		75E596311FF272BD00784269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596301FF272BD00784269 /* AppDelegate.swift */; };
@@ -360,6 +361,7 @@
 		0DFA7F0F214A79BA008F3286 /* ItemActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemActionView.xib; sourceTree = "<group>"; };
 		0DFA7F12214AA4E8008F3286 /* ItemNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemNameView.xib; sourceTree = "<group>"; };
 		0DFA7F14214AA625008F3286 /* ReactionFooterButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionFooterButtonView.xib; sourceTree = "<group>"; };
+		0DFA7F16214AA7E1008F3286 /* ReactionFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionFooterView.xib; sourceTree = "<group>"; };
 		759441921FF52E62001E4FD1 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		75E5962D1FF272BD00784269 /* PracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -606,6 +608,7 @@
 				0D85A86A1FFCDCA900A9C364 /* ReactionFooterView.swift */,
 				0D85A86C1FFCDCC600A9C364 /* ReactionFooterButtonView.swift */,
 				0DFA7F14214AA625008F3286 /* ReactionFooterButtonView.xib */,
+				0DFA7F16214AA7E1008F3286 /* ReactionFooterView.xib */,
 			);
 			path = ReactionFooterView;
 			sourceTree = "<group>";
@@ -1308,6 +1311,7 @@
 				0D2C193A1FFE9FCF0083466A /* ImageCell.xib in Resources */,
 				0DD8FCEB214938D60075D874 /* ReactionBarView.xib in Resources */,
 				0DA088451FFABB7D00EE18CF /* ItemDetailReusableView.xib in Resources */,
+				0DFA7F17214AA7E1008F3286 /* ReactionFooterView.xib in Resources */,
 				75E5963B1FF272BD00784269 /* LaunchScreen.storyboard in Resources */,
 				0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */,
 				0DFA7F13214AA4E8008F3286 /* ItemNameView.xib in Resources */,
