@@ -523,7 +523,6 @@
 				0DD8FC72214557AA0075D874 /* Coordinator */,
 				0DD8FC1B2144C1670075D874 /* ViewModel */,
 				0D2C191D1FFE65D80083466A /* View */,
-				0DA088361FFAB1AA00EE18CF /* Model */,
 			);
 			path = MySumally;
 			sourceTree = "<group>";
@@ -547,6 +546,7 @@
 				0D2C19421FFFE5DD0083466A /* FollowButton */,
 				0D2C19491FFFF6A90083466A /* MySumallyViewController.swift */,
 				0D2C194B1FFFF7D80083466A /* MySumallyViewController.storyboard */,
+				0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -643,30 +643,14 @@
 				0DD8FC6C2145534A0075D874 /* Coordinator */,
 				0DD8FC162143EB4B0075D874 /* ViewModel */,
 				0DA088411FFABB3E00EE18CF /* View */,
-				0DA0882E1FFAB00200EE18CF /* Model */,
 			);
 			path = ItemDetail;
-			sourceTree = "<group>";
-		};
-		0DA0882E1FFAB00200EE18CF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0DD8FC192143EBAD0075D874 /* ItemDetailDataSource.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0DA088361FFAB1AA00EE18CF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0DA088411FFABB3E00EE18CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DD8FC192143EBAD0075D874 /* ItemDetailDataSource.swift */,
 				0DA088461FFABBD500EE18CF /* ItemDetailView */,
 			);
 			path = View;
@@ -1066,7 +1050,6 @@
 			children = (
 				0DD8FC6F214554630075D874 /* Coordinator */,
 				759441911FF52E4F001E4FD1 /* ViewModel */,
-				75E596C01FF4E24B00784269 /* Model */,
 				75E596B61FF4D5AB00784269 /* View */,
 			);
 			path = ItemList;
@@ -1082,6 +1065,7 @@
 				75E596BE1FF4E21800784269 /* ItemCell.swift */,
 				75E596C71FF4E2F300784269 /* ItemCell.xib */,
 				75E596C91FF4E82700784269 /* ItemButton.swift */,
+				0DD8FC14213EE5630075D874 /* ItemDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1094,14 +1078,6 @@
 				75E596BC1FF4D88C00784269 /* PiterestLayoutDelegate.swift */,
 			);
 			path = PinterestLayout;
-			sourceTree = "<group>";
-		};
-		75E596C01FF4E24B00784269 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0DD8FC14213EE5630075D874 /* ItemDataSource.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
