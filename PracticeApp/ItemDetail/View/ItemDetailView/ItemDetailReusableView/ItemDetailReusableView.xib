@@ -102,64 +102,10 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiP-cM-y38" customClass="ItemLogView" customModule="PracticeApp" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="390" width="345" height="36"/>
-                            <subviews>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHV-jg-iGE" customClass="UserIconView" customModule="PracticeApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="J2L-dy-xAV">
-                                            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="J2L-dy-xAV" firstAttribute="top" secondItem="nHV-jg-iGE" secondAttribute="top" id="1Ez-8M-YQx"/>
-                                        <constraint firstAttribute="width" secondItem="nHV-jg-iGE" secondAttribute="height" multiplier="1:1" id="P5y-Ue-atE"/>
-                                        <constraint firstItem="J2L-dy-xAV" firstAttribute="leading" secondItem="nHV-jg-iGE" secondAttribute="leading" id="VSf-Wx-3az"/>
-                                        <constraint firstAttribute="bottom" secondItem="J2L-dy-xAV" secondAttribute="bottom" id="c6N-zD-kx3"/>
-                                        <constraint firstAttribute="trailing" secondItem="J2L-dy-xAV" secondAttribute="trailing" id="ql6-y7-LcD"/>
-                                    </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="2"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7D-ly-x38">
-                                    <rect key="frame" x="44" y="7.5" width="293" height="20"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="20" id="yuC-uf-gbs"/>
-                                    </constraints>
-                                    <attributedString key="attributedText">
-                                        <fragment content="Atsushi">
-                                            <attributes>
-                                                <font key="NSFont" size="10" name="HiraginoSans-W3"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="さんが2018/01/01に登録">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="HiraginoSans-W3"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="q7D-ly-x38" firstAttribute="centerY" secondItem="tiP-cM-y38" secondAttribute="centerY" id="0LX-Oa-Yu4"/>
-                                <constraint firstItem="nHV-jg-iGE" firstAttribute="top" secondItem="tiP-cM-y38" secondAttribute="top" id="1u1-jv-DD6"/>
-                                <constraint firstAttribute="bottom" secondItem="nHV-jg-iGE" secondAttribute="bottom" id="bO9-CW-I4G"/>
-                                <constraint firstItem="q7D-ly-x38" firstAttribute="leading" secondItem="nHV-jg-iGE" secondAttribute="trailing" constant="8" id="bSR-0g-kaN"/>
-                                <constraint firstAttribute="trailing" secondItem="q7D-ly-x38" secondAttribute="trailing" constant="8" id="iUF-bA-WyJ"/>
-                                <constraint firstItem="nHV-jg-iGE" firstAttribute="leading" secondItem="tiP-cM-y38" secondAttribute="leading" id="j4a-qL-RMm"/>
                                 <constraint firstAttribute="height" constant="36" id="nbA-eZ-MtX"/>
                             </constraints>
-                            <connections>
-                                <outlet property="logLabel" destination="q7D-ly-x38" id="NmG-gi-gGI"/>
-                                <outlet property="userIconView" destination="nHV-jg-iGE" id="eFi-Ug-ixb"/>
-                            </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-sf-IeZ" customClass="ItemActionView" customModule="PracticeApp" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="446" width="345" height="50"/>
@@ -471,6 +417,5 @@
         <image name="google" width="43" height="44"/>
         <image name="haves_mark" width="200" height="200"/>
         <image name="sample" width="1000" height="1000"/>
-        <image name="user" width="750" height="750"/>
     </resources>
 </document>
