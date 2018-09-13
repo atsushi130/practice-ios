@@ -7,8 +7,21 @@
 //
 
 import UIKit
+import SwiftExtensions
 
-final class ItemLogView: UIView {
+@IBDesignable
+final class ItemLogView: UIView, NibDesignable {
+    
     @IBOutlet private weak var userIconView: UserIconView!
     @IBOutlet private weak var logLabel: UILabel!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.configureNib()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.configureNib()
+    }
 }
