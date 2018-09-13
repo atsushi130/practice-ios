@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-struct User {
-    let name: String
-    let profile: String
-    let follow: Int
-    let follower: Int
+public struct User {
+    public let name: String
+    public let profile: String
+    public let follow: Int
+    public let follower: Int
 }
