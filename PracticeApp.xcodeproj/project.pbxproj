@@ -486,13 +486,13 @@
 		0D2C19141FFE1ADF0083466A /* ItemDetailReusableView */ = {
 			isa = PBXGroup;
 			children = (
+				0DFA7F0B214A77BE008F3286 /* ItemLogView */,
 				0D85A8701FFCDD0B00A9C364 /* ItemInformationView */,
 				0D85A86F1FFCDCF100A9C364 /* ReactionBarsView */,
 				0D85A86E1FFCDCCD00A9C364 /* ReactionFooterView */,
 				0DA088421FFABB5400EE18CF /* ItemDetailReusableView.swift */,
 				0DA088441FFABB7D00EE18CF /* ItemDetailReusableView.xib */,
 				0D485DB11FFD21F4004116AB /* ItemNameView.swift */,
-				0D485DB41FFD2289004116AB /* ItemLogView.swift */,
 				0D485DB61FFD2309004116AB /* ItemActionView.swift */,
 			);
 			path = ItemDetailReusableView;
@@ -852,6 +852,14 @@
 				0DE6501020023F6100ACDEE5 /* FunListView.xib */,
 			);
 			path = FunListView;
+			sourceTree = "<group>";
+		};
+		0DFA7F0B214A77BE008F3286 /* ItemLogView */ = {
+			isa = PBXGroup;
+			children = (
+				0D485DB41FFD2289004116AB /* ItemLogView.swift */,
+			);
+			path = ItemLogView;
 			sourceTree = "<group>";
 		};
 		759441911FF52E4F001E4FD1 /* ViewModel */ = {
