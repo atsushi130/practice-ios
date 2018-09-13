@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Model
 import SwiftExtensions
 
 final class ItemDetailReusableView: UICollectionReusableView, NibInstantiatable {
