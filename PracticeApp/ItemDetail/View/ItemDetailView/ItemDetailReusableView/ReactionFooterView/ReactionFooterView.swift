@@ -10,8 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Model
+import SwiftExtensions
 
-final class ReactionFooterView: UIView {
+@IBDesignable
+final class ReactionFooterView: UIView, NibDesignable {
     
     @IBOutlet fileprivate weak var wants: ReactionFooterButtonView!
     @IBOutlet fileprivate weak var haves: ReactionFooterButtonView!
@@ -29,6 +31,16 @@ final class ReactionFooterView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setup()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.configureNib()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.configureNib()
     }
     
     private func setup() {
