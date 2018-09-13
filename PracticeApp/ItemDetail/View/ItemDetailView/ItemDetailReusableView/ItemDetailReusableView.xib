@@ -87,52 +87,10 @@
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Iv-gB-nbf" customClass="ReactionFooterView" customModule="PracticeApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="886" width="375" height="94"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L7q-sX-TR9">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cSd-fk-D6U">
-                            <rect key="frame" x="10" y="8" width="355" height="44"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ux7-Vo-7X2" customClass="ReactionFooterButtonView" customModule="PracticeApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="173.5" height="44"/>
-                                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="3"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ex-nC-ZQO" customClass="ReactionFooterButtonView" customModule="PracticeApp" customModuleProvider="target">
-                                    <rect key="frame" x="181.5" y="0.0" width="173.5" height="44"/>
-                                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="3"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="image" keyPath="markImage" value="haves_mark"/>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="8ex-nC-ZQO" firstAttribute="width" secondItem="ux7-Vo-7X2" secondAttribute="width" id="k8W-iC-pSa"/>
-                            </constraints>
-                        </stackView>
-                    </subviews>
                     <color key="backgroundColor" white="1" alpha="0.90199593321917804" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="94" id="11r-wR-1kM"/>
-                        <constraint firstAttribute="trailing" secondItem="cSd-fk-D6U" secondAttribute="trailing" constant="10" id="1Cb-iE-tGc"/>
-                        <constraint firstAttribute="bottom" secondItem="cSd-fk-D6U" secondAttribute="bottom" constant="42" id="NKc-6e-dSx"/>
-                        <constraint firstItem="cSd-fk-D6U" firstAttribute="top" secondItem="6Iv-gB-nbf" secondAttribute="top" constant="8" id="Zot-D4-FFc"/>
-                        <constraint firstItem="cSd-fk-D6U" firstAttribute="leading" secondItem="6Iv-gB-nbf" secondAttribute="leading" constant="10" id="an8-8k-46f"/>
                     </constraints>
-                    <connections>
-                        <outlet property="haves" destination="8ex-nC-ZQO" id="QKi-Le-3RS"/>
-                        <outlet property="wants" destination="ux7-Vo-7X2" id="I3W-Aq-A8C"/>
-                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,19 +108,18 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="h2Z-9M-BGJ"/>
             <connections>
-                <outlet property="imageView" destination="ULe-bY-66h" id="637-d6-X1d"/>
-                <outlet property="itemActionView" destination="cVt-sf-IeZ" id="Pe8-JI-9gE"/>
-                <outlet property="itemInformationView" destination="7Hw-jY-ioC" id="ZUX-oE-fQQ"/>
-                <outlet property="itemLogView" destination="tiP-cM-y38" id="XS2-wW-AGb"/>
-                <outlet property="itemNameView" destination="48w-N5-EXB" id="aSC-23-YBC"/>
-                <outlet property="reactionBarsView" destination="oGt-FS-MCI" id="Iel-y7-mas"/>
-                <outlet property="reactionFooterView" destination="6Iv-gB-nbf" id="je4-DG-OWe"/>
+                <outlet property="imageView" destination="ULe-bY-66h" id="jiN-aw-EUb"/>
+                <outlet property="itemActionView" destination="cVt-sf-IeZ" id="C2L-hA-Stk"/>
+                <outlet property="itemInformationView" destination="7Hw-jY-ioC" id="YNV-1T-Juk"/>
+                <outlet property="itemLogView" destination="tiP-cM-y38" id="ge4-cd-AaA"/>
+                <outlet property="itemNameView" destination="48w-N5-EXB" id="QUd-p8-KSz"/>
+                <outlet property="reactionBarsView" destination="oGt-FS-MCI" id="EmY-Z8-kq7"/>
+                <outlet property="reactionFooterView" destination="6Iv-gB-nbf" id="MrT-uO-aN8"/>
             </connections>
             <point key="canvasLocation" x="-73.5" y="165"/>
         </collectionReusableView>
     </objects>
     <resources>
-        <image name="haves_mark" width="200" height="200"/>
         <image name="sample" width="1000" height="1000"/>
     </resources>
 </document>
