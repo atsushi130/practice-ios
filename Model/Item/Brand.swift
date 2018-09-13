@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-struct Brand {
-    let name: String
-    let isFun: Bool
+public struct Brand {
+    public let name: String
+    public let isFun: Bool
 }
