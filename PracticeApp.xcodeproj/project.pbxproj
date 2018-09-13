@@ -39,12 +39,6 @@
 		0D85A86D1FFCDCC600A9C364 /* ReactionFooterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85A86C1FFCDCC600A9C364 /* ReactionFooterButtonView.swift */; };
 		0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; };
 		0DA0882C1FFA8BBA00EE18CF /* UIFontComplete.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0DA088301FFAB01000EE18CF /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */; };
-		0DA088321FFAB03A00EE18CF /* Itemable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088311FFAB03A00EE18CF /* Itemable.swift */; };
-		0DA088381FFAB1B800EE18CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088371FFAB1B800EE18CF /* User.swift */; };
-		0DA0883A1FFAB1BF00EE18CF /* Userable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088391FFAB1BF00EE18CF /* Userable.swift */; };
-		0DA0883C1FFAB2F200EE18CF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0883B1FFAB2F200EE18CF /* Category.swift */; };
-		0DA088401FFAB34100EE18CF /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0883F1FFAB34100EE18CF /* Brand.swift */; };
 		0DA088431FFABB5400EE18CF /* ItemDetailReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088421FFABB5400EE18CF /* ItemDetailReusableView.swift */; };
 		0DA088451FFABB7D00EE18CF /* ItemDetailReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA088441FFABB7D00EE18CF /* ItemDetailReusableView.xib */; };
 		0DA088481FFABC8C00EE18CF /* ReactionBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088471FFABC8C00EE18CF /* ReactionBarsView.swift */; };
@@ -124,6 +118,12 @@
 		0DFA7F13214AA4E8008F3286 /* ItemNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA7F12214AA4E8008F3286 /* ItemNameView.xib */; };
 		0DFA7F15214AA625008F3286 /* ReactionFooterButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA7F14214AA625008F3286 /* ReactionFooterButtonView.xib */; };
 		0DFA7F17214AA7E1008F3286 /* ReactionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA7F16214AA7E1008F3286 /* ReactionFooterView.xib */; };
+		0DFA7F18214ABCF8008F3286 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */; };
+		0DFA7F19214ABD19008F3286 /* Itemable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088311FFAB03A00EE18CF /* Itemable.swift */; };
+		0DFA7F1A214ABD28008F3286 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0883B1FFAB2F200EE18CF /* Category.swift */; };
+		0DFA7F1B214ABD44008F3286 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0883F1FFAB34100EE18CF /* Brand.swift */; };
+		0DFA7F1D214ABDB3008F3286 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088371FFAB1B800EE18CF /* User.swift */; };
+		0DFA7F1E214ABDB6008F3286 /* Userable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088391FFAB1BF00EE18CF /* Userable.swift */; };
 		759441931FF52E62001E4FD1 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759441921FF52E62001E4FD1 /* ItemViewModel.swift */; };
 		7594419C1FF6ABD0001E4FD1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594419B1FF6ABD0001E4FD1 /* UIColor+.swift */; };
 		75E596311FF272BD00784269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596301FF272BD00784269 /* AppDelegate.swift */; };
@@ -651,8 +651,6 @@
 		0DA0882E1FFAB00200EE18CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */,
-				0DA0883B1FFAB2F200EE18CF /* Category.swift */,
 				0DD8FC192143EBAD0075D874 /* ItemDetailDataSource.swift */,
 			);
 			path = Model;
@@ -661,25 +659,7 @@
 		0DA088361FFAB1AA00EE18CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0DA088371FFAB1B800EE18CF /* User.swift */,
-				0DA088391FFAB1BF00EE18CF /* Userable.swift */,
 				0DD8FC1E2144C1AD0075D874 /* MySumallyDataSource.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0DA0883D1FFAB33500EE18CF /* Brand */ = {
-			isa = PBXGroup;
-			children = (
-				0DA0883E1FFAB33900EE18CF /* Model */,
-			);
-			path = Brand;
-			sourceTree = "<group>";
-		};
-		0DA0883E1FFAB33900EE18CF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0DA0883F1FFAB34100EE18CF /* Brand.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -800,6 +780,7 @@
 		0DD8FCD72146C0F40075D874 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0DFA7F1C214ABD6D008F3286 /* User */,
 				0DD8FCE32146C12F0075D874 /* Item */,
 				0DD8FCD82146C0F40075D874 /* Model.h */,
 				0DD8FCD92146C0F40075D874 /* Info.plist */,
@@ -810,6 +791,10 @@
 		0DD8FCE32146C12F0075D874 /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				0DA0883F1FFAB34100EE18CF /* Brand.swift */,
+				0DA0883B1FFAB2F200EE18CF /* Category.swift */,
+				0DA088311FFAB03A00EE18CF /* Itemable.swift */,
+				0DA0882F1FFAB01000EE18CF /* ItemDetail.swift */,
 				0DD8FCE42146C1420075D874 /* Item.swift */,
 				0DD8FCE62146C1A60075D874 /* Reaction.swift */,
 			);
@@ -893,6 +878,15 @@
 			path = ItemNameView;
 			sourceTree = "<group>";
 		};
+		0DFA7F1C214ABD6D008F3286 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0DA088391FFAB1BF00EE18CF /* Userable.swift */,
+				0DA088371FFAB1B800EE18CF /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		759441911FF52E4F001E4FD1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -942,7 +936,6 @@
 				0DD8FC7E214621C30075D874 /* Resources */,
 				0D2C191C1FFE65AB0083466A /* UserList */,
 				0D2C191B1FFE659D0083466A /* MySumally */,
-				0DA0883D1FFAB33500EE18CF /* Brand */,
 				0DA0882D1FFAAFF900EE18CF /* ItemDetail */,
 				0D00B1BF1FFA4C4900DFCCE0 /* Main */,
 				7594419A1FF6ABBA001E4FD1 /* Extension */,
@@ -1106,7 +1099,6 @@
 		75E596C01FF4E24B00784269 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0DA088311FFAB03A00EE18CF /* Itemable.swift */,
 				0DD8FC14213EE5630075D874 /* ItemDataSource.swift */,
 			);
 			path = Model;
@@ -1374,8 +1366,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DFA7F19214ABD19008F3286 /* Itemable.swift in Sources */,
+				0DFA7F1B214ABD44008F3286 /* Brand.swift in Sources */,
+				0DFA7F1A214ABD28008F3286 /* Category.swift in Sources */,
 				0DD8FCE72146C1A60075D874 /* Reaction.swift in Sources */,
+				0DFA7F1E214ABDB6008F3286 /* Userable.swift in Sources */,
+				0DFA7F18214ABCF8008F3286 /* ItemDetail.swift in Sources */,
 				0DD8FCE52146C1420075D874 /* Item.swift in Sources */,
+				0DFA7F1D214ABDB3008F3286 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1391,7 +1389,6 @@
 				0DD8FC1D2144C1780075D874 /* MySumallyViewModel.swift in Sources */,
 				0D2C19451FFFE6F30083466A /* ItemCollectionCell.swift in Sources */,
 				75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */,
-				0DA088381FFAB1B800EE18CF /* User.swift in Sources */,
 				0DE6500D20023E3B00ACDEE5 /* FunLabelCell.swift in Sources */,
 				0D6899481FFBBED6004640CE /* ReactionView.swift in Sources */,
 				0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */,
@@ -1401,7 +1398,6 @@
 				0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */,
 				0DD8FCF121496E0C0075D874 /* ItemInformationBrandView.swift in Sources */,
 				0DA0884C1FFAC21300EE18CF /* ItemInformationView.swift in Sources */,
-				0DA0883A1FFAB1BF00EE18CF /* Userable.swift in Sources */,
 				0D2C19111FFD4A9B0083466A /* ItemDetailViewController.swift in Sources */,
 				0D85A86D1FFCDCC600A9C364 /* ReactionFooterButtonView.swift in Sources */,
 				0DD8FC6E214553610075D874 /* ItemDetailConfigurator.swift in Sources */,
@@ -1428,10 +1424,8 @@
 				75E596A41FF39F5500784269 /* AccountValidateViewModel.swift in Sources */,
 				7594419C1FF6ABD0001E4FD1 /* UIColor+.swift in Sources */,
 				0DD8FC7D214578580075D874 /* ItemDetailCoordinator.swift in Sources */,
-				0DA088321FFAB03A00EE18CF /* Itemable.swift in Sources */,
 				0D485DB71FFD2309004116AB /* ItemActionView.swift in Sources */,
 				75E596BF1FF4E21800784269 /* ItemCell.swift in Sources */,
-				0DA088301FFAB01000EE18CF /* ItemDetail.swift in Sources */,
 				75E596BD1FF4D88C00784269 /* PiterestLayoutDelegate.swift in Sources */,
 				0DA088481FFABC8C00EE18CF /* ReactionBarsView.swift in Sources */,
 				0D2C194A1FFFF6A90083466A /* MySumallyViewController.swift in Sources */,
@@ -1443,10 +1437,8 @@
 				75E596AF1FF3DA2700784269 /* Account.swift in Sources */,
 				0D485DB51FFD2289004116AB /* ItemLogView.swift in Sources */,
 				0DA0884E1FFAC7D100EE18CF /* FollowButton.swift in Sources */,
-				0DA0883C1FFAB2F200EE18CF /* Category.swift in Sources */,
 				0DD8FC76214558770075D874 /* ItemConfigurator.swift in Sources */,
 				75E596AC1FF3DA1100784269 /* LoginViewModel.swift in Sources */,
-				0DA088401FFAB34100EE18CF /* Brand.swift in Sources */,
 				75E596311FF272BD00784269 /* AppDelegate.swift in Sources */,
 				75E596C41FF4E2A200784269 /* ItemViewController.swift in Sources */,
 				0DD8FC1A2143EBAD0075D874 /* ItemDetailDataSource.swift in Sources */,
