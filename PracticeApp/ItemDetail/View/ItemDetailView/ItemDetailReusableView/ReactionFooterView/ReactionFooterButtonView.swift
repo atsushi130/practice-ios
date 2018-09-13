@@ -9,9 +9,10 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftExtensions
 
 @IBDesignable
-final class ReactionFooterButtonView: UIView {
+final class ReactionFooterButtonView: UIView, NibDesignable {
     
     @IBOutlet fileprivate weak var button:       UIButton!
     @IBOutlet fileprivate weak var reactionView: ReactionView!
@@ -20,6 +21,12 @@ final class ReactionFooterButtonView: UIView {
     @IBInspectable var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set { self.layer.cornerRadius = newValue }
+    }
+    
+    @IBInspectable
+    var markImage: UIImage? {
+        get { return self.reactionView.markImage }
+        set { self.reactionView.markImage = newValue }
     }
     
     var isVoted: Bool = false {
@@ -33,6 +40,16 @@ final class ReactionFooterButtonView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.isVoted = self.reactionView.isVoted
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.configureNib()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.configureNib()
     }
 }
 
