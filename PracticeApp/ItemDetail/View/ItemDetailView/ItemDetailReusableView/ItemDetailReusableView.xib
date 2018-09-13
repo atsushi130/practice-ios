@@ -10,11 +10,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HiraginoMincho.ttc">
-            <string>HiraMinProN-W3</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -103,99 +98,22 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ux7-Vo-7X2" customClass="ReactionFooterButtonView" customModule="PracticeApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="173.5" height="44"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-S0-X1s" customClass="ReactionView" customModule="PracticeApp" customModuleProvider="target">
-                                            <rect key="frame" x="74" y="4" width="25.5" height="25.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="YNc-S0-X1s" secondAttribute="height" multiplier="1:1" id="HHt-Xy-z1j"/>
-                                                <constraint firstAttribute="width" constant="25.5" id="tGh-gh-rDy"/>
-                                            </constraints>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="want it (3k)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSA-5T-uzI">
-                                            <rect key="frame" x="57" y="32" width="60" height="8"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="8" id="KOg-Y1-WEU"/>
-                                                <constraint firstAttribute="width" constant="60" id="r1A-qc-crU"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="6"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4j1-vq-Oc5">
-                                            <rect key="frame" x="0.0" y="0.0" width="174" height="44"/>
-                                        </button>
-                                    </subviews>
                                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="4j1-vq-Oc5" secondAttribute="trailing" id="7Ek-IR-E61"/>
-                                        <constraint firstItem="YNc-S0-X1s" firstAttribute="leading" secondItem="ux7-Vo-7X2" secondAttribute="trailing" constant="-99.5" id="Eab-Bz-rcD"/>
-                                        <constraint firstItem="YNc-S0-X1s" firstAttribute="centerX" secondItem="ux7-Vo-7X2" secondAttribute="centerX" id="FnQ-dM-LHQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="4j1-vq-Oc5" secondAttribute="bottom" id="JbY-hm-tuI"/>
-                                        <constraint firstItem="4j1-vq-Oc5" firstAttribute="top" secondItem="ux7-Vo-7X2" secondAttribute="top" id="clK-U5-zzj"/>
-                                        <constraint firstItem="YNc-S0-X1s" firstAttribute="top" secondItem="ux7-Vo-7X2" secondAttribute="top" constant="4" id="eAq-on-xD8"/>
-                                        <constraint firstItem="4j1-vq-Oc5" firstAttribute="leading" secondItem="ux7-Vo-7X2" secondAttribute="leading" id="fvc-hh-SOA"/>
-                                        <constraint firstItem="DSA-5T-uzI" firstAttribute="top" secondItem="YNc-S0-X1s" secondAttribute="bottom" constant="2.5" id="nfS-oQ-qTG"/>
-                                        <constraint firstItem="DSA-5T-uzI" firstAttribute="centerX" secondItem="ux7-Vo-7X2" secondAttribute="centerX" id="t2A-DC-EMt"/>
-                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="3"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <outlet property="button" destination="4j1-vq-Oc5" id="XKa-Id-P15"/>
-                                        <outlet property="label" destination="DSA-5T-uzI" id="4LL-v8-zpD"/>
-                                        <outlet property="reactionView" destination="YNc-S0-X1s" id="w5Q-lq-D95"/>
-                                    </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ex-nC-ZQO" customClass="ReactionFooterButtonView" customModule="PracticeApp" customModuleProvider="target">
                                     <rect key="frame" x="181.5" y="0.0" width="173.5" height="44"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TP-64-zEc" customClass="ReactionView" customModule="PracticeApp" customModuleProvider="target">
-                                            <rect key="frame" x="74" y="4" width="25.5" height="25.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="0TP-64-zEc" secondAttribute="height" multiplier="1:1" id="4ma-Vt-LLl"/>
-                                                <constraint firstAttribute="width" constant="25.5" id="wBj-9f-Gq0"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="markImage" value="haves_mark"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="have it (29)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QML-fl-fwa">
-                                            <rect key="frame" x="57" y="32" width="60" height="8"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="8" id="QM3-qA-iK0"/>
-                                                <constraint firstAttribute="width" constant="60" id="xUm-nJ-H0C"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="6"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REF-EF-hpf">
-                                            <rect key="frame" x="0.0" y="0.0" width="174" height="44"/>
-                                        </button>
-                                    </subviews>
                                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstItem="QML-fl-fwa" firstAttribute="centerX" secondItem="8ex-nC-ZQO" secondAttribute="centerX" id="0pY-vX-cte"/>
-                                        <constraint firstItem="REF-EF-hpf" firstAttribute="leading" secondItem="8ex-nC-ZQO" secondAttribute="leading" id="0r6-le-nvh"/>
-                                        <constraint firstItem="0TP-64-zEc" firstAttribute="centerX" secondItem="8ex-nC-ZQO" secondAttribute="centerX" id="2pO-cI-Aa8"/>
-                                        <constraint firstAttribute="trailing" secondItem="REF-EF-hpf" secondAttribute="trailing" id="CXw-sx-Jtd"/>
-                                        <constraint firstItem="0TP-64-zEc" firstAttribute="top" secondItem="8ex-nC-ZQO" secondAttribute="top" constant="4" id="KTN-yq-oVJ"/>
-                                        <constraint firstItem="REF-EF-hpf" firstAttribute="top" secondItem="8ex-nC-ZQO" secondAttribute="top" id="Z5C-u8-eVI"/>
-                                        <constraint firstItem="QML-fl-fwa" firstAttribute="top" secondItem="0TP-64-zEc" secondAttribute="bottom" constant="2.5" id="x1v-0T-MCa"/>
-                                        <constraint firstAttribute="bottom" secondItem="REF-EF-hpf" secondAttribute="bottom" id="yEc-KV-iI6"/>
-                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="3"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="markImage" value="haves_mark"/>
                                     </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <outlet property="button" destination="REF-EF-hpf" id="e4R-A9-DOB"/>
-                                        <outlet property="label" destination="QML-fl-fwa" id="ubD-cj-62s"/>
-                                        <outlet property="reactionView" destination="0TP-64-zEc" id="aQb-PR-D2S"/>
-                                    </connections>
                                 </view>
                             </subviews>
                             <constraints>
