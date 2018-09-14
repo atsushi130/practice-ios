@@ -12,12 +12,12 @@ import RxCocoa
 import SwiftExtensions
 
 @IBDesignable
-final class FollowButton: UIView, NibDesignable {
+public final class FollowButton: UIView, NibDesignable {
     
     @IBOutlet private weak var button: UIButton!
     
     @IBInspectable
-    var buttonTitle: String? {
+    public var buttonTitle: String? {
         get { return self.button.currentTitle }
         set { self.button.setTitle(newValue, for: .normal) }
     }
@@ -26,39 +26,39 @@ final class FollowButton: UIView, NibDesignable {
         didSet { self.changeView() }
     }
     
-    var title: (followed: String, notFollowing: String) = (followed: "フォロー中", notFollowing: "フォローする")
+    public var title: (followed: String, notFollowing: String) = (followed: "フォロー中", notFollowing: "フォローする")
 
     @IBInspectable
-    var cornerRadius: CGFloat {
+    public var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set { self.layer.cornerRadius = newValue }
     }
     
     @IBInspectable
-    var borderColor: UIColor {
+    public var borderColor: UIColor {
         get { return self.layer.borderColor!.ex.uiColor }
         set { self.layer.borderColor = newValue.cgColor }
     }
     
     @IBInspectable
-    var borderWidth: CGFloat {
+    public var borderWidth: CGFloat {
         get { return self.layer.borderWidth }
         set { self.layer.borderWidth = newValue }
     }
     
     private let disposeBag = DisposeBag()
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.configureNib()
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         self.observe()
     }
