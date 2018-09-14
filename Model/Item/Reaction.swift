@@ -68,6 +68,12 @@ public final class Reactions: Decodable {
     public enum ReactionCodingKeys: String, CodingKey {
         case wants
         case haves
+        public var title: String {
+            switch self {
+            case .wants: return "wantしている人"
+            case .haves: return "haveしている人"
+            }
+        }
     }
     
     fileprivate enum ReactionValueCodingKeys: String, CodingKey {
