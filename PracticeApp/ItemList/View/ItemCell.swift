@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 import Model
+import ViewComponent
 
 final class ItemCell: UICollectionViewCell {
 

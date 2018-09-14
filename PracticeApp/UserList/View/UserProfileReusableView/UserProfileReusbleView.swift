@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ViewComponent
 
 final class UserProfileReusableView: UICollectionReusableView {
     

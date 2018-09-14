@@ -12,6 +12,7 @@ import RxCocoa
 import Connectable
 import Model
 import Data
+import ViewComponent
 
 final class ItemDetailViewModel: Connectable {
     

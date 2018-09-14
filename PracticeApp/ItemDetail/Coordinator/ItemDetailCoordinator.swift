@@ -8,12 +8,14 @@
 
 import Foundation
 import CoordinatorKit
+import ViewComponent
 
 struct ItemDetailCoordinator: Coordinator {
     
     weak var viewController: UIViewController?
     
     enum Route {
+        // FIXME: - get rid of ReactionView.ReactionType
         case userList(reactionType: ReactionView.ReactionType)
         case detail
         

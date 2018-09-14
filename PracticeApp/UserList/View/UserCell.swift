@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import ViewComponent
 
 final class UserCell: UICollectionViewCell {
     
