@@ -35,7 +35,7 @@ struct ItemDetailCoordinator: Coordinator {
     
     func transition(to route: Route) {
         let viewController = route.viewController
-        self.viewController?.navigationController?.pushViewController(viewController, animated: true)
         viewController.navigationItem.title = route.navigationTitle
+        self.viewController?.navigationController?.pushViewController(viewController, animated: true)
     }
 }
