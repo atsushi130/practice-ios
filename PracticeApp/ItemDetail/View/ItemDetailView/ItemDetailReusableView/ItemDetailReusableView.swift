@@ -45,7 +45,7 @@ final class ItemDetailReusableView: UICollectionReusableView, NibInstantiatable 
 }
 
 extension Reactive where Base: ItemDetailReusableView {
-    var tappedUserList: Observable<ReactionView.ReactionType> {
+    var tappedUserList: Observable<Reactions.Style> {
         return self.base.reactionBarsView.rx.tappedUserList
     }
 }

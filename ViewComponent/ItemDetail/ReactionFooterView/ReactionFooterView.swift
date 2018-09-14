@@ -44,8 +44,8 @@ public final class ReactionFooterView: UIView, NibDesignable {
     }
     
     private func setup() {
-        self.wants.reactionType = .wants
-        self.haves.reactionType = .haves
+        self.wants.reactionStyle = .wants
+        self.haves.reactionStyle = .haves
         self.observe()
     }
     

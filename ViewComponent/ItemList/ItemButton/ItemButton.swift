@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Model
 
 public final class ItemButton: UIView {
     
@@ -26,8 +27,8 @@ public final class ItemButton: UIView {
         didSet { self.reactionView.isVoted = self.isVoted }
     }
     
-    public var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {
-        didSet { self.reactionView.reactionType = self.reactionType }
+    public var reactionStyle: Reactions.Style = Reactions.Style.wants {
+        didSet { self.reactionView.reactionStyle = self.reactionStyle }
     }
 }
 

@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Model
 import SwiftExtensions
 
 @IBDesignable
@@ -29,8 +30,8 @@ final class ReactionBarView: UIView, NibDesignable {
         set { self.reactionView.markImage = newValue }
     }
     
-    var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {
-        didSet { self.reactionView.reactionType = self.reactionType }
+    var reactionStyle: Reactions.Style = Reactions.Style.wants {
+        didSet { self.reactionView.reactionStyle = self.reactionStyle }
     }
     
     override func awakeFromNib() {
@@ -55,8 +56,8 @@ extension Reactive where Base: ReactionBarView {
         return self.base.button.rx.controlEvent(controlEvent).asDriver().throttle(self.base.reactionView.animationDuration)
     }
     
-    var tappedUserList: Observable<ReactionView.ReactionType> {
+    var tappedUserList: Observable<Reactions.Style> {
         return self.base.userListButton.rx.controlEvent(.touchUpInside)
-            .map { self.base.reactionType }
+            .map { self.base.reactionStyle }
     }
 }

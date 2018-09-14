@@ -8,15 +8,14 @@
 
 import Foundation
 import CoordinatorKit
-import ViewComponent
+import Model
 
 struct ItemDetailCoordinator: Coordinator {
     
     weak var viewController: UIViewController?
     
     enum Route {
-        // FIXME: - get rid of ReactionView.ReactionType
-        case userList(reactionType: ReactionView.ReactionType)
+        case userList(reactionStyle: Reactions.Style)
         case detail
         
         var viewController: UIViewController {
@@ -28,7 +27,7 @@ struct ItemDetailCoordinator: Coordinator {
         
         var navigationTitle: String {
             switch self {
-            case let .userList(reactionType): return reactionType.title
+            case .userList(let reactionStyle): return reactionStyle.title
             case .detail: return ""
             }
         }

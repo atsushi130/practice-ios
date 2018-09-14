@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Model
 import SwiftExtensions
 
 @IBDesignable
@@ -33,8 +34,8 @@ final class ReactionFooterButtonView: UIView, NibDesignable {
         didSet { self.reactionView.isVoted = self.isVoted }
     }
     
-    var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {
-        didSet { self.reactionView.reactionType = self.reactionType }
+    var reactionStyle: Reactions.Style = Reactions.Style.wants {
+        didSet { self.reactionView.reactionStyle = self.reactionStyle }
     }
     
     override func awakeFromNib() {

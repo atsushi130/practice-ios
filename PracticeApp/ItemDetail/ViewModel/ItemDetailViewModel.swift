@@ -20,9 +20,9 @@ final class ItemDetailViewModel: Connectable {
     private let disposeBag = DisposeBag()
     let items = BehaviorRelay<[Item]>(value: [])
     
-    fileprivate lazy var tappedUserList = AnyObserver<ReactionView.ReactionType> { event in
-        if case let .next(reactionType) = event {
-            self.coordinator.transition(to: .userList(reactionType: reactionType))
+    fileprivate lazy var tappedUserList = AnyObserver<Reactions.Style> { event in
+        if case let .next(reactionStyle) = event {
+            self.coordinator.transition(to: .userList(reactionStyle: reactionStyle))
         }
     }
     
@@ -62,7 +62,7 @@ extension OutputSpace where Definer: ItemDetailViewModel {
 // MARK: - Input
 extension InputSpace where Definer: ItemDetailViewModel {
     
-    var tappedUserList: AnyObserver<ReactionView.ReactionType> {
+    var tappedUserList: AnyObserver<Reactions.Style> {
         return self.definer.tappedUserList
     }
     

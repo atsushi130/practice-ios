@@ -38,7 +38,7 @@ public final class ReactionBarsView: UIView, NibDesignable {
     
     private let disposeBag = DisposeBag()
     fileprivate let updateStateEvent = PublishSubject<Reactions>()
-    fileprivate let tappedUserList   = PublishSubject<ReactionView.ReactionType>()
+    fileprivate let tappedUserList   = PublishSubject<Reactions.Style>()
     
     fileprivate var reactions: Reactions = Reactions.default {
         didSet {
@@ -63,8 +63,8 @@ public final class ReactionBarsView: UIView, NibDesignable {
     }
     
     private func setup() {
-        self.wants.reactionType = .wants
-        self.haves.reactionType = .haves
+        self.wants.reactionStyle = .wants
+        self.haves.reactionStyle = .haves
         self.observe()
     }
     
@@ -108,7 +108,7 @@ extension Reactive where Base: ReactionBarsView {
             })
     }
     
-    public var tappedUserList: Observable<ReactionView.ReactionType> {
+    public var tappedUserList: Observable<Reactions.Style> {
         return self.base.tappedUserList
     }
 }
