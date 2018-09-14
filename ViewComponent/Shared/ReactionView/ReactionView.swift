@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Model
 import SwiftExtensions
 
 @IBDesignable
@@ -30,19 +31,8 @@ public final class ReactionView: UIView, NibDesignable {
         get { return self.markView.image }
         set { self.markView.image = newValue }
     }
-    
-    public enum ReactionType: String {
-        case wants = "wants"
-        case haves = "haves"
-        public var title: String {
-            switch self {
-            case .wants: return "wantしている人"
-            case .haves: return "haveしている人"
-            }
-        }
-    }
-    
-    public var reactionType: ReactionType = .wants {
+
+    public var reactionStyle: Reactions.Style = .wants {
         didSet {
             self.changeMark()
         }
@@ -75,7 +65,7 @@ public final class ReactionView: UIView, NibDesignable {
     }
 
     private func changeMark() {
-        self.markView.image = UIImage(named: self.reactionType.rawValue + "_mark")
+        self.markView.image = UIImage(named: self.reactionStyle.rawValue + "_mark")
     }
     
     private func changeAnimation() {

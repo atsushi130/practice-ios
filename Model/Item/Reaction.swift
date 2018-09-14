@@ -64,7 +64,7 @@ public final class Reactions: Decodable {
         return Reactions()
     }
     
-    public typealias ReactionType = ReactionCodingKeys
+    public typealias Style = ReactionCodingKeys
     public enum ReactionCodingKeys: String, CodingKey {
         case wants
         case haves
@@ -101,8 +101,8 @@ public final class Reactions: Decodable {
         )
     }
     
-    public func `switch`(of reactionType: ReactionType) {
-        switch reactionType {
+    public func `switch`(of style: Reactions.Style) {
+        switch style {
         case .wants:
             self.wants.switch()
             self.haves.turnOff()
