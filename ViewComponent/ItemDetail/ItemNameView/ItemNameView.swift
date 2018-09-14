@@ -10,22 +10,22 @@ import UIKit
 import SwiftExtensions
 
 @IBDesignable
-final class ItemNameView: UIView, NibDesignable {
+public final class ItemNameView: UIView, NibDesignable {
     
     @IBOutlet private weak var mainNameLabel: UILabel!
     @IBOutlet private weak var subNameLabel:  UILabel!
  
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.configureNib()
     }
     
-    func bind(name: (main: String, sub: String)) {
+    public func bind(name: (main: String, sub: String)) {
         self.mainNameLabel.text = name.main
         self.subNameLabel.text  = name.sub
     }
