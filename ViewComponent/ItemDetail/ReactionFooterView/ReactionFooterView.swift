@@ -13,7 +13,7 @@ import Model
 import SwiftExtensions
 
 @IBDesignable
-final class ReactionFooterView: UIView, NibDesignable {
+public final class ReactionFooterView: UIView, NibDesignable {
     
     @IBOutlet fileprivate weak var wants: ReactionFooterButtonView!
     @IBOutlet fileprivate weak var haves: ReactionFooterButtonView!
@@ -28,17 +28,17 @@ final class ReactionFooterView: UIView, NibDesignable {
         }
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         self.setup()
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.configureNib()
     }
@@ -65,15 +65,15 @@ final class ReactionFooterView: UIView, NibDesignable {
     }
 }
 
-extension Reactive where Base: ReactionFooterView {
+public extension Reactive where Base: ReactionFooterView {
     
-    var reactions: Binder<Reactions> {
+    public var reactions: Binder<Reactions> {
         return Binder(self.base) { element, value in
             element.reactions = value
         }
     }
     
-    var updateReactions: Observable<Reactions> {
+    public var updateReactions: Observable<Reactions> {
         return self.base.updateStateEvent
             .do(onNext: { reactions in
                 self.base.wants.isVoted = reactions.wants.state
