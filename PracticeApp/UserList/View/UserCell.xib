@@ -27,7 +27,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxW-cL-tFZ" customClass="UserIconView" customModule="PracticeApp" customModuleProvider="target">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxW-cL-tFZ" customClass="UserIconView" customModule="ViewComponent">
                         <rect key="frame" x="12" y="12" width="50" height="50"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -104,7 +104,7 @@
                             <constraint firstAttribute="height" constant="1" id="Io7-CH-8HR"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6O-SL-TV0" customClass="FollowButton" customModule="PracticeApp" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6O-SL-TV0" customClass="FollowButton" customModule="ViewComponent">
                         <rect key="frame" x="268" y="22" width="95" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="9Bm-t5-cXc"/>

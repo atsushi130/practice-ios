@@ -76,7 +76,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="CLe-5O-Gep">
                                 <rect key="frame" x="0.0" y="217" width="172" height="46"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrM-Zr-nCS" customClass="ItemButton" customModule="PracticeApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrM-Zr-nCS" customClass="ItemButton" customModule="ViewComponent">
                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="46"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="az0-hP-MOp">
@@ -85,11 +85,14 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi6-HK-Zxh">
                                                         <rect key="frame" x="0.0" y="0.0" width="38.5" height="46"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-Qy-FBC" customClass="ReactionView" customModule="PracticeApp" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-Qy-FBC" customClass="ReactionView" customModule="ViewComponent">
                                                                 <rect key="frame" x="9" y="10" width="25.5" height="25.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="cD0-Qy-FBC" secondAttribute="height" multiplier="1:1" id="UVh-hp-P8h"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="markImage" value="wants_mark"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -160,7 +163,7 @@
                                             <outlet property="typeLabel" destination="ohc-iW-MIq" id="Mue-RQ-kV5"/>
                                         </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jG-EX-dew" customClass="ItemButton" customModule="PracticeApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jG-EX-dew" customClass="ItemButton" customModule="ViewComponent">
                                         <rect key="frame" x="86.5" y="0.0" width="85.5" height="46"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiR-QS-9Ng">
@@ -169,7 +172,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7M2-13-A2I">
                                                         <rect key="frame" x="0.0" y="0.0" width="38.5" height="46"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIV-qQ-vMu" customClass="ReactionView" customModule="PracticeApp" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIV-qQ-vMu" customClass="ReactionView" customModule="ViewComponent">
                                                                 <rect key="frame" x="9" y="10" width="25.5" height="25.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="QIV-qQ-vMu" secondAttribute="height" multiplier="1:1" id="RZr-AO-29H"/>
@@ -280,5 +283,6 @@
     <resources>
         <image name="haves_mark" width="200" height="200"/>
         <image name="sample" width="1000" height="1000"/>
+        <image name="wants_mark" width="200" height="200"/>
     </resources>
 </document>

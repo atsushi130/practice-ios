@@ -26,7 +26,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eyu-eo-Hdf">
                     <rect key="frame" x="15" y="390" width="345" height="556"/>
                     <subviews>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGt-FS-MCI" customClass="ReactionBarsView" customModule="PracticeApp" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGt-FS-MCI" customClass="ReactionBarsView" customModule="ViewComponent">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="70"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="UWz-zM-iTJ"/>
@@ -37,14 +37,14 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48w-N5-EXB" customClass="ItemNameView" customModule="PracticeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48w-N5-EXB" customClass="ItemNameView" customModule="ViewComponent">
                             <rect key="frame" x="0.0" y="90" width="345" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="ghL-u3-F1e"/>
                             </constraints>
                         </view>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hw-jY-ioC" customClass="ItemInformationView" customModule="PracticeApp" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hw-jY-ioC" customClass="ItemInformationView" customModule="ViewComponent">
                             <rect key="frame" x="0.0" y="160" width="345" height="210"/>
                             <color key="backgroundColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
@@ -62,14 +62,14 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiP-cM-y38" customClass="ItemLogView" customModule="PracticeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiP-cM-y38" customClass="ItemLogView" customModule="ViewComponent">
                             <rect key="frame" x="0.0" y="390" width="345" height="36"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="nbA-eZ-MtX"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-sf-IeZ" customClass="ItemActionView" customModule="PracticeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-sf-IeZ" customClass="ItemActionView" customModule="ViewComponent">
                             <rect key="frame" x="0.0" y="446" width="345" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -85,7 +85,7 @@
                         </view>
                     </subviews>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Iv-gB-nbf" customClass="ReactionFooterView" customModule="PracticeApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Iv-gB-nbf" customClass="ReactionFooterView" customModule="ViewComponent">
                     <rect key="frame" x="0.0" y="886" width="375" height="94"/>
                     <color key="backgroundColor" white="1" alpha="0.90199593321917804" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
