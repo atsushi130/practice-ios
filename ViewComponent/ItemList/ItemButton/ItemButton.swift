@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class ItemButton: UIView {
+public final class ItemButton: UIView {
     
     @IBOutlet fileprivate weak var button: UIButton!
     @IBOutlet private weak var imageView:  UIImageView!
@@ -22,18 +22,18 @@ final class ItemButton: UIView {
     
     private let disposeBag = DisposeBag()
     
-    var isVoted: Bool = false {
+    public var isVoted: Bool = false {
         didSet { self.reactionView.isVoted = self.isVoted }
     }
     
-    var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {
+    public var reactionType: ReactionView.ReactionType = ReactionView.ReactionType.wants {
         didSet { self.reactionView.reactionType = self.reactionType }
     }
 }
 
 extension Reactive where Base: ItemButton {
     
-    func controlEvent(_ controlEvent: UIControlEvents) -> Driver<Void> {
+    public func controlEvent(_ controlEvent: UIControlEvents) -> Driver<Void> {
         return self.base.button.rx.controlEvent(controlEvent).asDriver().throttle(self.base.reactionView.animationDuration)
     }
 }
