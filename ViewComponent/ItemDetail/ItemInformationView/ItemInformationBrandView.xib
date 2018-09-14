@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemInformationBrandView" customModule="PracticeApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemInformationBrandView" customModule="ViewComponent" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="d8Q-xi-MRD">
             <rect key="frame" x="0.0" y="0.0" width="345" height="86"/>
@@ -83,16 +83,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="35" height="36.5"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample3" translatesAutoresizingMaskIntoConstraints="NO" id="68d-4r-4yZ">
-                            <rect key="frame" x="41" y="0.0" width="36" height="36.5"/>
+                            <rect key="frame" x="41" y="0.0" width="35.5" height="36.5"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample4" translatesAutoresizingMaskIntoConstraints="NO" id="jMy-xE-bL9">
-                            <rect key="frame" x="83" y="0.0" width="35.5" height="36.5"/>
+                            <rect key="frame" x="82.5" y="0.0" width="35.5" height="36.5"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample5" translatesAutoresizingMaskIntoConstraints="NO" id="fNi-6D-uTe">
-                            <rect key="frame" x="124.5" y="0.0" width="35" height="36.5"/>
+                            <rect key="frame" x="124" y="0.0" width="35" height="36.5"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample6" translatesAutoresizingMaskIntoConstraints="NO" id="zQ0-8b-zhv">
-                            <rect key="frame" x="165.5" y="0.0" width="35.5" height="36.5"/>
+                            <rect key="frame" x="165" y="0.0" width="36" height="36.5"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="bLm-hO-UdG">
                             <rect key="frame" x="207" y="0.0" width="35.5" height="36.5"/>
@@ -106,7 +106,7 @@
                         <constraint firstItem="fNi-6D-uTe" firstAttribute="width" secondItem="l4z-LA-FH7" secondAttribute="width" id="uSF-Df-1xf"/>
                     </constraints>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhy-Zy-CPo" customClass="FollowButton" customModule="PracticeApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhy-Zy-CPo" customClass="FollowButton" customModule="ViewComponent" customModuleProvider="target">
                     <rect key="frame" x="257" y="12" width="80" height="20"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
