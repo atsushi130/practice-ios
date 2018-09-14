@@ -10,7 +10,7 @@ import UIKit
 import SwiftExtensions
 
 @IBDesignable
-final class ReactionView: UIView, NibDesignable {
+public final class ReactionView: UIView, NibDesignable {
     
     @IBOutlet private weak var animationView: UIView!
     @IBOutlet private weak var markView: UIImageView!
@@ -23,18 +23,18 @@ final class ReactionView: UIView, NibDesignable {
         static let options: UIViewAnimationOptions = .curveEaseIn
     }
     
-    var animationDuration: Double { return Const.animationDuration }
+    public var animationDuration: Double { return Const.animationDuration }
     
     @IBInspectable
-    var markImage: UIImage? {
+    public var markImage: UIImage? {
         get { return self.markView.image }
         set { self.markView.image = newValue }
     }
     
-    enum ReactionType: String {
+    public enum ReactionType: String {
         case wants = "wants"
         case haves = "haves"
-        var title: String {
+        public var title: String {
             switch self {
             case .wants: return "wantしている人"
             case .haves: return "haveしている人"
@@ -42,35 +42,35 @@ final class ReactionView: UIView, NibDesignable {
         }
     }
     
-    var reactionType: ReactionType = .wants {
+    public var reactionType: ReactionType = .wants {
         didSet {
             self.changeMark()
         }
     }
     
-    var isVoted = false {
+    public var isVoted = false {
         didSet {
             self.changeAnimation()
         }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.configureNib()
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         self.animationView.backgroundColor    = UIColor.theme
         self.animationView.layer.cornerRadius = self.frame.size.width.ex.half
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
     }
 
