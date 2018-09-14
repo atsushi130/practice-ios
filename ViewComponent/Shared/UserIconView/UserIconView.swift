@@ -9,28 +9,29 @@
 import UIKit
 import SwiftExtensions
 
-@IBDesignable final class UserIconView: UIView, NibDesignable {
+@IBDesignable
+public final class UserIconView: UIView, NibDesignable {
     
     @IBOutlet private weak var imageView: UIImageView!
     
     @IBInspectable
-    var image: UIImage? {
+    public var image: UIImage? {
         get { return self.imageView.image }
         set { self.imageView.image = newValue }
     }
     
     @IBInspectable
-    var cornerRadius: CGFloat {
+    public var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set { self.layer.cornerRadius = newValue }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.configureNib()
     }
