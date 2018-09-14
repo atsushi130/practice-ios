@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Atsushi Miyake. All rights reserved.
 //
 
-protocol Itemable {
+public protocol Itemable {
     var name: String { get }
     var subName: String { get }
     var isOn: (wants: Bool, haves: Bool) { get }
