@@ -10,7 +10,7 @@ import UIKit
 import SwiftExtensions
 
 @IBDesignable
-final class ItemInformationView: UIView, NibDesignable {
+public final class ItemInformationView: UIView, NibDesignable {
     
     @IBOutlet weak var brandView: ItemInformationBrandView!
     @IBOutlet weak var searchView: ItemInformationTextView!
@@ -19,19 +19,19 @@ final class ItemInformationView: UIView, NibDesignable {
 
     // MARK: - ItemInformationView Inspectables
     @IBInspectable
-    var cornerRadius: CGFloat {
+    public var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set { self.layer.cornerRadius = newValue }
     }
     
     @IBInspectable
-    var borderColor: UIColor {
+    public var borderColor: UIColor {
         get { return self.layer.borderColor!.ex.uiColor }
         set { self.layer.borderColor = newValue.cgColor }
     }
     
     @IBInspectable
-    var borderWidth: CGFloat {
+    public var borderWidth: CGFloat {
         get { return self.layer.borderWidth }
         set { self.layer.borderWidth = newValue }
     }
@@ -40,68 +40,68 @@ final class ItemInformationView: UIView, NibDesignable {
     
     // MARK: - Search Inspectables
     @IBInspectable
-    var searchTitle: String? {
+    public var searchTitle: String? {
         get { return self.searchView.title }
         set { self.searchView.title = newValue }
     }
     
     @IBInspectable
-    var iconImage: UIImage? {
+    public var iconImage: UIImage? {
         get { return self.searchView.iconImage }
         set { self.searchView.iconImage = newValue }
     }
     
     @IBInspectable
-    var searchText: String? {
+    public var searchText: String? {
         get { return self.searchView.text }
         set { self.searchView.text = newValue }
     }
     
     // MARK: - Category Inspectables
     @IBInspectable
-    var categoryTitle: String? {
+    public var categoryTitle: String? {
         get { return self.categoryView.title }
         set { self.categoryView.title = newValue }
     }
     
     @IBInspectable
-    var categoryImage: UIImage? {
+    public var categoryImage: UIImage? {
         get { return self.categoryView.iconImage }
         set { self.categoryView.iconImage = newValue }
     }
     
     @IBInspectable
-    var categoryText: String? {
+    public var categoryText: String? {
         get { return self.categoryView.text }
         set { self.categoryView.text = newValue }
     }
     
     // MARK: - Category Inspectables
     @IBInspectable
-    var sourceWebTitle: String? {
+    public var sourceWebTitle: String? {
         get { return self.sourceWebView.title }
         set { self.sourceWebView.title = newValue }
     }
     
     @IBInspectable
-    var sourceWebIconImage: UIImage? {
+    public var sourceWebIconImage: UIImage? {
         get { return self.sourceWebView.iconImage }
         set { self.sourceWebView.iconImage = newValue }
     }
     
     @IBInspectable
-    var sourceWebText: String? {
+    public var sourceWebText: String? {
         get { return self.sourceWebView.text }
         set { self.sourceWebView.text = newValue }
     }
     
     // MARK: - init
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.configureNib()
     }
