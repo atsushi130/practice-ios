@@ -29,7 +29,7 @@ final class ItemViewModel: Connectable {
         self.coordinator = coordinator
         
         ApiClient.items.fetchAll()
-            .asDriver(onErrorJustReturn: [])
+            .asDriverIgonringError()
             .drive(self.items)
             .disposed(by: self.disposeBag)
     }
