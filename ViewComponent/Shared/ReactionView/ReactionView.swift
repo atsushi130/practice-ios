@@ -8,6 +8,7 @@
 
 import UIKit
 import Model
+import Extension
 import SwiftExtensions
 
 @IBDesignable

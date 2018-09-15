@@ -144,6 +144,7 @@
 		0DFA7F72214CE89C008F3286 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596671FF378C500784269 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DFA7F73214CE8B9008F3286 /* SwiftExtensions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E5966A1FF378C500784269 /* SwiftExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DFA7F74214CE8C0008F3286 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E5966A1FF378C500784269 /* SwiftExtensions.framework */; };
+		0DFA7F75214CE986008F3286 /* Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFA7F62214CE855008F3286 /* Extension.framework */; };
 		759441931FF52E62001E4FD1 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759441921FF52E62001E4FD1 /* ItemViewModel.swift */; };
 		75E596311FF272BD00784269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596301FF272BD00784269 /* AppDelegate.swift */; };
 		75E596331FF272BD00784269 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596321FF272BD00784269 /* ViewController.swift */; };
@@ -497,6 +498,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DFA7F75214CE986008F3286 /* Extension.framework in Frameworks */,
 				0DFA7F30214BAF59008F3286 /* Model.framework in Frameworks */,
 				0DFA7F31214BAF71008F3286 /* SwiftExtensions.framework in Frameworks */,
 				0DFA7F36214BAFAB008F3286 /* RxSwift.framework in Frameworks */,
