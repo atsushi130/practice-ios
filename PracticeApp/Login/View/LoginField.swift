@@ -14,7 +14,7 @@ import RxCocoa
     
     @IBOutlet fileprivate weak var field: UITextField!
     
-    let isValidated = Variable<Bool>(false)
+    let isValidated = BehaviorRelay<Bool>(value: false)
     
     var value: String {
         return self.field.text ?? ""
@@ -60,7 +60,7 @@ extension Reactive where Base: LoginField {
     /// Bindable sink for `validated` property.
     var isValidated: Binder<Bool> {
         return Binder(self.base) { element, value in
-            element.isValidated.value = value
+            element.isValidated.accept(value)
         }
     }
     
