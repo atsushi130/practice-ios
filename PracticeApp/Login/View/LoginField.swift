@@ -10,7 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-@IBDesignable final class LoginField: UIView {
+@IBDesignable
+final class LoginField: UIView {
     
     @IBOutlet fileprivate weak var field: UITextField!
     

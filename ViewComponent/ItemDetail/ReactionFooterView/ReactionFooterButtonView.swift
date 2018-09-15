@@ -19,7 +19,8 @@ final class ReactionFooterButtonView: UIView, NibDesignable {
     @IBOutlet fileprivate weak var reactionView: ReactionView!
     @IBOutlet fileprivate weak var label:        UILabel!
     
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable
+    var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set { self.layer.cornerRadius = newValue }
     }

@@ -10,7 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-@IBDesignable final class LoginButton: UIButton {
+@IBDesignable
+final class LoginButton: UIButton {
     
     @IBInspectable
     var cornerRadius: CGFloat {
