@@ -31,16 +31,16 @@ PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 - [CoordinatorKit](https://github.com/atsushi130/CoordinatorKit)
 
 ## Embedded Frameworks
-- Data
+- Data  
 Mainly define the service that will interface with the outside.
 
-- Model
+- Model  
 Define the models used in PracticeApp.
 
-- ViewComponent
+- ViewComponent  
 The Designable Views define in ViewComponent module for high-speed AAA build.
 
-- Extension
+- Extension  
 Define the extensions used in PracticeApp.
 
 ## Architecture
