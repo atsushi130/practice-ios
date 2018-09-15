@@ -28,6 +28,8 @@
 		0D2C19471FFFEAC80083466A /* ItemCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19461FFFEAC80083466A /* ItemCollectionCell.xib */; };
 		0D2C194A1FFFF6A90083466A /* MySumallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C19491FFFF6A90083466A /* MySumallyViewController.swift */; };
 		0D2C194C1FFFF7D80083466A /* MySumallyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C194B1FFFF7D80083466A /* MySumallyViewController.storyboard */; };
+		0D67BAA5214D6DE000189F72 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; };
+		0D67BAA6214D6DEC00189F72 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; };
 		0DA0882C1FFA8BBA00EE18CF /* UIFontComplete.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DA088431FFABB5400EE18CF /* ItemDetailReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA088421FFABB5400EE18CF /* ItemDetailReusableView.swift */; };
@@ -273,6 +275,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0D67BAA6214D6DEC00189F72 /* RxCocoa.framework in CopyFiles */,
 				0DFA7F72214CE89C008F3286 /* RxSwift.framework in CopyFiles */,
 				0DFA7F73214CE8B9008F3286 /* SwiftExtensions.framework in CopyFiles */,
 			);
@@ -511,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DFA7F70214CE887008F3286 /* RxSwift.framework in Frameworks */,
+				0D67BAA5214D6DE000189F72 /* RxCocoa.framework in Frameworks */,
 				0DFA7F74214CE8C0008F3286 /* SwiftExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
