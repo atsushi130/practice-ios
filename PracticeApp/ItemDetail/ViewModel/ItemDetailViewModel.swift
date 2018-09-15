@@ -18,7 +18,7 @@ final class ItemDetailViewModel: Connectable {
     
     private let coordinator: ItemDetailCoordinator
     private let disposeBag = DisposeBag()
-    let items = BehaviorRelay<[Item]>(value: [])
+    fileprivate let items = BehaviorRelay<[Item]>(value: [])
     
     fileprivate lazy var tappedUserList = AnyObserver<Reactions.Style> { event in
         if case let .next(reactionStyle) = event {
@@ -70,4 +70,3 @@ extension InputSpace where Definer: ItemDetailViewModel {
         return self.definer.selectedItem
     }
 }
-
