@@ -22,10 +22,26 @@ PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 - RxSwift
 - RxDataSources
 - NSObject+Rx
+- Moya
+- RxMoya
 - SnapKit
 - UIFontComplate
 - [SwiftTargetedExtensions](https://github.com/atsushi130/SwiftTargetedExtensions)
 - [Connectable](https://github.com/atsushi130/Connectable)
+- [CoordinatorKit](https://github.com/atsushi130/CoordinatorKit)
+
+## Embedded Frameworks
+- Data
+Mainly define the service that will interface with the outside.
+
+- Model
+Define the models used in PracticeApp.
+
+- ViewComponent
+The Designable Views define in ViewComponent module for high-speed AAA build.
+
+- Extension
+Define the extensions used in PracticeApp.
 
 ## Architecture
 - MVVM
