@@ -18,7 +18,7 @@ final class ItemViewModel: Connectable {
     private let coordinator: ItemCoordinator
     private let disposeBag = DisposeBag()
     
-    let items = BehaviorRelay<[Item]>(value: [])
+    fileprivate let items = BehaviorRelay<[Item]>(value: [])
     
     fileprivate lazy var itemSelected = AnyObserver<Void> { event in
         self.coordinator.transition(to: .detail)
