@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SwiftExtensions
 
-extension UIColor {
-    static var theme: UIColor {
+public extension UIColor {
+    public static var theme: UIColor {
         return UIColor.ex.hex(string: "#F8A41A")
     }
 }

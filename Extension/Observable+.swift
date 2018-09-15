@@ -9,12 +9,12 @@
 import Foundation
 import RxSwift
 
-extension Observable {
-    var discarded: Observable<()> {
+public extension Observable {
+    public var discarded: Observable<()> {
         return self.fill(())
     }
     
-    func fill<A>( _ value: A) -> Observable<A> {
+    public func fill<A>( _ value: A) -> Observable<A> {
         return self.map { _ in value }
     }
 }
