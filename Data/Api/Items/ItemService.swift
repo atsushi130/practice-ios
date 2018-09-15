@@ -14,13 +14,17 @@ public extension ApiClient {
     
     // MARK: - Service
     public final class ItemService {
-        public static let shared = ItemService()
+        static let shared = ItemService()
         private init() {}
         
         // MARK: - Endpoint
         enum Endpoint {
             case fetchAll
         }
+    }
+    
+    public static var items: ItemService {
+        return ItemService.shared
     }
 }
 
