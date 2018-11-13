@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReactionFooterButtonView" customModule="PracticeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReactionFooterButtonView" customModule="ViewComponent" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="qRU-W9-vwn" id="HCk-c2-srq"/>
                 <outlet property="label" destination="I88-SY-cyD" id="IWg-qV-pk4"/>
@@ -28,7 +28,7 @@
             <rect key="frame" x="0.0" y="0.0" width="173.5" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-eX-ZQr" customClass="ReactionView" customModule="PracticeApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-eX-ZQr" customClass="ReactionView" customModule="ViewComponent" customModuleProvider="target">
                     <rect key="frame" x="74" y="4" width="25.5" height="25.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Tz3-eX-ZQr" secondAttribute="height" multiplier="1:1" id="8Dl-NK-qcl"/>
