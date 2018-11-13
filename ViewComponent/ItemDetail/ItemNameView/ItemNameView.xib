@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemNameView" customModule="PracticeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemNameView" customModule="ViewComponent" customModuleProvider="target">
             <connections>
                 <outlet property="mainNameLabel" destination="K8o-Lz-UIu" id="NfL-vv-kAO"/>
                 <outlet property="subNameLabel" destination="k2W-S4-9bF" id="Wci-gg-k88"/>
