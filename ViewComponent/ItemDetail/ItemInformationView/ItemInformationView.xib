@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemInformationView" customModule="PracticeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemInformationView" customModule="ViewComponent" customModuleProvider="target">
             <connections>
                 <outlet property="brandView" destination="ZUB-1A-fpm" id="TBm-Kt-jtr"/>
                 <outlet property="categoryView" destination="Guz-js-cIg" id="npo-Kr-yiX"/>
@@ -26,15 +26,15 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-4C-rsj">
                     <rect key="frame" x="0.0" y="0.0" width="345" height="210"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUB-1A-fpm" customClass="ItemInformationBrandView" customModule="PracticeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUB-1A-fpm" customClass="ItemInformationBrandView" customModule="ViewComponent" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="86"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGn-Xj-J2T" customClass="ItemInformationTextView" customModule="PracticeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGn-Xj-J2T" customClass="ItemInformationTextView" customModule="ViewComponent" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="87" width="345" height="40"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Guz-js-cIg" customClass="ItemInformationTextView" customModule="PracticeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Guz-js-cIg" customClass="ItemInformationTextView" customModule="ViewComponent" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="128" width="345" height="40.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
@@ -43,7 +43,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="text" value="腕時計"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-Dq-P5a" customClass="ItemInformationTextView" customModule="PracticeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-Dq-P5a" customClass="ItemInformationTextView" customModule="ViewComponent" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="169.5" width="345" height="40.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
