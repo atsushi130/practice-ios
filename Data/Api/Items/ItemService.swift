@@ -14,7 +14,7 @@ public extension ApiClient {
     
     // MARK: - Service
     public final class ItemService {
-        static let shared = ItemService()
+        fileprivate static let shared = ItemService()
         private init() {}
         
         // MARK: - Endpoint
