@@ -42,9 +42,9 @@ extension ApiClient.ItemService.Endpoint {
 // MARK: Interface
 public extension ApiClient.ItemService {
     
-    /// Fetch all items
+    /// Fetch latest items
     /// - Returns: all items
-    public func fetchAll() -> Observable<[Item]> {
+    public func latest() -> Observable<[Item]> {
         let data = try! Data(contentsOf: Endpoint.fetchAll.url)
         let items = try! JSONDecoder().decode([Item].self, from: data)
         return Observable.just(items)
