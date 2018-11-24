@@ -1024,13 +1024,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		7594419A1FF6ABBA001E4FD1 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		75E596241FF272BD00784269 = {
 			isa = PBXGroup;
 			children = (
@@ -1069,7 +1062,6 @@
 				0D2C191B1FFE659D0083466A /* MySumally */,
 				0DA0882D1FFAAFF900EE18CF /* ItemDetail */,
 				0D00B1BF1FFA4C4900DFCCE0 /* Main */,
-				7594419A1FF6ABBA001E4FD1 /* Extension */,
 				75E596B51FF4CD0E00784269 /* ItemList */,
 				75E596B01FF3F16100784269 /* Api */,
 				75E5968A1FF37E0300784269 /* Login */,
