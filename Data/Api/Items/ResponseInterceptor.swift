@@ -33,3 +33,20 @@ final class SuccessResponseInterceptor: ResponseInterceptor {
         }
     }
 }
+
+final class FailureResponseInterceptor: ResponseInterceptor {
+    
+    static let shared = FailureResponseInterceptor()
+    private init() {}
+    
+    func intercept<T>(response: Response) -> Observable<T>? where T : Decodable {
+        switch response.statusCode {
+        case 400...600:
+            guard let error = try? response.map(RequestError.self, using: .snakeCaseDecoder) else {
+                return .error(PracticeError.internalError)
+            }
+            return .error(PracticeError.specificError(message: error.message, code: error.code))
+        default: return nil
+        }
+    }
+}
