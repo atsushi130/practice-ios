@@ -182,7 +182,6 @@
 		75E596871FF3791200784269 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E5966B1FF378C500784269 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596881FF3791200784269 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596611FF378C500784269 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596891FF3791200784269 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596621FF378C500784269 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		75E596951FF37E7B00784269 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596941FF37E7B00784269 /* LoginButton.swift */; };
 		75E596A21FF39EBD00784269 /* LoginFieldValidateViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */; };
 		75E596A41FF39F5500784269 /* AccountValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A31FF39F5500784269 /* AccountValidateViewModel.swift */; };
 		75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */; };
@@ -461,7 +460,6 @@
 		75E596681FF378C500784269 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		75E5966A1FF378C500784269 /* SwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExtensions.framework; path = Carthage/Build/iOS/SwiftExtensions.framework; sourceTree = SOURCE_ROOT; };
 		75E5966B1FF378C500784269 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
-		75E596941FF37E7B00784269 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldValidateViewModelable.swift; sourceTree = "<group>"; };
 		75E596A31FF39F5500784269 /* AccountValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountValidateViewModel.swift; sourceTree = "<group>"; };
 		75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidateViewModel.swift; sourceTree = "<group>"; };
@@ -1139,17 +1137,8 @@
 			children = (
 				75E596AD1FF3DA1800784269 /* Model */,
 				75E596A01FF39EA400784269 /* ViewModel */,
-				75E5968B1FF37E1100784269 /* View */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		75E5968B1FF37E1100784269 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				75E596941FF37E7B00784269 /* LoginButton.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		75E596A01FF39EA400784269 /* ViewModel */ = {
@@ -1629,7 +1618,6 @@
 				0DD8FC6E214553610075D874 /* ItemDetailConfigurator.swift in Sources */,
 				0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */,
 				0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */,
-				75E596951FF37E7B00784269 /* LoginButton.swift in Sources */,
 				75E596B31FF3F17500784269 /* LoginApi.swift in Sources */,
 				0DA088431FFABB5400EE18CF /* ItemDetailReusableView.swift in Sources */,
 				0D2C19381FFE9FA00083466A /* ImageCell.swift in Sources */,
