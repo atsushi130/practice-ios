@@ -29,6 +29,7 @@ PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
 - [SwiftTargetedExtensions](https://github.com/atsushi130/SwiftTargetedExtensions)
 - [Connectable](https://github.com/atsushi130/Connectable)
 - [CoordinatorKit](https://github.com/atsushi130/CoordinatorKit)
+- [UniversalLinkCoordinatorKit](https://github.com/atsushi130/UniversalLinkCoordinatorKit)
 
 ## Embedded Frameworks
 - Data  
