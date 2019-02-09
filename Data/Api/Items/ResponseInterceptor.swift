@@ -11,6 +11,17 @@ import RxSwift
 import Moya
 import Extension
 
+enum PracticeApiResponseInterceptor: Swift.CaseIterable {
+    case success
+    case failure
+    var interceptor: ResponseInterceptor {
+        switch self {
+        case .success: return SuccessResponseInterceptor.shared
+        case .failure: return FailureResponseInterceptor.shared
+        }
+    }
+}
+
 protocol ResponseInterceptor {
     func intercept<T>(response: Response) -> Observable<T>? where T: Decodable
 }
