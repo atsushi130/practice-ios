@@ -840,6 +840,7 @@
 			children = (
 				0DD8FCCE2146BCB90075D874 /* Items */,
 				0DD8FCC521467E230075D874 /* ApiClient.swift */,
+				0D4A0C4F220EC5370031F307 /* ResponseInterceptor.swift */,
 				0D4A0C4B220EC2570031F307 /* MoyaProvider+.swift */,
 				0D4A0C4D220EC2F10031F307 /* PracticeError.swift */,
 			);
@@ -850,7 +851,6 @@
 			isa = PBXGroup;
 			children = (
 				0DD8FCCF2146BDD80075D874 /* ItemService.swift */,
-				0D4A0C4F220EC5370031F307 /* ResponseInterceptor.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
