@@ -16,12 +16,15 @@ struct ItemDetailCoordinator: Coordinator {
     
     enum Route {
         case userList(reactionStyle: Reactions.Style)
-        case detail
+        case detail(itemId: String)
         
         var viewController: UIViewController {
             switch self {
-            case .userList: return UserListViewController.instantiate()
-            case .detail:   return ItemDetailViewController.instantiate()
+            case .userList:
+                return UserListViewController.instantiate()
+            case .detail(let itemId):
+                let dependency = ItemDetailViewController.Dependency(itemId: itemId)
+                return ItemDetailViewController.instantiate(with: dependency)
             }
         }
         

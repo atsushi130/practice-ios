@@ -26,8 +26,10 @@ final class ItemDetailViewModel: Connectable {
         }
     }
     
-    fileprivate lazy var selectedItem = AnyObserver<Void> { event in
-        self.coordinator.transition(to: .detail)
+    fileprivate lazy var itemSelected = AnyObserver<Item> { event in
+        if case .next(let item) = event {
+            self.coordinator.transition(to: .detail(itemId: item.id))
+        }
     }
     
     init(coordinator: ItemDetailCoordinator) {
@@ -66,7 +68,7 @@ extension InputSpace where Definer: ItemDetailViewModel {
         return self.definer.tappedUserList
     }
     
-    var selectedItem: AnyObserver<Void> {
-        return self.definer.selectedItem
+    var itemSelected: AnyObserver<Item> {
+        return self.definer.itemSelected
     }
 }

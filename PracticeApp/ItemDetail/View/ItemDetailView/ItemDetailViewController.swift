@@ -14,7 +14,9 @@ import CoordinatorKit
 
 extension ItemDetailViewController: RoutableViewController {
     typealias ViewControllerConfigurator = ItemDetailConfigurator
-    typealias Dependency = Void
+    struct Dependency {
+        let itemId: String
+    }
 }
 
 final class ItemDetailViewController: UIViewController {
@@ -119,8 +121,9 @@ final class ItemDetailViewController: UIViewController {
             .disposed(by: self.rx.disposeBag)
         
         self.collectionView.rx.modelSelected(ItemDetailSectionItem.self).asObservable()
-            .discarded
-            .subscribe(self.viewModel.in.selectedItem)
+            .map { $0.item }
+            .filterNil()
+            .subscribe(self.viewModel.in.itemSelected)
             .disposed(by: self.rx.disposeBag)
     }
 }
