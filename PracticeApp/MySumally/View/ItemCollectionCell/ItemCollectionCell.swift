@@ -46,7 +46,7 @@ final class ItemCollectionCell: UICollectionViewCell {
         }
     }
     
-    enum CellType: String, CaseIterable {
+    enum CellType: String, Swift.CaseIterable {
         case wants     = "wants"
         case haves     = "haves"
         case adds      = "adds"
