@@ -7,6 +7,14 @@
 //
 
 import Foundation
+import RxSwift
 import Moya
 import RxMoya
 
+extension Reactive where Base: MoyaProviderType {
+    func request<T>(_ token: Base.Target, callbackQueue: DispatchQueue? = nil) -> Observable<T> where T: Decodable {
+        return self.request(token, callbackQueue: callbackQueue)
+            .asObservable()
+            .intercept()
+    }
+}
