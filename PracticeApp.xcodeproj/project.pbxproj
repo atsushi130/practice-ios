@@ -35,6 +35,7 @@
 		0D4A0C54220F1A3E0031F307 /* Observable+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C53220F1A3E0031F307 /* Observable+Optional.swift */; };
 		0D4A0C56220F1E530031F307 /* UniversalLinkCoordinatorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4A0C55220F1E530031F307 /* UniversalLinkCoordinatorKit.framework */; };
 		0D4A0C57220F1E910031F307 /* UniversalLinkCoordinatorKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D4A0C55220F1E530031F307 /* UniversalLinkCoordinatorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D4A0C5A220F1F720031F307 /* PracticeUniversalLinkCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C59220F1F720031F307 /* PracticeUniversalLinkCoordinator.swift */; };
 		0D67BAA5214D6DE000189F72 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; };
 		0D67BAA6214D6DEC00189F72 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; };
@@ -355,6 +356,7 @@
 		0D4A0C51220EC6B80031F307 /* JSONDecoder+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+.swift"; sourceTree = "<group>"; };
 		0D4A0C53220F1A3E0031F307 /* Observable+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Optional.swift"; sourceTree = "<group>"; };
 		0D4A0C55220F1E530031F307 /* UniversalLinkCoordinatorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniversalLinkCoordinatorKit.framework; path = Carthage/Build/iOS/UniversalLinkCoordinatorKit.framework; sourceTree = SOURCE_ROOT; };
+		0D4A0C59220F1F720031F307 /* PracticeUniversalLinkCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeUniversalLinkCoordinator.swift; sourceTree = "<group>"; };
 		0D6899471FFBBED5004640CE /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
 		0D6899491FFBC028004640CE /* ReactionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionView.xib; sourceTree = "<group>"; };
 		0D85A86A1FFCDCA900A9C364 /* ReactionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionFooterView.swift; sourceTree = "<group>"; };
@@ -676,6 +678,14 @@
 				0D2C19201FFE65EE0083466A /* UserIconView.xib */,
 			);
 			path = UserIconView;
+			sourceTree = "<group>";
+		};
+		0D4A0C58220F1ECB0031F307 /* UniversalLinkCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0D4A0C59220F1F720031F307 /* PracticeUniversalLinkCoordinator.swift */,
+			);
+			path = UniversalLinkCoordinator;
 			sourceTree = "<group>";
 		};
 		0D85A86E1FFCDCCD00A9C364 /* ReactionFooterView */ = {
@@ -1055,6 +1065,7 @@
 		75E5962F1FF272BD00784269 /* PracticeApp */ = {
 			isa = PBXGroup;
 			children = (
+				0D4A0C58220F1ECB0031F307 /* UniversalLinkCoordinator */,
 				0DD8FC7E214621C30075D874 /* Resources */,
 				0D2C191C1FFE65AB0083466A /* UserList */,
 				0D2C191B1FFE659D0083466A /* MySumally */,
@@ -1563,6 +1574,7 @@
 				0D2C19111FFD4A9B0083466A /* ItemDetailViewController.swift in Sources */,
 				0DD8FC6E214553610075D874 /* ItemDetailConfigurator.swift in Sources */,
 				0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */,
+				0D4A0C5A220F1F720031F307 /* PracticeUniversalLinkCoordinator.swift in Sources */,
 				0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */,
 				0DA088431FFABB5400EE18CF /* ItemDetailReusableView.swift in Sources */,
 				0D2C19381FFE9FA00083466A /* ImageCell.swift in Sources */,
