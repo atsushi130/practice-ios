@@ -11,6 +11,9 @@ import UIFontComplete
 
 final class MainTabController: UITabBarController {
     
+    let itemViewController      = ItemViewController.instantiate()
+    let mySumallyViewController = MySumallyViewController.instantiate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
@@ -36,9 +39,7 @@ final class MainTabController: UITabBarController {
     }
     
     private func setupTabBarController() {
-        let itemViewController      = ItemViewController.instantiate()
-        let mySumallyViewController = MySumallyViewController.instantiate()
-        self.setViewControllers([itemViewController, mySumallyViewController], animated: false)
+        self.setViewControllers([self.itemViewController, self.mySumallyViewController], animated: false)
     }
 }
 
