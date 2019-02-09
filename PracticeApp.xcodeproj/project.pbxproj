@@ -185,7 +185,6 @@
 		75E596A21FF39EBD00784269 /* LoginFieldValidateViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */; };
 		75E596A41FF39F5500784269 /* AccountValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A31FF39F5500784269 /* AccountValidateViewModel.swift */; };
 		75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */; };
-		75E596AC1FF3DA1100784269 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596AB1FF3DA1100784269 /* LoginViewModel.swift */; };
 		75E596AF1FF3DA2700784269 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596AE1FF3DA2700784269 /* Account.swift */; };
 		75E596B31FF3F17500784269 /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596B21FF3F17500784269 /* LoginApi.swift */; };
 		75E596B81FF4D5DA00784269 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596B71FF4D5DA00784269 /* PinterestLayout.swift */; };
@@ -463,7 +462,6 @@
 		75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldValidateViewModelable.swift; sourceTree = "<group>"; };
 		75E596A31FF39F5500784269 /* AccountValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountValidateViewModel.swift; sourceTree = "<group>"; };
 		75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidateViewModel.swift; sourceTree = "<group>"; };
-		75E596AB1FF3DA1100784269 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		75E596AE1FF3DA2700784269 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		75E596B21FF3F17500784269 /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApi.swift; sourceTree = "<group>"; };
 		75E596B71FF4D5DA00784269 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
@@ -1147,7 +1145,6 @@
 				75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */,
 				75E596A31FF39F5500784269 /* AccountValidateViewModel.swift */,
 				75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */,
-				75E596AB1FF3DA1100784269 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1639,7 +1636,6 @@
 				75E596BB1FF4D62A00784269 /* Const.swift in Sources */,
 				75E596AF1FF3DA2700784269 /* Account.swift in Sources */,
 				0DD8FC76214558770075D874 /* ItemConfigurator.swift in Sources */,
-				75E596AC1FF3DA1100784269 /* LoginViewModel.swift in Sources */,
 				75E596311FF272BD00784269 /* AppDelegate.swift in Sources */,
 				75E596C41FF4E2A200784269 /* ItemViewController.swift in Sources */,
 				0DD8FC1A2143EBAD0075D874 /* ItemDetailDataSource.swift in Sources */,
