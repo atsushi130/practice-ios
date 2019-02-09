@@ -62,7 +62,7 @@ final class ItemViewController: UIViewController {
             .disposed(by: self.rx.disposeBag)
         
         self.collectionView.rx.modelSelected(ItemSectionItem.self).asObservable()
-            .discarded
+            .map { $0.item }
             .subscribe(self.viewModel.in.itemSelected)
             .disposed(by: self.rx.disposeBag)
     }

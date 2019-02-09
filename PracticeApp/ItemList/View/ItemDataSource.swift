@@ -16,6 +16,11 @@ enum ItemSectionModel {
 
 enum ItemSectionItem {
     case normalItem(item: Item)
+    var item: Item {
+        switch self {
+        case .normalItem(let item): return item
+        }
+    }
 }
 
 extension ItemSectionModel: SectionModelType {

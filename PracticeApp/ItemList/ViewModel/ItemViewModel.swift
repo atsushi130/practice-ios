@@ -20,8 +20,10 @@ final class ItemViewModel: Connectable {
     
     fileprivate let items = BehaviorRelay<[Item]>(value: [])
     
-    fileprivate lazy var itemSelected = AnyObserver<Void> { event in
-        self.coordinator.transition(to: .detail)
+    fileprivate lazy var itemSelected = AnyObserver<Item> { event in
+        if case .next(let item) = event {
+            self.coordinator.transition(to: .detail(itemId: item.id))
+        }
     }
     
     init(coordinator: ItemCoordinator) {
@@ -51,7 +53,7 @@ extension OutputSpace where Definer: ItemViewModel {
 
 // MARK: - Input
 extension InputSpace where Definer: ItemViewModel {
-    var itemSelected: AnyObserver<Void> {
+    var itemSelected: AnyObserver<Item> {
         return self.definer.itemSelected
     }
 }

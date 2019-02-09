@@ -14,13 +14,14 @@ struct ItemCoordinator: Coordinator {
     weak var viewController: UIViewController?
     
     enum Route {
-        case detail
+        case detail(itemId: String)
     }
     
     func transition(to route: ItemCoordinator.Route) {
         switch route {
-        case .detail:
-            let vc = ItemDetailViewController.instantiate()
+        case .detail(let itemId):
+            let dependency = ItemDetailViewController.Dependency(itemId: itemId)
+            let vc = ItemDetailViewController.instantiate(with: dependency)
             self.viewController?.navigationController?.pushViewController(vc, animated: true)
         }
     }
