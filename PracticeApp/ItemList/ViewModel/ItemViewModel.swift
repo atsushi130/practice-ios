@@ -15,7 +15,7 @@ import Data
 
 final class ItemViewModel: Connectable {
     
-    private let coordinator: ItemCoordinator
+    let coordinator: ItemCoordinator
     private let disposeBag = DisposeBag()
     
     fileprivate let items = BehaviorRelay<[Item]>(value: [])
