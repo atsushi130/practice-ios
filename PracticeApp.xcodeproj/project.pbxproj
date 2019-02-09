@@ -182,7 +182,6 @@
 		75E596871FF3791200784269 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E5966B1FF378C500784269 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596881FF3791200784269 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596611FF378C500784269 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596891FF3791200784269 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596621FF378C500784269 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		75E596A21FF39EBD00784269 /* LoginFieldValidateViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */; };
 		75E596A41FF39F5500784269 /* AccountValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A31FF39F5500784269 /* AccountValidateViewModel.swift */; };
 		75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */; };
 		75E596AF1FF3DA2700784269 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596AE1FF3DA2700784269 /* Account.swift */; };
@@ -459,7 +458,6 @@
 		75E596681FF378C500784269 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		75E5966A1FF378C500784269 /* SwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExtensions.framework; path = Carthage/Build/iOS/SwiftExtensions.framework; sourceTree = SOURCE_ROOT; };
 		75E5966B1FF378C500784269 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
-		75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldValidateViewModelable.swift; sourceTree = "<group>"; };
 		75E596A31FF39F5500784269 /* AccountValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountValidateViewModel.swift; sourceTree = "<group>"; };
 		75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidateViewModel.swift; sourceTree = "<group>"; };
 		75E596AE1FF3DA2700784269 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -1142,7 +1140,6 @@
 		75E596A01FF39EA400784269 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */,
 				75E596A31FF39F5500784269 /* AccountValidateViewModel.swift */,
 				75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */,
 			);
@@ -1598,7 +1595,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E596A21FF39EBD00784269 /* LoginFieldValidateViewModelable.swift in Sources */,
 				0DE6500920023C1500ACDEE5 /* FunCell.swift in Sources */,
 				0DD8FC71214554780075D874 /* ItemCoordinator.swift in Sources */,
 				0D00B1C11FFA4D2B00DFCCE0 /* MainTabController.swift in Sources */,
