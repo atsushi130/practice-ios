@@ -31,7 +31,7 @@ final class ItemViewController: UIViewController {
     private lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         // self sizing by autolayout
-        layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+        layout.estimatedItemSize = CGSize(width: 172, height: 263)
         layout.sectionInset      = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         layout.minimumLineSpacing      = 10
         layout.minimumInteritemSpacing = 10
