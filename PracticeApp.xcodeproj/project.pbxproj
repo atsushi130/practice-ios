@@ -183,7 +183,6 @@
 		75E596881FF3791200784269 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596611FF378C500784269 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596891FF3791200784269 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596621FF378C500784269 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596AF1FF3DA2700784269 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596AE1FF3DA2700784269 /* Account.swift */; };
-		75E596B31FF3F17500784269 /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596B21FF3F17500784269 /* LoginApi.swift */; };
 		75E596B81FF4D5DA00784269 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596B71FF4D5DA00784269 /* PinterestLayout.swift */; };
 		75E596BB1FF4D62A00784269 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596BA1FF4D62A00784269 /* Const.swift */; };
 		75E596BD1FF4D88C00784269 /* PiterestLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596BC1FF4D88C00784269 /* PiterestLayoutDelegate.swift */; };
@@ -457,7 +456,6 @@
 		75E5966A1FF378C500784269 /* SwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExtensions.framework; path = Carthage/Build/iOS/SwiftExtensions.framework; sourceTree = SOURCE_ROOT; };
 		75E5966B1FF378C500784269 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		75E596AE1FF3DA2700784269 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		75E596B21FF3F17500784269 /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApi.swift; sourceTree = "<group>"; };
 		75E596B71FF4D5DA00784269 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		75E596BA1FF4D62A00784269 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		75E596BC1FF4D88C00784269 /* PiterestLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiterestLayoutDelegate.swift; sourceTree = "<group>"; };
@@ -1128,16 +1126,8 @@
 			isa = PBXGroup;
 			children = (
 				75E596AD1FF3DA1800784269 /* Model */,
-				75E596A01FF39EA400784269 /* ViewModel */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		75E596A01FF39EA400784269 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		75E596AD1FF3DA1800784269 /* Model */ = {
@@ -1159,7 +1149,6 @@
 		75E596B11FF3F16B00784269 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				75E596B21FF3F17500784269 /* LoginApi.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1604,7 +1593,6 @@
 				0DD8FC6E214553610075D874 /* ItemDetailConfigurator.swift in Sources */,
 				0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */,
 				0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */,
-				75E596B31FF3F17500784269 /* LoginApi.swift in Sources */,
 				0DA088431FFABB5400EE18CF /* ItemDetailReusableView.swift in Sources */,
 				0D2C19381FFE9FA00083466A /* ImageCell.swift in Sources */,
 				75E596331FF272BD00784269 /* ViewController.swift in Sources */,
