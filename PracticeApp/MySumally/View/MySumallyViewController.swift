@@ -30,7 +30,7 @@ final class MySumallyViewController: UIViewController {
     
     private lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize  = CGSize(width: 1.0, height: 1.0)
+        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         layout.sectionInset       = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         layout.minimumInteritemSpacing = 10.0
         layout.minimumLineSpacing      = 15.0
@@ -73,5 +73,10 @@ final class MySumallyViewController: UIViewController {
         self.viewModel.out.updateMySumallies
             .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.rx.disposeBag)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.collectionView.collectionViewLayout.invalidateLayout()
     }
 }
