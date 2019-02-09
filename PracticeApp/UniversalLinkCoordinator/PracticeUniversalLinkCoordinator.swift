@@ -26,7 +26,8 @@ final class PracticeUniversalLinkCoordinator: UniversalLinkCoordinator {
         switch route.universalLink {
         case .items:
             guard let itemId: String = route.context.parameters["item_id"] else { return }
-            print("itemId: \(itemId)")
+            let itemCoordinator = self.mainTabController?.itemViewController.viewModel.coordinator
+            itemCoordinator?.transition(to: .detail(itemId: itemId))
         }
     }
 }
