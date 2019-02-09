@@ -28,6 +28,10 @@
 		0D2C19471FFFEAC80083466A /* ItemCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C19461FFFEAC80083466A /* ItemCollectionCell.xib */; };
 		0D2C194A1FFFF6A90083466A /* MySumallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C19491FFFF6A90083466A /* MySumallyViewController.swift */; };
 		0D2C194C1FFFF7D80083466A /* MySumallyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2C194B1FFFF7D80083466A /* MySumallyViewController.storyboard */; };
+		0D4A0C4C220EC2570031F307 /* MoyaProvider+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C4B220EC2570031F307 /* MoyaProvider+.swift */; };
+		0D4A0C4E220EC2F10031F307 /* PracticeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C4D220EC2F10031F307 /* PracticeError.swift */; };
+		0D4A0C50220EC5370031F307 /* ResponseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C4F220EC5370031F307 /* ResponseInterceptor.swift */; };
+		0D4A0C52220EC6B80031F307 /* JSONDecoder+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C51220EC6B80031F307 /* JSONDecoder+.swift */; };
 		0D67BAA5214D6DE000189F72 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; };
 		0D67BAA6214D6DEC00189F72 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; };
@@ -352,6 +356,10 @@
 		0D485DB11FFD21F4004116AB /* ItemNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNameView.swift; sourceTree = "<group>"; };
 		0D485DB41FFD2289004116AB /* ItemLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLogView.swift; sourceTree = "<group>"; };
 		0D485DB61FFD2309004116AB /* ItemActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionView.swift; sourceTree = "<group>"; };
+		0D4A0C4B220EC2570031F307 /* MoyaProvider+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+.swift"; sourceTree = "<group>"; };
+		0D4A0C4D220EC2F10031F307 /* PracticeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeError.swift; sourceTree = "<group>"; };
+		0D4A0C4F220EC5370031F307 /* ResponseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseInterceptor.swift; sourceTree = "<group>"; };
+		0D4A0C51220EC6B80031F307 /* JSONDecoder+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+.swift"; sourceTree = "<group>"; };
 		0D6899471FFBBED5004640CE /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
 		0D6899491FFBC028004640CE /* ReactionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionView.xib; sourceTree = "<group>"; };
 		0D85A86A1FFCDCA900A9C364 /* ReactionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionFooterView.swift; sourceTree = "<group>"; };
@@ -832,6 +840,8 @@
 			children = (
 				0DD8FCCE2146BCB90075D874 /* Items */,
 				0DD8FCC521467E230075D874 /* ApiClient.swift */,
+				0D4A0C4B220EC2570031F307 /* MoyaProvider+.swift */,
+				0D4A0C4D220EC2F10031F307 /* PracticeError.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -840,6 +850,7 @@
 			isa = PBXGroup;
 			children = (
 				0DD8FCCF2146BDD80075D874 /* ItemService.swift */,
+				0D4A0C4F220EC5370031F307 /* ResponseInterceptor.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -1012,6 +1023,7 @@
 				0DD8FC77214560730075D874 /* Observable+.swift */,
 				0DFA7F64214CE855008F3286 /* Extension.h */,
 				0DFA7F65214CE855008F3286 /* Info.plist */,
+				0D4A0C51220EC6B80031F307 /* JSONDecoder+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1552,7 +1564,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DD8FCD02146BDD80075D874 /* ItemService.swift in Sources */,
+				0D4A0C4C220EC2570031F307 /* MoyaProvider+.swift in Sources */,
 				0DD8FCC621467E230075D874 /* ApiClient.swift in Sources */,
+				0D4A0C4E220EC2F10031F307 /* PracticeError.swift in Sources */,
+				0D4A0C50220EC5370031F307 /* ResponseInterceptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1598,6 +1613,7 @@
 			files = (
 				0DFA7F6F214CE866008F3286 /* Observable+.swift in Sources */,
 				0DFA7F6E214CE866008F3286 /* UIColor+.swift in Sources */,
+				0D4A0C52220EC6B80031F307 /* JSONDecoder+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
