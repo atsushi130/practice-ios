@@ -24,6 +24,7 @@ enum PracticeApiResponseInterceptor: Swift.CaseIterable {
 
 protocol ResponseInterceptor {
     func intercept<T>(response: Response) -> Observable<T>? where T: Decodable
+    func intercept(response: Response) -> Observable<Void>?
 }
 
 final class SuccessResponseInterceptor: ResponseInterceptor {
@@ -43,6 +44,13 @@ final class SuccessResponseInterceptor: ResponseInterceptor {
         default: return nil
         }
     }
+    
+    func intercept(response: Response) -> Observable<Void>? {
+        switch response.statusCode {
+        case 200...226: return .just(())
+        default: return nil
+        }
+    }
 }
 
 final class FailureResponseInterceptor: ResponseInterceptor {
@@ -51,6 +59,14 @@ final class FailureResponseInterceptor: ResponseInterceptor {
     private init() {}
     
     func intercept<T>(response: Response) -> Observable<T>? where T : Decodable {
+        return self.failureHandle(response: response)
+    }
+    
+    func intercept(response: Response) -> Observable<Void>? {
+        return self.failureHandle(response: response)
+    }
+    
+    private func failureHandle<T>(response: Response) -> Observable<T>? {
         switch response.statusCode {
         case 400...600:
             guard let error = try? response.map(RequestError.self, using: .snakeCaseDecoder) else {
