@@ -7,7 +7,23 @@
 //
 
 import Foundation
+import RxSwift
+import Moya
 
 public final class ApiClient {
     private init() {}
+}
+
+extension Observable where Element: Response {
+    @inline(never)
+    func intercept<T>() -> Observable<T> where T: Decodable {
+        return self.flatMap { response -> Observable<T> in
+            return PracticeApiResponseInterceptor.allCases
+                .map { $0.interceptor }
+                .compactMap { interceptor -> Observable<T>? in
+                    interceptor.intercept(response: response)
+                }
+                .first!
+            }
+    }
 }
