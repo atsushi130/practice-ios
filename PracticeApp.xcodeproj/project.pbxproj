@@ -182,8 +182,6 @@
 		75E596871FF3791200784269 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E5966B1FF378C500784269 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596881FF3791200784269 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596611FF378C500784269 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596891FF3791200784269 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596621FF378C500784269 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		75E5968D1FF37E2700784269 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E5968C1FF37E2700784269 /* LoginViewController.storyboard */; };
-		75E5968F1FF37E3500784269 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E5968E1FF37E3500784269 /* LoginViewController.swift */; };
 		75E596911FF37E6100784269 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596901FF37E6100784269 /* LoginView.swift */; };
 		75E596951FF37E7B00784269 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596941FF37E7B00784269 /* LoginButton.swift */; };
 		75E596A21FF39EBD00784269 /* LoginFieldValidateViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */; };
@@ -464,8 +462,6 @@
 		75E596681FF378C500784269 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		75E5966A1FF378C500784269 /* SwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExtensions.framework; path = Carthage/Build/iOS/SwiftExtensions.framework; sourceTree = SOURCE_ROOT; };
 		75E5966B1FF378C500784269 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
-		75E5968C1FF37E2700784269 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
-		75E5968E1FF37E3500784269 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75E596901FF37E6100784269 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		75E596941FF37E7B00784269 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		75E596A11FF39EBD00784269 /* LoginFieldValidateViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldValidateViewModelable.swift; sourceTree = "<group>"; };
@@ -1153,8 +1149,6 @@
 		75E5968B1FF37E1100784269 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				75E5968C1FF37E2700784269 /* LoginViewController.storyboard */,
-				75E5968E1FF37E3500784269 /* LoginViewController.swift */,
 				75E596901FF37E6100784269 /* LoginView.swift */,
 				75E596941FF37E7B00784269 /* LoginButton.swift */,
 			);
@@ -1524,7 +1518,6 @@
 				0D00B1C41FFA51D200DFCCE0 /* MainTabController.storyboard in Resources */,
 				0D2C194C1FFFF7D80083466A /* MySumallyViewController.storyboard in Resources */,
 				0DE650032002376A00ACDEE5 /* UserProfileReusableView.xib in Resources */,
-				75E5968D1FF37E2700784269 /* LoginViewController.storyboard in Resources */,
 				75E596C81FF4E2F300784269 /* ItemCell.xib in Resources */,
 				0D2C19281FFE70990083466A /* UserCell.xib in Resources */,
 				0D2C19131FFD4AB50083466A /* ItemDetailViewController.storyboard in Resources */,
@@ -1637,7 +1630,6 @@
 				0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */,
 				0D2C19111FFD4A9B0083466A /* ItemDetailViewController.swift in Sources */,
 				0DD8FC6E214553610075D874 /* ItemDetailConfigurator.swift in Sources */,
-				75E5968F1FF37E3500784269 /* LoginViewController.swift in Sources */,
 				0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */,
 				0DD8FC74214557C00075D874 /* MySumallyConfigurator.swift in Sources */,
 				75E596951FF37E7B00784269 /* LoginButton.swift in Sources */,
