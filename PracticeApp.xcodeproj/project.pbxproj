@@ -32,6 +32,7 @@
 		0D4A0C4E220EC2F10031F307 /* PracticeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C4D220EC2F10031F307 /* PracticeError.swift */; };
 		0D4A0C50220EC5370031F307 /* ResponseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C4F220EC5370031F307 /* ResponseInterceptor.swift */; };
 		0D4A0C52220EC6B80031F307 /* JSONDecoder+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C51220EC6B80031F307 /* JSONDecoder+.swift */; };
+		0D4A0C54220F1A3E0031F307 /* Observable+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A0C53220F1A3E0031F307 /* Observable+Optional.swift */; };
 		0D67BAA5214D6DE000189F72 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; };
 		0D67BAA6214D6DEC00189F72 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DA0882B1FFA8BAB00EE18CF /* UIFontComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0882A1FFA8BAB00EE18CF /* UIFontComplete.framework */; };
@@ -360,6 +361,7 @@
 		0D4A0C4D220EC2F10031F307 /* PracticeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeError.swift; sourceTree = "<group>"; };
 		0D4A0C4F220EC5370031F307 /* ResponseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseInterceptor.swift; sourceTree = "<group>"; };
 		0D4A0C51220EC6B80031F307 /* JSONDecoder+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+.swift"; sourceTree = "<group>"; };
+		0D4A0C53220F1A3E0031F307 /* Observable+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Optional.swift"; sourceTree = "<group>"; };
 		0D6899471FFBBED5004640CE /* ReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionView.swift; sourceTree = "<group>"; };
 		0D6899491FFBC028004640CE /* ReactionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionView.xib; sourceTree = "<group>"; };
 		0D85A86A1FFCDCA900A9C364 /* ReactionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionFooterView.swift; sourceTree = "<group>"; };
@@ -1024,6 +1026,7 @@
 				0DFA7F64214CE855008F3286 /* Extension.h */,
 				0DFA7F65214CE855008F3286 /* Info.plist */,
 				0D4A0C51220EC6B80031F307 /* JSONDecoder+.swift */,
+				0D4A0C53220F1A3E0031F307 /* Observable+Optional.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1613,6 +1616,7 @@
 			files = (
 				0DFA7F6F214CE866008F3286 /* Observable+.swift in Sources */,
 				0DFA7F6E214CE866008F3286 /* UIColor+.swift in Sources */,
+				0D4A0C54220F1A3E0031F307 /* Observable+Optional.swift in Sources */,
 				0D4A0C52220EC6B80031F307 /* JSONDecoder+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
