@@ -1056,8 +1056,6 @@
 				0DA0882D1FFAAFF900EE18CF /* ItemDetail */,
 				0D00B1BF1FFA4C4900DFCCE0 /* Main */,
 				75E596B51FF4CD0E00784269 /* ItemList */,
-				75E596B01FF3F16100784269 /* Api */,
-				75E5968A1FF37E0300784269 /* Login */,
 				75E596301FF272BD00784269 /* AppDelegate.swift */,
 				75E596321FF272BD00784269 /* ViewController.swift */,
 				75E596341FF272BD00784269 /* Main.storyboard */,
@@ -1118,36 +1116,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		75E5968A1FF37E0300784269 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				75E596AD1FF3DA1800784269 /* Model */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		75E596AD1FF3DA1800784269 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		75E596B01FF3F16100784269 /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				75E596B11FF3F16B00784269 /* Login */,
-			);
-			path = Api;
-			sourceTree = "<group>";
-		};
-		75E596B11FF3F16B00784269 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		75E596B51FF4CD0E00784269 /* ItemList */ = {
