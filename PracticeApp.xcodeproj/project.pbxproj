@@ -182,7 +182,6 @@
 		75E596871FF3791200784269 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E5966B1FF378C500784269 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596881FF3791200784269 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596611FF378C500784269 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75E596891FF3791200784269 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596621FF378C500784269 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */; };
 		75E596AF1FF3DA2700784269 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596AE1FF3DA2700784269 /* Account.swift */; };
 		75E596B31FF3F17500784269 /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596B21FF3F17500784269 /* LoginApi.swift */; };
 		75E596B81FF4D5DA00784269 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E596B71FF4D5DA00784269 /* PinterestLayout.swift */; };
@@ -457,7 +456,6 @@
 		75E596681FF378C500784269 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		75E5966A1FF378C500784269 /* SwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExtensions.framework; path = Carthage/Build/iOS/SwiftExtensions.framework; sourceTree = SOURCE_ROOT; };
 		75E5966B1FF378C500784269 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
-		75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidateViewModel.swift; sourceTree = "<group>"; };
 		75E596AE1FF3DA2700784269 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		75E596B21FF3F17500784269 /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApi.swift; sourceTree = "<group>"; };
 		75E596B71FF4D5DA00784269 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
@@ -1138,7 +1136,6 @@
 		75E596A01FF39EA400784269 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				75E596A71FF3B3B500784269 /* PasswordValidateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1598,7 +1595,6 @@
 				0DD8FC15213EE5630075D874 /* ItemDataSource.swift in Sources */,
 				0DD8FC1D2144C1780075D874 /* MySumallyViewModel.swift in Sources */,
 				0D2C19451FFFE6F30083466A /* ItemCollectionCell.swift in Sources */,
-				75E596A81FF3B3B500784269 /* PasswordValidateViewModel.swift in Sources */,
 				0DE6500D20023E3B00ACDEE5 /* FunLabelCell.swift in Sources */,
 				0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */,
 				0DD8FC182143EB5F0075D874 /* ItemDetailViewModel.swift in Sources */,
