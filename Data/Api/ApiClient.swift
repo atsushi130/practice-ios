@@ -25,5 +25,22 @@ extension Observable where Element: Response {
                 }
                 .first!
             }
+            .debugLogIfNeeded()
+    }
+}
+
+extension Observable {
+    @inline(__always)
+    fileprivate func debugLogIfNeeded() -> Observable<Element> {
+        #if RELEASE || BETA
+        return self
+        #else
+        guard ProcessInfo.processInfo.environment["API_DEBUG_MODE"] != nil else { return self }
+        return self.do(onNext: { value in
+            print("request success: \(value)")
+        }, onError: { error in
+            print("request error: \(error)")
+        })
+        #endif
     }
 }
