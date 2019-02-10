@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import Moya
+
+extension Response {
+    var requestError: RequestError? {
+        return try? self.map(RequestError.self, using: .snakeCaseDecoder)
+    }
+}
