@@ -98,6 +98,7 @@
 		0DDEE3B1220FED8600194AEC /* PracticeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B0220FED8600194AEC /* PracticeApiService.swift */; };
 		0DDEE3B3220FEDE200194AEC /* PracticeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */; };
 		0DDEE3B6220FF16700194AEC /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B5220FF16700194AEC /* Observable+.swift */; };
+		0DDEE3B8221065DC00194AEC /* MainTabConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B7221065DC00194AEC /* MainTabConfigurator.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -427,6 +428,7 @@
 		0DDEE3B0220FED8600194AEC /* PracticeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeApiService.swift; sourceTree = "<group>"; };
 		0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeEndpoint.swift; sourceTree = "<group>"; };
 		0DDEE3B5220FF16700194AEC /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
+		0DDEE3B7221065DC00194AEC /* MainTabConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabConfigurator.swift; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -589,6 +591,7 @@
 			children = (
 				0D00B1C01FFA4D2B00DFCCE0 /* MainTabController.swift */,
 				0D00B1C31FFA51D200DFCCE0 /* MainTabController.storyboard */,
+				0DDEE3B7221065DC00194AEC /* MainTabConfigurator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1610,6 +1613,7 @@
 				0D2C19451FFFE6F30083466A /* ItemCollectionCell.swift in Sources */,
 				0DE6500D20023E3B00ACDEE5 /* FunLabelCell.swift in Sources */,
 				0D2C192A1FFE80DC0083466A /* UserListViewController.swift in Sources */,
+				0DDEE3B8221065DC00194AEC /* MainTabConfigurator.swift in Sources */,
 				0DD8FC182143EB5F0075D874 /* ItemDetailViewModel.swift in Sources */,
 				0DD8FC7B2145773E0075D874 /* UserListConfigurator.swift in Sources */,
 				0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */,
