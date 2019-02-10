@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import RxSwift
+import Data
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let universalLinkCoordinator = PracticeUniversalLinkCoordinator.shared
+    private let universalLinkCoordinator   = PracticeUniversalLinkCoordinator.shared
+    private let forceTransitionCoordinator = ForceTransitionCoordinator.shared
+    
+    private let disposeBag = DisposeBag()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        ApiClient.shared.out.forceTransition
+            .bind(to: self.forceTransitionCoordinator.in.transition)
+            .disposed(by: self.disposeBag)
         return true
     }
     
@@ -44,7 +52,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
