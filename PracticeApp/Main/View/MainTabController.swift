@@ -20,6 +20,8 @@ final class MainTabController: UITabBarController {
     let itemViewController      = ItemViewController.instantiate()
     let mySumallyViewController = MySumallyViewController.instantiate()
     
+    private(set) lazy var coordinator = MainTabCoordinator(viewController: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
