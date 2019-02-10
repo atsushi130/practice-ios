@@ -97,6 +97,7 @@
 		0DD8FCE72146C1A60075D874 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCE62146C1A60075D874 /* Reaction.swift */; };
 		0DDEE3B1220FED8600194AEC /* PracticeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B0220FED8600194AEC /* PracticeApiService.swift */; };
 		0DDEE3B3220FEDE200194AEC /* PracticeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */; };
+		0DDEE3B6220FF16700194AEC /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B5220FF16700194AEC /* Observable+.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -425,6 +426,7 @@
 		0DD8FCF721496FA20075D874 /* ItemInformationTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInformationTextView.xib; sourceTree = "<group>"; };
 		0DDEE3B0220FED8600194AEC /* PracticeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeApiService.swift; sourceTree = "<group>"; };
 		0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeEndpoint.swift; sourceTree = "<group>"; };
+		0DDEE3B5220FF16700194AEC /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -900,6 +902,14 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
+		0DDEE3B4220FF14F00194AEC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0DDEE3B5220FF16700194AEC /* Observable+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		0DE64FF72001318F00ACDEE5 /* ItemCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1091,6 +1101,7 @@
 		75E5962F1FF272BD00784269 /* PracticeApp */ = {
 			isa = PBXGroup;
 			children = (
+				0DDEE3B4220FF14F00194AEC /* Extension */,
 				0D4A0C58220F1ECB0031F307 /* Coordinator */,
 				0DD8FC7E214621C30075D874 /* Resources */,
 				0D2C191C1FFE65AB0083466A /* UserList */,
@@ -1618,6 +1629,7 @@
 				0D2C19361FFE9D940083466A /* ItemDetailFoldersCell.swift in Sources */,
 				0D2C19321FFE9D810083466A /* ItemDetailFolderCell.swift in Sources */,
 				0DD8FC7D214578580075D874 /* ItemDetailCoordinator.swift in Sources */,
+				0DDEE3B6220FF16700194AEC /* Observable+.swift in Sources */,
 				75E596BF1FF4E21800784269 /* ItemCell.swift in Sources */,
 				75E596BD1FF4D88C00784269 /* PiterestLayoutDelegate.swift in Sources */,
 				0D2C194A1FFFF6A90083466A /* MySumallyViewController.swift in Sources */,
