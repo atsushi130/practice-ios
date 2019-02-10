@@ -8,6 +8,12 @@
 
 import UIKit
 import UIFontComplete
+import CoordinatorKit
+
+extension MainTabController: RoutableViewController {
+    typealias ViewControllerConfigurator = MainTabConfigurator
+    typealias Dependency = Void
+}
 
 final class MainTabController: UITabBarController {
     
