@@ -96,6 +96,7 @@
 		0DD8FCE52146C1420075D874 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCE42146C1420075D874 /* Item.swift */; };
 		0DD8FCE72146C1A60075D874 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCE62146C1A60075D874 /* Reaction.swift */; };
 		0DDEE3B1220FED8600194AEC /* PracticeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B0220FED8600194AEC /* PracticeApiService.swift */; };
+		0DDEE3B3220FEDE200194AEC /* PracticeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -423,6 +424,7 @@
 		0DD8FCF521496E670075D874 /* ItemInformationBrandView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInformationBrandView.xib; sourceTree = "<group>"; };
 		0DD8FCF721496FA20075D874 /* ItemInformationTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInformationTextView.xib; sourceTree = "<group>"; };
 		0DDEE3B0220FED8600194AEC /* PracticeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeApiService.swift; sourceTree = "<group>"; };
+		0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeEndpoint.swift; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -710,6 +712,7 @@
 				0D4A0C60220FD92E0031F307 /* ForceTransitionRoute.swift */,
 				0D4A0C62220FDE7C0031F307 /* Response+.swift */,
 				0DDEE3B0220FED8600194AEC /* PracticeApiService.swift */,
+				0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */,
 			);
 			path = PracticeApi;
 			sourceTree = "<group>";
@@ -1527,6 +1530,7 @@
 				0D4A0C61220FD92E0031F307 /* ForceTransitionRoute.swift in Sources */,
 				0DD8FCD02146BDD80075D874 /* ItemService.swift in Sources */,
 				0D4A0C4C220EC2570031F307 /* MoyaProvider+.swift in Sources */,
+				0DDEE3B3220FEDE200194AEC /* PracticeEndpoint.swift in Sources */,
 				0DD8FCC621467E230075D874 /* PracticeApi.swift in Sources */,
 				0DDEE3B1220FED8600194AEC /* PracticeApiService.swift in Sources */,
 				0D4A0C4E220EC2F10031F307 /* PracticeError.swift in Sources */,
