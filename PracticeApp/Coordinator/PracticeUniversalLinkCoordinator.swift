@@ -20,11 +20,14 @@ final class PracticeUniversalLinkCoordinator: UniversalLinkCoordinator, Coordina
     typealias Route = (universalLink: UniversalLink, context: UniversalLinkContext)
     enum UniversalLink: String, UniversalLinkable {
         static var scheme: String { return "com.github.atsush130.practice" }
-        case item = "/items/:item_id"
+        case items = "/items"
+        case item  = "/items/:item_id"
     }
     
     func transition(to route: Route) {
         switch route.universalLink {
+        case .items:
+            self.mainTabController?.coordinator.transition(to: .itemList)
         case .item:
             guard let itemId: String = route.context.parameters["item_id"] else { return }
             let itemCoordinator = self.mainTabController?.itemViewController.viewModel.coordinator
