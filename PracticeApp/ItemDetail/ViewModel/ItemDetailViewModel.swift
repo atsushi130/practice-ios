@@ -18,7 +18,7 @@ final class ItemDetailViewModel: Connectable {
     
     private let coordinator: ItemDetailCoordinator
     private let disposeBag = DisposeBag()
-    fileprivate let items = BehaviorRelay<[Item]>(value: [])
+    fileprivate let updateItems: Observable<[Item]>
     
     fileprivate lazy var tappedUserList = AnyObserver<Reactions.Style> { event in
         if case let .next(reactionStyle) = event {
@@ -33,20 +33,15 @@ final class ItemDetailViewModel: Connectable {
     }
     
     init(coordinator: ItemDetailCoordinator) {
-        
         self.coordinator = coordinator
-        
-        PracticeApi.items.latest()
-            .asDriverIgonringError()
-            .drive(self.items)
-            .disposed(by: self.disposeBag)
+        self.updateItems = PracticeApi.items.latest()
     }
 }
 
 // MARK: - Output
 extension OutputSpace where Definer: ItemDetailViewModel {
     var updateItems: Observable<[ItemDetailSectionModel]> {
-        return self.definer.items
+        return self.definer.updateItems
             .map { items in
                 return items.map { item in ItemDetailSectionItem.normalItem(item: item) }
             }
