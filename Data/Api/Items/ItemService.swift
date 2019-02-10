@@ -8,17 +8,20 @@
 
 import Foundation
 import RxSwift
+import Moya
 import Model
 
 public extension PracticeApi {
     
     // MARK: - Service
-    public final class ItemService {
+    public final class ItemService: PracticeApiService {
         fileprivate static let shared = ItemService()
         private init() {}
         
+        let provider = MoyaProvider<Endpoint>(stubClosure: MoyaProvider<Endpoint>.immediatelyStub)
+        
         // MARK: - Endpoint
-        enum Endpoint {
+        enum Endpoint: PracticeEndpoint {
             case fetchAll
         }
     }
@@ -31,11 +34,33 @@ public extension PracticeApi {
 extension PracticeApi.ItemService.Endpoint {
     
     var path: String {
-        return Bundle.main.path(forResource: "items", ofType: "json")!
+        switch self {
+        case .fetchAll:
+            return "/items"
+        }
     }
     
-    var url: URL {
-        return URL(fileURLWithPath: self.path)
+    var method: Moya.Method {
+        switch self {
+        case .fetchAll:
+            return .get
+        }
+    }
+    
+    var task: Task {
+        switch self {
+        case .fetchAll:
+            return .requestPlain
+        }
+    }
+    
+    var sampleData: Data {
+        switch self {
+        case .fetchAll:
+            let path = Bundle.main.path(forResource: "items", ofType: "json")!
+            let url = URL(fileURLWithPath: path)
+            return try! Data(contentsOf: url)
+        }
     }
 }
 
@@ -45,8 +70,6 @@ public extension PracticeApi.ItemService {
     /// Fetch latest items
     /// - Returns: all items
     public func latest() -> Observable<[Item]> {
-        let data = try! Data(contentsOf: Endpoint.fetchAll.url)
-        let items = try! JSONDecoder().decode([Item].self, from: data)
-        return Observable.just(items)
+        return self.provider.rx.request(.fetchAll)
     }
 }
