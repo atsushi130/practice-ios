@@ -82,7 +82,7 @@
 		0DD8FCC121467D160075D874 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD8FCB521467CCB0075D874 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DD8FCC221467D160075D874 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596661FF378C500784269 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0DD8FCC321467D160075D874 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75E596671FF378C500784269 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0DD8FCC621467E230075D874 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCC521467E230075D874 /* ApiClient.swift */; };
+		0DD8FCC621467E230075D874 /* PracticeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD8FCC521467E230075D874 /* PracticeApi.swift */; };
 		0DD8FCC921467ECF0075D874 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FCB721467CD40075D874 /* RxMoya.framework */; };
 		0DD8FCCA21467ED20075D874 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FCB921467CDE0075D874 /* Alamofire.framework */; };
 		0DD8FCCB21467ED60075D874 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD8FCB521467CCB0075D874 /* Moya.framework */; };
@@ -407,7 +407,7 @@
 		0DD8FCB521467CCB0075D874 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = SOURCE_ROOT; };
 		0DD8FCB721467CD40075D874 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = SOURCE_ROOT; };
 		0DD8FCB921467CDE0075D874 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
-		0DD8FCC521467E230075D874 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		0DD8FCC521467E230075D874 /* PracticeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeApi.swift; sourceTree = "<group>"; };
 		0DD8FCCF2146BDD80075D874 /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
 		0DD8FCD62146C0F40075D874 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD8FCD82146C0F40075D874 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
@@ -701,7 +701,7 @@
 		0D4A0C5F220FD9150031F307 /* PracticeApi */ = {
 			isa = PBXGroup;
 			children = (
-				0DD8FCC521467E230075D874 /* ApiClient.swift */,
+				0DD8FCC521467E230075D874 /* PracticeApi.swift */,
 				0D4A0C4F220EC5370031F307 /* ResponseInterceptor.swift */,
 				0D4A0C4B220EC2570031F307 /* MoyaProvider+.swift */,
 				0D4A0C4D220EC2F10031F307 /* PracticeError.swift */,
@@ -1524,7 +1524,7 @@
 				0D4A0C61220FD92E0031F307 /* ForceTransitionRoute.swift in Sources */,
 				0DD8FCD02146BDD80075D874 /* ItemService.swift in Sources */,
 				0D4A0C4C220EC2570031F307 /* MoyaProvider+.swift in Sources */,
-				0DD8FCC621467E230075D874 /* ApiClient.swift in Sources */,
+				0DD8FCC621467E230075D874 /* PracticeApi.swift in Sources */,
 				0D4A0C4E220EC2F10031F307 /* PracticeError.swift in Sources */,
 				0D4A0C63220FDE7C0031F307 /* Response+.swift in Sources */,
 				0D4A0C50220EC5370031F307 /* ResponseInterceptor.swift in Sources */,

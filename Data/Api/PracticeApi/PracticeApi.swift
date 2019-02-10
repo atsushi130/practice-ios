@@ -1,5 +1,5 @@
 //
-//  ApiClient.swift
+//  PracticeApi.swift
 //  Data
 //
 //  Created by Atsushi Miyake on 2018/09/10.
@@ -11,13 +11,13 @@ import RxSwift
 import Connectable
 import Moya
 
-public final class ApiClient: Outputable {
-    public static let shared = ApiClient()
+public final class PracticeApi: Outputable {
+    public static let shared = PracticeApi()
     private init() {}
     let triggerForceTransition = PublishSubject<ForceTransitionRoute>()
 }
 
-public extension OutputSpace where Definer: ApiClient {
+public extension OutputSpace where Definer: PracticeApi {
     public var forceTransition: Observable<ForceTransitionRoute> {
         return self.definer.triggerForceTransition.asObservable()
     }

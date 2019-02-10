@@ -30,7 +30,7 @@ final class ItemViewModel: Connectable {
         
         self.coordinator = coordinator
         
-        ApiClient.items.latest()
+        PracticeApi.items.latest()
             .asDriverIgonringError()
             .drive(self.items)
             .disposed(by: self.disposeBag)

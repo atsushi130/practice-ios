@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import Model
 
-public extension ApiClient {
+public extension PracticeApi {
     
     // MARK: - Service
     public final class ItemService {
@@ -28,7 +28,7 @@ public extension ApiClient {
     }
 }
 
-extension ApiClient.ItemService.Endpoint {
+extension PracticeApi.ItemService.Endpoint {
     
     var path: String {
         return Bundle.main.path(forResource: "items", ofType: "json")!
@@ -40,7 +40,7 @@ extension ApiClient.ItemService.Endpoint {
 }
 
 // MARK: Interface
-public extension ApiClient.ItemService {
+public extension PracticeApi.ItemService {
     
     /// Fetch latest items
     /// - Returns: all items

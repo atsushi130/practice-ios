@@ -71,7 +71,7 @@ final class FailureResponseInterceptor: ResponseInterceptor {
         case 400...600:
             guard let error = response.requestError else { return .error(PracticeError.internalError) }
             if let route = ForceTransitionRoute(statusCode: response.statusCode, error: error) {
-                ApiClient.shared.triggerForceTransition.onNext(route)
+                PracticeApi.shared.triggerForceTransition.onNext(route)
                 return .empty()
             } else {
                 return .error(PracticeError.specificError(message: error.message, code: error.code))
