@@ -117,7 +117,8 @@ final class ItemDetailViewController: UIViewController {
             .disposed(by: self.rx.disposeBag)
         
         self.viewModel.out.updateItems
-            .bind(to: self.collectionView.rx.items(dataSource: self.dataSource))
+            .asDriverWithPracticeErrorAlert(on: self)
+            .drive(self.collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.rx.disposeBag)
         
         self.collectionView.rx.modelSelected(ItemDetailSectionItem.self).asObservable()
