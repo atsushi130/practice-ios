@@ -1,5 +1,5 @@
 //
-//  PracticeService.swift
+//  PracticeApiService.swift
 //  Data
 //
 //  Created by Atsushi Miyake on 2019/02/10.
@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import Moya
+
+protocol PracticeApiService {
+    associatedtype Endpoint: PracticeEndpoint
+    var provider: MoyaProvider<Endpoint> { get }
+}
+
