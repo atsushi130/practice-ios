@@ -34,7 +34,7 @@ final class ItemDetailViewController: UIViewController {
     private lazy var layout: UICollectionViewFlowLayout = {
         // self sizing by autolayout
         let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize   = CGSize(width: 1.0, height: 1.0)
+        layout.estimatedItemSize = CGSize(width: 172, height: 263)
         layout.headerReferenceSize = CGSize(width: 1.0, height: 1.0)
         layout.sectionInset        = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         layout.minimumLineSpacing      = 10
@@ -126,6 +126,11 @@ final class ItemDetailViewController: UIViewController {
             .filterNil()
             .subscribe(self.viewModel.in.itemSelected)
             .disposed(by: self.rx.disposeBag)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.collectionView.collectionViewLayout.invalidateLayout()
     }
 }
 
