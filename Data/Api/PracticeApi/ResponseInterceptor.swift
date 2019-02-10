@@ -69,29 +69,14 @@ final class FailureResponseInterceptor: ResponseInterceptor {
     private func failureHandle<T>(response: Response) -> Observable<T>? {
         switch response.statusCode {
         case 400...600:
-            guard let error = try? response.map(RequestError.self, using: .snakeCaseDecoder) else {
-                return .error(PracticeError.internalError)
+            guard let error = response.requestError else { return .error(PracticeError.internalError) }
+            if let route = ForceTransitionRoute(statusCode: response.statusCode, error: error) {
+                ApiClient.shared.triggerForceTransition.onNext(route)
+                return .empty()
+            } else {
+                return .error(PracticeError.specificError(message: error.message, code: error.code))
             }
-            return .error(PracticeError.specificError(message: error.message, code: error.code))
         default: return nil
         }
-    }
-}
-
-final class ForceTransitionResponseInterceptor: ResponseInterceptor {
-    
-    static let shared = ForceTransitionResponseInterceptor()
-    private init() {}
-    
-    func intercept<T>(response: Response) -> Observable<T>? where T : Decodable {
-        return self.forceTransitionIfNeeded(response: response)
-    }
-    
-    func intercept(response: Response) -> Observable<Void>? {
-        return self.forceTransitionIfNeeded(response: response)
-    }
-    
-    func forceTransitionIfNeeded<T>(response: Response) -> Observable<T>? {
-        
     }
 }
