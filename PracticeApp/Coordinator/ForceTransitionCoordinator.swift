@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 import CoordinatorKit
+import Connectable
+import Data
 
-final class ForceTransitionCoordinator: Coordinator {
+final class ForceTransitionCoordinator: Coordinator, Inputable {
     
+    static let shared = ForceTransitionCoordinator()
     var viewController: UIViewController? = nil
     
-    enum Route {
-        case logout
-        case updateRequired
-        case ban
-    }
-    
+    typealias Route = ForceTransitionRoute
+
     func transition(to route: Route) {
         switch route {
         case .logout:
@@ -32,6 +33,17 @@ final class ForceTransitionCoordinator: Coordinator {
             // let banViewController = BanViewController.instantiate()
             // UIApplication.shared.keyWindow?.rootViewController = banViewController
             break
+        }
+    }
+}
+
+// MARK: - Input
+extension InputSpace where Definer: ForceTransitionCoordinator {
+    var transition: AnyObserver<ForceTransitionCoordinator.Route> {
+        return AnyObserver<ForceTransitionCoordinator.Route> { event in
+            if case .next(let forceTransitionRoute) = event {
+                self.definer.transition(to: forceTransitionRoute)
+            }
         }
     }
 }
