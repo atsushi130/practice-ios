@@ -12,6 +12,7 @@ import Moya
 
 public final class ApiClient {
     private init() {}
+    
 }
 
 extension Observable where Element: Response {

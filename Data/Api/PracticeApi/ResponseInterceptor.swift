@@ -77,3 +77,21 @@ final class FailureResponseInterceptor: ResponseInterceptor {
         }
     }
 }
+
+final class ForceTransitionResponseInterceptor: ResponseInterceptor {
+    
+    static let shared = ForceTransitionResponseInterceptor()
+    private init() {}
+    
+    func intercept<T>(response: Response) -> Observable<T>? where T : Decodable {
+        return self.forceTransitionIfNeeded(response: response)
+    }
+    
+    func intercept(response: Response) -> Observable<Void>? {
+        return self.forceTransitionIfNeeded(response: response)
+    }
+    
+    func forceTransitionIfNeeded<T>(response: Response) -> Observable<T>? {
+        
+    }
+}
