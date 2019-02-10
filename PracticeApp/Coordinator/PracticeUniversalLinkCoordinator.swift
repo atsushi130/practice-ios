@@ -20,8 +20,9 @@ final class PracticeUniversalLinkCoordinator: UniversalLinkCoordinator, Coordina
     typealias Route = (universalLink: UniversalLink, context: UniversalLinkContext)
     enum UniversalLink: String, UniversalLinkable {
         static var scheme: String { return "com.github.atsush130.practice" }
-        case items = "/items"
-        case item  = "/items/:item_id"
+        case items     = "/items"
+        case item      = "/items/:item_id"
+        case mySumally = "/mysumally"
     }
     
     func transition(to route: Route) {
@@ -32,6 +33,8 @@ final class PracticeUniversalLinkCoordinator: UniversalLinkCoordinator, Coordina
             guard let itemId: String = route.context.parameters["item_id"] else { return }
             let itemCoordinator = self.mainTabController?.itemViewController.viewModel.coordinator
             itemCoordinator?.transition(to: .detail(itemId: itemId))
+        case .mySumally:
+            self.mainTabController?.coordinator.transition(to: .mySumally)
         }
     }
 }
