@@ -8,11 +8,19 @@
 
 import Foundation
 import RxSwift
+import Connectable
 import Moya
 
-public final class ApiClient {
+public final class ApiClient: Outputable {
+    public static let shared = ApiClient()
     private init() {}
-    
+    let triggerForceTransition = PublishSubject<ForceTransitionRoute>()
+}
+
+public extension OutputSpace where Definer: ApiClient {
+    public var forceTransition: Observable<ForceTransitionRoute> {
+        return self.definer.triggerForceTransition.asObservable()
+    }
 }
 
 extension Observable where Element: Response {
