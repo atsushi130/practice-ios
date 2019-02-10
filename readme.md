@@ -3,7 +3,7 @@
 
 [![mit licensed](https://img.shields.io/badge/License-MIT-d94c32.svg)](./license)
 [![practiceapp](https://img.shields.io/badge/Swift-PracticeApp-3B5998.svg)](https://github.com/atsushi130/PracticeApp.git)
-![swift](https://img.shields.io/badge/Swift-4-ffac45.svg)
+![swift](https://img.shields.io/badge/Swift-4.2-ffac45.svg)
 
 
 PracticeApp implements a part of the [Sumally](https://sumally.com)'s design.
