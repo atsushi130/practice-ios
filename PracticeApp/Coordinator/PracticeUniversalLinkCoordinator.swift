@@ -8,12 +8,13 @@
 
 import Foundation
 import UniversalLinkCoordinatorKit
+import CoordinatorKit
 
-final class PracticeUniversalLinkCoordinator: UniversalLinkCoordinator {
+final class PracticeUniversalLinkCoordinator: UniversalLinkCoordinator, Coordinator {
     
     static let shared = PracticeUniversalLinkCoordinator()
-    private init() {}
-    
+    var viewController: UIViewController? = nil
+
     let router = UniversalLinkRouter<UniversalLink>()
     
     typealias Route = (universalLink: UniversalLink, context: UniversalLinkContext)
