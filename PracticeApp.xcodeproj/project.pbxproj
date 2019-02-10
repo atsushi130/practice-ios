@@ -99,6 +99,7 @@
 		0DDEE3B3220FEDE200194AEC /* PracticeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */; };
 		0DDEE3B6220FF16700194AEC /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B5220FF16700194AEC /* Observable+.swift */; };
 		0DDEE3B8221065DC00194AEC /* MainTabConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B7221065DC00194AEC /* MainTabConfigurator.swift */; };
+		0DDEE3BA221067C800194AEC /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEE3B9221067C800194AEC /* MainTabCoordinator.swift */; };
 		0DE64FFA200131AC00ACDEE5 /* NewFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */; };
 		0DE64FFC200131F100ACDEE5 /* NewFolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */; };
 		0DE650012002375E00ACDEE5 /* UserProfileReusbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */; };
@@ -429,6 +430,7 @@
 		0DDEE3B2220FEDE200194AEC /* PracticeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeEndpoint.swift; sourceTree = "<group>"; };
 		0DDEE3B5220FF16700194AEC /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
 		0DDEE3B7221065DC00194AEC /* MainTabConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabConfigurator.swift; sourceTree = "<group>"; };
+		0DDEE3B9221067C800194AEC /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		0DE64FF9200131AC00ACDEE5 /* NewFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderCell.swift; sourceTree = "<group>"; };
 		0DE64FFB200131F100ACDEE5 /* NewFolderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFolderCell.xib; sourceTree = "<group>"; };
 		0DE650002002375E00ACDEE5 /* UserProfileReusbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileReusbleView.swift; sourceTree = "<group>"; };
@@ -592,6 +594,7 @@
 				0D00B1C01FFA4D2B00DFCCE0 /* MainTabController.swift */,
 				0D00B1C31FFA51D200DFCCE0 /* MainTabController.storyboard */,
 				0DDEE3B7221065DC00194AEC /* MainTabConfigurator.swift */,
+				0DDEE3B9221067C800194AEC /* MainTabCoordinator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1629,6 +1632,7 @@
 				0DD8FC1F2144C1AD0075D874 /* MySumallyDataSource.swift in Sources */,
 				0D2C192D1FFE82030083466A /* UserListViewModel.swift in Sources */,
 				0DE650052002380700ACDEE5 /* FunListView.swift in Sources */,
+				0DDEE3BA221067C800194AEC /* MainTabCoordinator.swift in Sources */,
 				0D2C19261FFE6A6C0083466A /* UserCell.swift in Sources */,
 				0D2C19361FFE9D940083466A /* ItemDetailFoldersCell.swift in Sources */,
 				0D2C19321FFE9D810083466A /* ItemDetailFolderCell.swift in Sources */,
