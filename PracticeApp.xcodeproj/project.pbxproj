@@ -682,13 +682,13 @@
 			path = UserIconView;
 			sourceTree = "<group>";
 		};
-		0D4A0C58220F1ECB0031F307 /* UniversalLinkCoordinator */ = {
+		0D4A0C58220F1ECB0031F307 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				0D4A0C59220F1F720031F307 /* PracticeUniversalLinkCoordinator.swift */,
 				0D4A0C5B220F23820031F307 /* PracticeUniversalLinkCoordinator+.swift */,
 			);
-			path = UniversalLinkCoordinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		0D85A86E1FFCDCCD00A9C364 /* ReactionFooterView */ = {
@@ -1068,7 +1068,7 @@
 		75E5962F1FF272BD00784269 /* PracticeApp */ = {
 			isa = PBXGroup;
 			children = (
-				0D4A0C58220F1ECB0031F307 /* UniversalLinkCoordinator */,
+				0D4A0C58220F1ECB0031F307 /* Coordinator */,
 				0DD8FC7E214621C30075D874 /* Resources */,
 				0D2C191C1FFE65AB0083466A /* UserList */,
 				0D2C191B1FFE659D0083466A /* MySumally */,
