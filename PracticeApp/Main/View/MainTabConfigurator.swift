@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import CoordinatorKit
+
+struct MainTabConfigurator: Configurator {
+    typealias VC = MainTabController
+}
